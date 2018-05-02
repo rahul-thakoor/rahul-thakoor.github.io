@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Driver on rahul thakoor</title>
+    <link>https://rahul-thakoor.github.io/tags/driver/</link>
+    <description>Recent content in Driver on rahul thakoor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>rahul.thakoor@gmail.com (Rahul Thakoor)</managingEditor>
+    <webMaster>rahul.thakoor@gmail.com (Rahul Thakoor)</webMaster>
+    <lastBuildDate>Tue, 01 May 2018 22:44:18 +0400</lastBuildDate>
+    
+	<atom:link href="https://rahul-thakoor.github.io/tags/driver/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>An I2C Rust driver for mma7660fc-based 3-Axis Digital Accelerometer</title>
+      <link>https://rahul-thakoor.github.io/an-i2c-rust-driver-for-mma7660fc-based-3-axis-digital-accelerometer/</link>
+      <pubDate>Tue, 01 May 2018 22:44:18 +0400</pubDate>
+      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      <guid>https://rahul-thakoor.github.io/an-i2c-rust-driver-for-mma7660fc-based-3-axis-digital-accelerometer/</guid>
+      <description>This is an I2C implementation for mma7660fc-based 3-Axis Digital Accelerometer. It is an embedded-hal driver as part of the weekly driver initiative by Jorge Aparicio.
+The Device The MMA7660FC is a ±1.5 g 3-Axis Accelerometer with Digital Output (I2C). It can be found on Seeed&amp;rsquo;s Grove 3-Axis Digital Accelerometer. It is made by NXP Semiconductor.
+ Development For the development of this driver, I used the Grove 3-Axis Digital Accelerometer and tested on a Raspberry Pi 1 running latest version of Raspbian.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/an-i2c-rust-driver-for-mma7660fc-based-3-axis-digital-accelerometer/</loc>
+    <lastmod>2018-05-01T22:44:18+04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/using-firmata-on-arduino-compatible-boards/</loc>
+    <lastmod>2017-06-25T08:12:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/how-to-get-started-with-nodebots---the-hardware/</loc>
+    <lastmod>2017-04-09T08:37:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/developers-conference-2017/</loc>
+    <lastmod>2017-04-02T08:37:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/my-instructables/</loc>
+    <lastmod>2017-01-23T22:10:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/blynk-esp8266-%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2016-05-01T20:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/page/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/categories/blog/</loc>
+    <lastmod>2018-05-01T22:44:18+04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/tags/blynk/</loc>
+    <lastmod>2016-05-01T20:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/categories/</loc>
+    <lastmod>2018-05-01T22:44:18+04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/tags/devconmru/</loc>
+    <lastmod>2017-04-02T08:37:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/tags/diy/</loc>
+    <lastmod>2017-06-25T08:12:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/tags/driver/</loc>
+    <lastmod>2018-05-01T22:44:18+04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/tags/embedded/</loc>
+    <lastmod>2018-05-01T22:44:18+04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/tags/firmata/</loc>
+    <lastmod>2017-06-25T08:12:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/tags/instructables/</loc>
+    <lastmod>2017-01-23T22:10:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/tags/iot/</loc>
+    <lastmod>2016-05-01T20:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/tags/johnny-five/</loc>
+    <lastmod>2017-06-25T08:12:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/tags/maker/</loc>
+    <lastmod>2017-06-25T08:12:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/tags/mscc/</loc>
+    <lastmod>2017-04-02T08:37:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/tags/mspmauritius/</loc>
+    <lastmod>2017-04-02T08:37:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/tags/nodebots/</loc>
+    <lastmod>2017-06-25T08:12:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/page/nodebotsmu/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/page/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/post/</loc>
+    <lastmod>2018-05-01T22:44:18+04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/categories/project/</loc>
+    <lastmod>2017-01-23T22:10:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/tags/rust/</loc>
+    <lastmod>2018-05-01T22:44:18+04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/tags/</loc>
+    <lastmod>2016-05-01T20:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/</loc>
+    <lastmod>2018-05-01T22:44:18+04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/page/rust_gpiozero/</loc>
+  </url>
+  
+</urlset>

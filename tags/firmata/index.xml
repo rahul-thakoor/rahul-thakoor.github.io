@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Firmata on rahul thakoor</title>
+    <link>https://rahul-thakoor.github.io/tags/firmata/</link>
+    <description>Recent content in Firmata on rahul thakoor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>rahul.thakoor@gmail.com (Rahul Thakoor)</managingEditor>
+    <webMaster>rahul.thakoor@gmail.com (Rahul Thakoor)</webMaster>
+    <lastBuildDate>Sun, 25 Jun 2017 08:12:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://rahul-thakoor.github.io/tags/firmata/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using Firmata On Arduino Compatible Boards</title>
+      <link>https://rahul-thakoor.github.io/using-firmata-on-arduino-compatible-boards/</link>
+      <pubDate>Sun, 25 Jun 2017 08:12:00 +0000</pubDate>
+      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      <guid>https://rahul-thakoor.github.io/using-firmata-on-arduino-compatible-boards/</guid>
+      <description>What is Arduino? Arduino is an open-source electronics prototyping platform. An Arduino board is development hardware consisting of a programmable microcontroller. The boards can collect information(inputs), act on the inputs(processing) and finally produce outputs. Typically, Arduino boards are programmed using the Arduino programming language through the Arduino IDE using custom firmware(sketches). Arduino exists in many forms and flavours, from the official boards such as the UNO, ArduinoBoard 101 and MEGA, to Arduino-compatible ones like the NodeMCU.</description>
+    </item>
+    
+  </channel>
+</rss>

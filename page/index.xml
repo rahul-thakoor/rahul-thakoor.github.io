@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on rahul thakoor</title>
+    <link>https://rahul-thakoor.github.io/page/</link>
+    <description>Recent content in Pages on rahul thakoor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>rahul.thakoor@gmail.com (Rahul Thakoor)</managingEditor>
+    <webMaster>rahul.thakoor@gmail.com (Rahul Thakoor)</webMaster>
+    
+	<atom:link href="https://rahul-thakoor.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About me</title>
+      <link>https://rahul-thakoor.github.io/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      <guid>https://rahul-thakoor.github.io/page/about/</guid>
+      <description>My name is Inigo Montoya. I have the following qualities:
+ I rock a great mustache I&amp;rsquo;m extremely loyal to my family  What else do you need?
+my history To be honest, I&amp;rsquo;m having some trouble remembering right now, so why don&amp;rsquo;t you just watch my movie and it will answer all your questions.</description>
+    </item>
+    
+    <item>
+      <title>Nodebots Mauritius</title>
+      <link>https://rahul-thakoor.github.io/page/nodebotsmu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      <guid>https://rahul-thakoor.github.io/page/nodebotsmu/</guid>
+      <description>Nodebots Mauritius is a meetup for hobbyists, hackers, makers and hardware enthusiasts. Nodebots are robots powered by NodeJS and Javascript, but we welcome anyone to wants to work on different platforms!
+Whether you are a web developer, skilled developer or a non-technical person, you are all welcome! So come join us to get advice, show off what you&amp;rsquo;re working on, help others, learn something new and tinker with electronics!</description>
+    </item>
+    
+    <item>
+      <title>rust_gpiozero</title>
+      <link>https://rahul-thakoor.github.io/page/rust_gpiozero/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      <guid>https://rahul-thakoor.github.io/page/rust_gpiozero/</guid>
+      <description>This library is based on GPIOZero library.
+Note: This is a work in progress. The library will eventually support embedded-hal based drivers
+The idea is to get started with physical computing using Rust with little coding by hiding the underlying complexity.
+The library uses BCM Pin numbering
+Example : Blinking an LED externcraterust_gpiozero;userust_gpiozero::*;fn main(){// Create a new LED attached to Pin 17 letmutled=LED::new(17);// blink the LED // on_time: 2 seconds and off_time: 3 seconds led.</description>
+    </item>
+    
+  </channel>
+</rss>

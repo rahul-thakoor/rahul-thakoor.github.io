@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rahul thakoor</title>
+    <link>https://rahul-thakoor.github.io/</link>
+    <description>Recent content on rahul thakoor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>rahul.thakoor@gmail.com (Rahul Thakoor)</managingEditor>
+    <webMaster>rahul.thakoor@gmail.com (Rahul Thakoor)</webMaster>
+    <lastBuildDate>Tue, 01 May 2018 22:44:18 +0400</lastBuildDate>
+    
+	<atom:link href="https://rahul-thakoor.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>An I2C Rust driver for mma7660fc-based 3-Axis Digital Accelerometer</title>
+      <link>https://rahul-thakoor.github.io/an-i2c-rust-driver-for-mma7660fc-based-3-axis-digital-accelerometer/</link>
+      <pubDate>Tue, 01 May 2018 22:44:18 +0400</pubDate>
+      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      <guid>https://rahul-thakoor.github.io/an-i2c-rust-driver-for-mma7660fc-based-3-axis-digital-accelerometer/</guid>
+      <description>This is an I2C implementation for mma7660fc-based 3-Axis Digital Accelerometer. It is an embedded-hal driver as part of the weekly driver initiative by Jorge Aparicio.
+The Device The MMA7660FC is a ±1.5 g 3-Axis Accelerometer with Digital Output (I2C). It can be found on Seeed&amp;rsquo;s Grove 3-Axis Digital Accelerometer. It is made by NXP Semiconductor.
+ Development For the development of this driver, I used the Grove 3-Axis Digital Accelerometer and tested on a Raspberry Pi 1 running latest version of Raspbian.</description>
+    </item>
+    
+    <item>
+      <title>Using Firmata On Arduino Compatible Boards</title>
+      <link>https://rahul-thakoor.github.io/using-firmata-on-arduino-compatible-boards/</link>
+      <pubDate>Sun, 25 Jun 2017 08:12:00 +0000</pubDate>
+      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      <guid>https://rahul-thakoor.github.io/using-firmata-on-arduino-compatible-boards/</guid>
+      <description>What is Arduino? Arduino is an open-source electronics prototyping platform. An Arduino board is development hardware consisting of a programmable microcontroller. The boards can collect information(inputs), act on the inputs(processing) and finally produce outputs. Typically, Arduino boards are programmed using the Arduino programming language through the Arduino IDE using custom firmware(sketches). Arduino exists in many forms and flavours, from the official boards such as the UNO, ArduinoBoard 101 and MEGA, to Arduino-compatible ones like the NodeMCU.</description>
+    </item>
+    
+    <item>
+      <title>How to get started with NodeBots? - The hardware</title>
+      <link>https://rahul-thakoor.github.io/how-to-get-started-with-nodebots---the-hardware/</link>
+      <pubDate>Sun, 09 Apr 2017 08:37:00 +0000</pubDate>
+      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      <guid>https://rahul-thakoor.github.io/how-to-get-started-with-nodebots---the-hardware/</guid>
+      <description>When it comes to starting a DIY Electronics project, one can be overwhelmed by the myriad of choices. With so many varieties out there, how to get started?
+The basic components include: Processing, Input/Output, Circuits and Wiring and Power.
+ Processing: the brain of the project, typically development boards which enable us to run our program logic.
+ Inputs/Outputs: sensors, actuators, and other gadgets we connect to our boards to enhance our projects.</description>
+    </item>
+    
+    <item>
+      <title>Developers Conference 2017</title>
+      <link>https://rahul-thakoor.github.io/developers-conference-2017/</link>
+      <pubDate>Sun, 02 Apr 2017 08:37:00 +0000</pubDate>
+      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      <guid>https://rahul-thakoor.github.io/developers-conference-2017/</guid>
+      <description>The Developers Conference, organised by the MSCC, is the BIGGEST tech event in Mauritius. DevCon brought together tech enthusiasts, hobbyists, numerous user groups, prestigious companies, students, and more!!! I was privileged to present as a Microsoft Student Partner.
+My team(@dishaykissoon and me), presented on NodeBots: Using Javascript for hardware programming. The idea was to use NodeBots and Javascript as an entry point to get more people interested in hardware programming and DIY projects.</description>
+    </item>
+    
+    <item>
+      <title>My Instructables</title>
+      <link>https://rahul-thakoor.github.io/my-instructables/</link>
+      <pubDate>Mon, 23 Jan 2017 22:10:00 +0000</pubDate>
+      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      <guid>https://rahul-thakoor.github.io/my-instructables/</guid>
+      <description>Here are my writings at instructables.com</description>
+    </item>
+    
+    <item>
+      <title>Blynk-ESP8266 教程</title>
+      <link>https://rahul-thakoor.github.io/blynk-esp8266-%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Sun, 01 May 2016 20:00:00 +0000</pubDate>
+      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      <guid>https://rahul-thakoor.github.io/blynk-esp8266-%E6%95%99%E7%A8%8B/</guid>
+      <description>Blynk 是一款适合喜欢折腾小型开发板的实用组合配套工具。通过该应用，你可以更方便的用于控制各种物联网设备。你可以使用Blynk创建精美的界面和挂件来控制你的微型计算机而且无需要自己编辑手机APP！Blynk适合于各种项目。 这里我们用一款ESP8266单片机来实现 Blynk 的基本功能.
+   软件/程序  Arduino IDE for ESP8266 Blynk Library Blynk App  Android iOS 不能访问 Google Play 的可以这里下载 1.11.2 稳定版， 于 2016-5-03 更新   硬件  智能手机 电脑 基于ESP8266的单片机 USB-TTL，3.3V 电源， LED， 感应器，等（按需）  步骤 先把相关的软件和程序下载好。 手机上安卓 Blynk App Arduino IDE 的设置 - 我们不是通过AT 模式来编辑 ESP8266而是用Arduino 平台. 不了解这个方式的用户请先参考这个教程 &amp;ndash; 经过上个教程你应该能在Arduino 环境下烧最基本的blink.ino程序到 ESP8266才继续下一步 - 先需要把 Blynk 的库导入到 Arduino IDE　中 &amp;ndash; Blynk 库的导入: 下载 库 &amp;ndash; 给项目一个名字， 在 Hardware Model 选 ESP8266 &amp;ndash; 把 AUTH TOKEN（用户授权） 拷贝（按即可）然后按 “Create Project&amp;rdquo; - 项目是空的， 按一下，”Widget Box&amp;rdquo; 会出来 &amp;ndash; 这里有各种模块 &amp;ndash; 我们这里简单的想展示Blynk 的功能，所以我们选“Button&amp;rdquo;(按键) - Button Settings 窗会出来 &amp;ndash; 先给这个按键一个名称， 我们用led &amp;ndash; 选哪个 GPIO 有 LED ，我们用已有的 D13, D就是 Digital, A 就是 Analog &amp;ndash; Mode 说明按键的类型，Push 就是按的时候 GPIO 是 1（等开），松开就 0（LED 关） &amp;ndash; 选 &amp;lsquo;OK&amp;rsquo;</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>https://rahul-thakoor.github.io/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      <guid>https://rahul-thakoor.github.io/page/about/</guid>
+      <description>My name is Inigo Montoya. I have the following qualities:
+ I rock a great mustache I&amp;rsquo;m extremely loyal to my family  What else do you need?
+my history To be honest, I&amp;rsquo;m having some trouble remembering right now, so why don&amp;rsquo;t you just watch my movie and it will answer all your questions.</description>
+    </item>
+    
+    <item>
+      <title>Nodebots Mauritius</title>
+      <link>https://rahul-thakoor.github.io/page/nodebotsmu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      <guid>https://rahul-thakoor.github.io/page/nodebotsmu/</guid>
+      <description>Nodebots Mauritius is a meetup for hobbyists, hackers, makers and hardware enthusiasts. Nodebots are robots powered by NodeJS and Javascript, but we welcome anyone to wants to work on different platforms!
+Whether you are a web developer, skilled developer or a non-technical person, you are all welcome! So come join us to get advice, show off what you&amp;rsquo;re working on, help others, learn something new and tinker with electronics!</description>
+    </item>
+    
+    <item>
+      <title>rust_gpiozero</title>
+      <link>https://rahul-thakoor.github.io/page/rust_gpiozero/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      <guid>https://rahul-thakoor.github.io/page/rust_gpiozero/</guid>
+      <description>This library is based on GPIOZero library.
+Note: This is a work in progress. The library will eventually support embedded-hal based drivers
+The idea is to get started with physical computing using Rust with little coding by hiding the underlying complexity.
+The library uses BCM Pin numbering
+Example : Blinking an LED externcraterust_gpiozero;userust_gpiozero::*;fn main(){// Create a new LED attached to Pin 17 letmutled=LED::new(17);// blink the LED // on_time: 2 seconds and off_time: 3 seconds led.</description>
+    </item>
+    
+  </channel>
+</rss>

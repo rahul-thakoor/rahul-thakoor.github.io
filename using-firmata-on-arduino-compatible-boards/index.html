@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Using Firmata On Arduino Compatible Boards</title>
+  <meta property="og:title" content="Using Firmata On Arduino Compatible Boards" />
+  <meta name="twitter:title" content="Using Firmata On Arduino Compatible Boards" />
+  <meta name="description" content="Using Firmata On Arduino Compatible Boards">
+  <meta property="og:description" content="Using Firmata On Arduino Compatible Boards">
+  <meta name="twitter:description" content="Using Firmata On Arduino Compatible Boards">
+  <meta name="author" content="Rahul Thakoor"/>
+  <link href='https://rahul-thakoor.github.io/img/favicon_r.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://rahul-thakoor.github.io/img/profile.png" />
+  <meta name="twitter:image" content="https://rahul-thakoor.github.io/img/profile.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@rahulthakoor" />
+  <meta name="twitter:creator" content="@rahulthakoor" />
+  <meta property="og:url" content="https://rahul-thakoor.github.io/using-firmata-on-arduino-compatible-boards/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="rahul thakoor" />
+
+  <meta name="generator" content="Hugo 0.37.1" />
+  <link rel="canonical" href="https://rahul-thakoor.github.io/using-firmata-on-arduino-compatible-boards/" />
+  <link rel="alternate" href="https://rahul-thakoor.github.io/index.xml" type="application/rss+xml" title="rahul thakoor">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://rahul-thakoor.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://rahul-thakoor.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://rahul-thakoor.github.io/css/codeblock.css" />
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-118403602-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://rahul-thakoor.github.io">rahul thakoor</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">Projects</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/nodebotsmu">Nodebots Mauritius</a>
+                
+                  <a href="/page/rust_gpiozero">rust_gpiozero</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="rahul thakoor" href="https://rahul-thakoor.github.io">
+            <img class="avatar-img" src="https://rahul-thakoor.github.io/img/profile.png" alt="rahul thakoor" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Using Firmata On Arduino Compatible Boards</h1>
+                
+                
+                  <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on June 25, 2017
+  
+  
+  &nbsp;|&nbsp;
+  <i class="fa fa-clock-o"></i> 4 minutes (686 words)
+  
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<h2 id="what-is-arduino">What is Arduino?</h2>
+
+<p>Arduino is an open-source electronics prototyping platform. An Arduino board is development hardware consisting of a programmable microcontroller. The boards can collect information(inputs), act on the inputs(processing) and finally produce outputs. Typically, Arduino boards are programmed using the Arduino programming language through the Arduino IDE using custom firmware(sketches). Arduino exists in many forms and flavours, from the official boards such as the UNO, ArduinoBoard 101 and MEGA, to Arduino-compatible ones like the NodeMCU.</p>
+
+<p><img src="https://github.com/rahul-thakoor/kws/raw/master/firmata%20on%20arduino/arduino.jpg" alt="Components" /></p>
+
+<h2 id="firmata">Firmata</h2>
+
+<p>Arduino boards are usually based on microcontrollers with low CPU clock speed (around 16 to 32 MHz) and limited memory space. The Firmata protocol provides a way to harness the power of a more powerful machine to run complex processing while using the arduino being used to collect data from sensors and execute desired outputs.</p>
+
+<p>Firmata is a protocol allowing communication between software and microcontrollers. It thus provides a common language with which both the software and hardware can communicate. It works as a host-client method where the microcontroller acts as the client and a more powerful device (smartphone, tablet or computer) acts as the host communicating through a channel such as WiFi, Bluetooth or USB connection. Basically, Firmata makes the board Input/Output pins available via serial communication.</p>
+
+<p>The protocol has two implementations : Firmware and Client Libraries.
+The firmware runs on the development board and establishes a method for communication with software running on a host machine. The Arduino IDE provides a Firmata library, implementing the Firmata protocol.</p>
+
+<p>The client libraries are software implementation of the Firmata protocol running on the host machine. Several Firmata client libraries and frameworks have been implemented in a variety of popular programming languages, namely Processing, Javascript, Python, Java and even Go!</p>
+
+<p><img src="https://github.com/rahul-thakoor/kws/raw/master/firmata%20on%20arduino/firmata%20protocol.jpg" alt="Components" /></p>
+
+<h3 id="advantages">Advantages</h3>
+
+<ul>
+<li>The protocol can be implemented in firmware on any microcontroller architecture</li>
+<li>The protocol can be implemented in software in any programming language</li>
+<li>The host machine runs the program logic and is not limited in resources like the microcontroller</li>
+<li>The microcontoller is able to communicate with different host machines - it does not run a single-purpose program</li>
+<li>No compilation is needed to run the program - just start another script on the host machine</li>
+</ul>
+
+<h3 id="disadvantages">Disadvantages</h3>
+
+<ul>
+<li>The board depends on the host machine - it can only operate as long as the host machine is running the software</li>
+<li>The board may need to be constantly powered on</li>
+</ul>
+
+<h2 id="connectivity">Connectivity</h2>
+
+<p>The client hardware can be connected to the host machine either physically (through a cable) or wirelessly. There Arduino IDE provides different implementations of the firmware taking into consideration the different means of communication such as Serial, Ethernet, WiFi and Bluetooth.</p>
+
+<h2 id="getting-started-on-arduino-compatible-boards">Getting Started on Arduino-Compatible Boards</h2>
+
+<h3 id="flashing-firmata-firmware">Flashing Firmata Firmware</h3>
+
+<p>Download and install the <a href="https://www.arduino.cc/en/Main/Software" target="_blank">Arduino IDE</a>.</p>
+
+<p>Arduino provides Firmata as sketches. The StandardFirmata sketch is the most widely used. It allows communication via a serial port such as USB.
+To flash it, naviagte to File &ndash;&gt; Examples &ndash;&gt; Firmata &ndash;&gt; Standard Firmata. Choose the appropriate options for your board in the Tools section and finally upload the sketch to the arduino board.</p>
+
+<p><img src="https://github.com/rahul-thakoor/kws/raw/master/firmata%20on%20arduino/arduino-firmata-library.png" alt="Components" /></p>
+
+<h3 id="testing">Testing</h3>
+
+<h4 id="via-firmata-test-program">Via Firmata Test Program</h4>
+
+<p>Firmata provides a test program for boards running StandardFirmata. It allows quick testing of all I/O pins. It runs without installation and works on Windows, MacOs, and Linux. The binaries can be found <a href="https://github.com/firmata/firmata_test/downloads" target="_blank">here</a>.</p>
+
+<p><img src="https://github.com/rahul-thakoor/kws/raw/master/firmata%20on%20arduino/firmata_test.png" alt="Components" /></p>
+
+<h4 id="via-education-lab-for-arduino-and-firmata-by-quai-lab">Via Education LAB for Arduino and Firmata by Quai-Lab</h4>
+
+<p>It is similar to the Firmata Test program, however it is available as a chrome extension.
+It has a RECORDER feature that enables the recording and the replay of the actions done with the interface and an OSCILLOSCOPE feature which allows to observe voltage changes on one of the analog input.</p>
+
+<p><img src="https://github.com/rahul-thakoor/kws/raw/master/firmata%20on%20arduino/education-lab.png" alt="Components" /></p>
+
+<h3 id="writing-software">Writing Software</h3>
+
+<p>Once the board running Firmata firmware has been tested, software can be implemented in different programming languages. There are different client libraries.</p>
+
+<p><img src="https://github.com/rahul-thakoor/kws/raw/master/firmata%20on%20arduino/pymata.png" alt="Components" /></p>
+
+<p>Also, there are frameworks using the libraries which makes it easier to write software for the board. The most popular frameworks use Javascript and include Johnny-Five and Cylon.Js.</p>
+
+<p><img src="https://github.com/rahul-thakoor/kws/raw/master/firmata%20on%20arduino/j5-blink.png" alt="Components" /></p>
+
+<h2 id="references">References</h2>
+
+<ol>
+<li>Arduino, <a href="https://www.arduino.cc/" target="_blank"><a href="https://www.arduino.cc/">https://www.arduino.cc/</a></a></li>
+<li>Firmata Procotol, <a href="https://github.com/firmata/protocol" target="_blank"><a href="https://github.com/firmata/protocol">https://github.com/firmata/protocol</a></a></li>
+<li>Firmata Test Program, <a  href="https://github.com/firmata/firmata_test" target="_blank"><a href="https://github.com/firmata/firmata_test">https://github.com/firmata/firmata_test</a></a></li>
+<li>Education LAB for Arduino and Firmata, <a  href="http://quai-lab.com/lancement-deducative-lab-arduino/" target="_blank"><a href="http://quai-lab.com/lancement-deducative-lab-arduino/">http://quai-lab.com/lancement-deducative-lab-arduino/</a></a></li>
+<li>Johnny-Five Framework, <a href="http://johnny-five.io/" target="_blank"><a href="http://johnny-five.io/">http://johnny-five.io/</a></a></li>
+<li>Cylon.JS, <a  href="https://cylonjs.com/" target="_blank"><a href="https://cylonjs.com/">https://cylonjs.com/</a></a></li>
+<li>Lyza Danger Gardner, JavaScript on Things - Chapter 1, <a  href="https://www.manning.com/books/javascript-on-things" target="_blank"><a href="https://www.manning.com/books/javascript-on-things">https://www.manning.com/books/javascript-on-things</a></a></li>
+</ol>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://rahul-thakoor.github.io/tags/nodebots/">NodeBots</a>&nbsp;
+            
+              <a href="https://rahul-thakoor.github.io/tags/johnny-five/">Johnny-Five</a>&nbsp;
+            
+              <a href="https://rahul-thakoor.github.io/tags/maker/">Maker</a>&nbsp;
+            
+              <a href="https://rahul-thakoor.github.io/tags/diy/">DIY</a>&nbsp;
+            
+              <a href="https://rahul-thakoor.github.io/tags/firmata/">Firmata</a>&nbsp;
+            
+          </div>
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://rahul-thakoor.github.io/how-to-get-started-with-nodebots---the-hardware/" data-toggle="tooltip" data-placement="top" title="How to get started with NodeBots? - The hardware">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://rahul-thakoor.github.io/an-i2c-rust-driver-for-mma7660fc-based-3-axis-digital-accelerometer/" data-toggle="tooltip" data-placement="top" title="An I2C Rust driver for mma7660fc-based 3-Axis Digital Accelerometer">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:rahul.thakoor@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/rahul-thakoor" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/rahulthakoor" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/rahul-thakoor-a50706138" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://paypal.me/rahulthakoor" title="PayPal">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-paypal fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Rahul Thakoor
+            
+          
+
+          &nbsp;&bull;&nbsp;
+          2018
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://rahul-thakoor.github.io">rahul thakoor</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.37.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://rahul-thakoor.github.io/js/main.js"></script>
+<script src="https://rahul-thakoor.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+<script src="https://rahul-thakoor.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
+

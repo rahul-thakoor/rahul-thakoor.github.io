@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on rahul thakoor</title>
+    <link>https://rahul-thakoor.github.io/categories/</link>
+    <description>Recent content in Categories on rahul thakoor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>rahul.thakoor@gmail.com (Rahul Thakoor)</managingEditor>
+    <webMaster>rahul.thakoor@gmail.com (Rahul Thakoor)</webMaster>
+    <lastBuildDate>Tue, 01 May 2018 22:44:18 +0400</lastBuildDate>
+    
+	<atom:link href="https://rahul-thakoor.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Blog</title>
+      <link>https://rahul-thakoor.github.io/categories/blog/</link>
+      <pubDate>Tue, 01 May 2018 22:44:18 +0400</pubDate>
+      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      <guid>https://rahul-thakoor.github.io/categories/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project</title>
+      <link>https://rahul-thakoor.github.io/categories/project/</link>
+      <pubDate>Mon, 23 Jan 2017 22:10:00 +0000</pubDate>
+      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      <guid>https://rahul-thakoor.github.io/categories/project/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

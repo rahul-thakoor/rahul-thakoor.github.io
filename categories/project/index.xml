@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project on rahul thakoor</title>
+    <link>https://rahul-thakoor.github.io/categories/project/</link>
+    <description>Recent content in Project on rahul thakoor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>rahul.thakoor@gmail.com (Rahul Thakoor)</managingEditor>
+    <webMaster>rahul.thakoor@gmail.com (Rahul Thakoor)</webMaster>
+    <lastBuildDate>Mon, 23 Jan 2017 22:10:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://rahul-thakoor.github.io/categories/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My Instructables</title>
+      <link>https://rahul-thakoor.github.io/my-instructables/</link>
+      <pubDate>Mon, 23 Jan 2017 22:10:00 +0000</pubDate>
+      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      <guid>https://rahul-thakoor.github.io/my-instructables/</guid>
+      <description>Here are my writings at instructables.com</description>
+    </item>
+    
+  </channel>
+</rss>
