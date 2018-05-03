@@ -70,8 +70,7 @@ My team(@dishaykissoon and me), presented on NodeBots: Using Javascript for hard
       <pubDate>Sun, 01 May 2016 20:00:00 +0000</pubDate>
       <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
       <guid>https://rahul-thakoor.github.io/blynk-esp8266-%E6%95%99%E7%A8%8B/</guid>
-      <description>Blynk 是一款适合喜欢折腾小型开发板的实用组合配套工具。通过该应用，你可以更方便的用于控制各种物联网设备。你可以使用Blynk创建精美的界面和挂件来控制你的微型计算机而且无需要自己编辑手机APP！Blynk适合于各种项目。 这里我们用一款ESP8266单片机来实现 Blynk 的基本功能.
-   软件/程序  Arduino IDE for ESP8266 Blynk Library Blynk App  Android iOS 不能访问 Google Play 的可以这里下载 1.11.2 稳定版， 于 2016-5-03 更新   硬件  智能手机 电脑 基于ESP8266的单片机 USB-TTL，3.3V 电源， LED， 感应器，等（按需）  步骤 先把相关的软件和程序下载好。 手机上安卓 Blynk App Arduino IDE 的设置 - 我们不是通过AT 模式来编辑 ESP8266而是用Arduino 平台. 不了解这个方式的用户请先参考这个教程 &amp;ndash; 经过上个教程你应该能在Arduino 环境下烧最基本的blink.ino程序到 ESP8266才继续下一步 - 先需要把 Blynk 的库导入到 Arduino IDE　中 &amp;ndash; Blynk 库的导入: 下载 库 &amp;ndash; 给项目一个名字， 在 Hardware Model 选 ESP8266 &amp;ndash; 把 AUTH TOKEN（用户授权） 拷贝（按即可）然后按 “Create Project&amp;rdquo; - 项目是空的， 按一下，”Widget Box&amp;rdquo; 会出来 &amp;ndash; 这里有各种模块 &amp;ndash; 我们这里简单的想展示Blynk 的功能，所以我们选“Button&amp;rdquo;(按键) - Button Settings 窗会出来 &amp;ndash; 先给这个按键一个名称， 我们用led &amp;ndash; 选哪个 GPIO 有 LED ，我们用已有的 D13, D就是 Digital, A 就是 Analog &amp;ndash; Mode 说明按键的类型，Push 就是按的时候 GPIO 是 1（等开），松开就 0（LED 关） &amp;ndash; 选 &amp;lsquo;OK&amp;rsquo;</description>
+      <description>Blynk 是一款适合喜欢折腾小型开发板的实用组合配套工具。通过该应用，你可以更方便的用于控制各种物联网设备。你可以使用Blynk创建精美的界面和挂件</description>
     </item>
     
     <item>
@@ -80,9 +79,7 @@ My team(@dishaykissoon and me), presented on NodeBots: Using Javascript for hard
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
       <guid>https://rahul-thakoor.github.io/page/about/</guid>
-      <description>My name is Inigo Montoya. I have the following qualities:
- I rock a great mustache I&amp;rsquo;m extremely loyal to my family  What else do you need?
-my history To be honest, I&amp;rsquo;m having some trouble remembering right now, so why don&amp;rsquo;t you just watch my movie and it will answer all your questions.</description>
+      <description></description>
     </item>
     
     <item>
