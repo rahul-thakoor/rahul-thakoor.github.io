@@ -180,7 +180,7 @@ ga('send', 'pageview');
   
   
   &nbsp;|&nbsp;
-  <i class="fa fa-clock-o"></i> 5 minutes (948 words)
+  <i class="fa fa-clock-o"></i> 6 minutes (1095 words)
   
   
 </span>
@@ -266,7 +266,22 @@ datasets</code></pre></div>
 <span class="kp">names</span><span class="p">(</span>datasets<span class="p">)</span>
 
 <span class="c1">#show all titles available</span>
-datasets<span class="o">$</span>title </code></pre></div>
+datasets<span class="o">$</span>title 
+  <span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="s">&#34;List of Sports Federation in Mauritius&#34;</span>                                                                                           
+  <span class="p">[</span><span class="m">2</span><span class="p">]</span> <span class="s">&#34;List of Secondary Schools in Rodrigues&#34;</span>                                                                                           
+  <span class="p">[</span><span class="m">3</span><span class="p">]</span> <span class="s">&#34;List of Primary Schools in Rodrigues&#34;</span>                                                                                             
+  <span class="p">[</span><span class="m">4</span><span class="p">]</span> <span class="s">&#34;List of Primary Schools in Mauritius&#34;</span>                                                                                             
+  <span class="p">[</span><span class="m">5</span><span class="p">]</span> <span class="s">&#34;List of Secondary Schools in Mauritius&#34;</span>                                                                                           
+  <span class="p">[</span><span class="m">6</span><span class="p">]</span> <span class="s">&#34;List of Youth Centres in Mauritius&#34;</span>                                                                                               
+  <span class="p">[</span><span class="m">7</span><span class="p">]</span> <span class="s">&#34;List of Police Stations in Mauritius&#34;</span>                                                                                             
+  <span class="p">[</span><span class="m">8</span><span class="p">]</span> <span class="s">&#34;Primary Enrolment and Gross Enrolment Ratio1 by sex, Island of Mauritius&#34;</span>                                                         
+  <span class="p">[</span><span class="m">9</span><span class="p">]</span> <span class="s">&#34;Number of primary schools, pupils, personnel and pupil/teacher ratio, Republic of Mauritius, 1967 - 2016\t\t&#34;</span>                     
+ <span class="p">[</span><span class="m">10</span><span class="p">]</span> <span class="s">&#34;Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex&#34;</span>                                                        
+ <span class="p">[</span><span class="m">11</span><span class="p">]</span> <span class="s">&#34;New Admissions on Tertiary Education Level Programmes by source&#34;</span>                                                                  
+ <span class="p">[</span><span class="m">12</span><span class="p">]</span> <span class="s">&#34;Gross Tertiary Enrolment Rate (GTER) in Tertiary Education by sex, 2000 - 2015&#34;</span>                                                   
+ <span class="p">[</span><span class="m">13</span><span class="p">]</span> <span class="s">&#34;Enrolment of International Students in Tertiary Education locally by sex&#34;</span>                                                         
+ <span class="p">[</span><span class="m">14</span><span class="p">]</span> <span class="s">&#34;Enrolment in Special Education needs in schools - Island of Mauritius, Island of Rodrigues &amp; Republic of Mauritius, 2010 - 2016&#34;</span>  
+<span class="kc">...</span> truncated</code></pre></div>
 <h2 id="exploring-a-particular-dataset">Exploring a particular dataset</h2>
 
 <p>Once you have identified a particular dataset you are interested in exploring, you can display it&rsquo;s relevant metadata. The datasets are identified by the <code>node ID</code>.</p>
@@ -342,7 +357,7 @@ resource_data <span class="o">&lt;-</span> read.csv2<span class="p">(</span>reso
 plot<span class="p">(</span>resource_data<span class="o">$</span>Year<span class="p">,</span>resource_data<span class="o">$</span>Number.of.Mauritian.Students.Pursuing.Tertiary.Education..Overseas.Total<span class="p">,</span> type <span class="o">=</span> <span class="s">&#34;o&#34;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#34;Year&#34;</span><span class="p">,</span> ylab <span class="o">=</span> <span class="s">&#34;Total number of students&#34;</span><span class="p">)</span>
 
 <span class="c1">#give the chart a title</span>
-title<span class="p">(</span>main <span class="o">=</span> <span class="s">&#34;Number of Mauritian Students(Both Sex)\nPursuing Tertiary Education Overseas, 2000-2015&#34;</span><span class="p">)</span></code></pre></div>
+title<span class="p">(</span>main <span class="o">=</span> <span class="s">&#34;Number of Mauritian Students(Both Sexes)\nPursuing Tertiary Education Overseas, 2000-2015&#34;</span><span class="p">)</span></code></pre></div>
 <div align="center">
 <p><img src="/img/opendata-dkanr/opendata-dkanr.png" alt="line chart visualisation"></p> 
  </div>
