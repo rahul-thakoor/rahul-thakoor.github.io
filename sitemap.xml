@@ -43,7 +43,7 @@
   
   <url>
     <loc>https://rahul-thakoor.github.io/categories/blog/</loc>
-    <lastmod>2018-05-01T22:44:18+04:00</lastmod>
+    <lastmod>2018-05-07T15:02:31+04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -55,7 +55,7 @@
   
   <url>
     <loc>https://rahul-thakoor.github.io/categories/</loc>
-    <lastmod>2018-05-01T22:44:18+04:00</lastmod>
+    <lastmod>2018-05-07T15:02:31+04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -68,6 +68,12 @@
   <url>
     <loc>https://rahul-thakoor.github.io/tags/diy/</loc>
     <lastmod>2017-06-25T08:12:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/tags/dkan/</loc>
+    <lastmod>2018-05-07T15:02:31+04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -136,6 +142,12 @@
   </url>
   
   <url>
+    <loc>https://rahul-thakoor.github.io/tags/opendata/</loc>
+    <lastmod>2018-05-07T15:02:31+04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://rahul-thakoor.github.io/page/</loc>
     <priority>0</priority>
   </url>
@@ -149,6 +161,12 @@
   <url>
     <loc>https://rahul-thakoor.github.io/categories/project/</loc>
     <lastmod>2017-01-23T22:10:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rahul-thakoor.github.io/tags/r/</loc>
+    <lastmod>2018-05-07T15:02:31+04:00</lastmod>
     <priority>0</priority>
   </url>
   
