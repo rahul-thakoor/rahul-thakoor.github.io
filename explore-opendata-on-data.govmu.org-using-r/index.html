@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Explore OpenData on data.govmu.org using R</title>
+  <meta property="og:title" content="Explore OpenData on data.govmu.org using R" />
+  <meta name="twitter:title" content="Explore OpenData on data.govmu.org using R" />
+  <meta name="description" content="The National Computer Board(NCB) of Mauritius recently announced the Open Data Mauritius portal1. It contains 100 datasets on topics such as Agriculture, Crime, Justice and Security, Health and Tourism. The portal is powered by the DKAN Open Data Platform2, which is a community-driven, free and open source open data platform that gives organizations and individuals ultimate freedom to publish and consume structured information.
+DKAN includes a number of APIs3 to allow it to communicate with external applications.">
+  <meta property="og:description" content="The National Computer Board(NCB) of Mauritius recently announced the Open Data Mauritius portal1. It contains 100 datasets on topics such as Agriculture, Crime, Justice and Security, Health and Tourism. The portal is powered by the DKAN Open Data Platform2, which is a community-driven, free and open source open data platform that gives organizations and individuals ultimate freedom to publish and consume structured information.
+DKAN includes a number of APIs3 to allow it to communicate with external applications.">
+  <meta name="twitter:description" content="The National Computer Board(NCB) of Mauritius recently announced the Open Data Mauritius portal1. It contains 100 datasets on topics such as Agriculture, Crime, Justice and Security, Health and …">
+  <meta name="author" content="Rahul Thakoor"/>
+  <link href='https://rahul-thakoor.github.io/img/favicon_r.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://rahul-thakoor.github.io/img/profile.png" />
+  <meta name="twitter:image" content="https://rahul-thakoor.github.io/img/profile.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@rahulthakoor" />
+  <meta name="twitter:creator" content="@rahulthakoor" />
+  <meta property="og:url" content="https://rahul-thakoor.github.io/explore-opendata-on-data.govmu.org-using-r/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="rahul thakoor" />
+
+  <meta name="generator" content="Hugo 0.37.1" />
+  <link rel="canonical" href="https://rahul-thakoor.github.io/explore-opendata-on-data.govmu.org-using-r/" />
+  <link rel="alternate" href="https://rahul-thakoor.github.io/index.xml" type="application/rss+xml" title="rahul thakoor">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://rahul-thakoor.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://rahul-thakoor.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://rahul-thakoor.github.io/css/codeblock.css" />
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-118403602-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://rahul-thakoor.github.io">rahul thakoor</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Home" href="/">Home</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">Projects</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/nodebotsmu">Nodebots Mauritius</a>
+                
+                  <a href="/page/rust_gpiozero">rust_gpiozero</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Explore OpenData on data.govmu.org using R</h1>
+                
+
+              
+                
+                
+                  <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on May 7, 2018
+  
+  
+  &nbsp;|&nbsp;
+  <i class="fa fa-clock-o"></i> 5 minutes (948 words)
+  
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p>The National Computer Board(NCB) of Mauritius recently announced the Open Data Mauritius portal<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>. It contains 100 datasets on topics such as Agriculture, Crime, Justice and Security, Health and Tourism. The portal is powered by the DKAN Open Data Platform<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>, which is a community-driven, free and open source open data platform that gives organizations and individuals ultimate freedom to publish and consume structured information.</p>
+
+<p>DKAN includes a number of APIs<sup class="footnote-ref" id="fnref:3"><a href="#fn:3">3</a></sup> to allow it to communicate with external applications. In this guide we are going to use the <code>dkanr</code><sup class="footnote-ref" id="fnref:4"><a href="#fn:4">4</a></sup> package, which is an R client for the DKAN REST API, to explore data on Open Data platforms powered by DKAN.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ol>
+<li><a href="http://cran.stat.ucla.edu/">R</a>  installed on your machine</li>
+<li>Basic command of the R programming language.
+<a href="https://www.statmethods.net/r-tutorial/index.html">Here&rsquo;s</a> a great primer for R.</li>
+</ol>
+
+<h2 id="installing-necessary-packages">Installing necessary packages</h2>
+
+<p>We will use the <code>purrr</code>, <code>dplyr</code> , <code>stringr</code> and <code>dkanr</code> packages. Install them by using the following command in the console:</p>
+<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R">install.packages<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&#34;purrr&#34;</span><span class="p">,</span><span class="s">&#34;dplyr&#34;</span><span class="p">,</span><span class="s">&#34;dkanr&#34;</span><span class="p">,</span><span class="s">&#34;stringr&#34;</span><span class="p">))</span></code></pre></div>
+<h2 id="setup-and-establish-connection-with-data-govmu-org">Setup and Establish connection with data.govmu.org</h2>
+
+<p>First import the necessary libraries and then set up a connection without using authentication.</p>
+<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1">#use libraries</span>
+<span class="kn">library</span><span class="p">(</span>purrr<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>dplyr<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>dkanr<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>stringr<span class="p">)</span>
+
+<span class="c1">#setup dkanr to use data.govmu.org</span>
+dkanr_setup<span class="p">(</span>url <span class="o">=</span> <span class="s">&#39;https://data.govmu.org/dkan/&#39;</span><span class="p">)</span>
+
+<span class="c1">#confirm connection</span>
+dkanr_settings<span class="p">()</span></code></pre></div>
+<p>The `dkanr_settings() function should output the following:</p>
+<div class="highlight"><pre class="chroma">&lt;dkanr settings&gt;
+  Base URL:  https://data.govmu.org/dkan/ 
+  Cookie:  
+  Token:  </pre></div>
+<h2 id="explore-all-datasets">Explore all datasets</h2>
+
+<p>After establishing connection with the open data platform, we can start explopring. First, let&rsquo;s get all the datasets:</p>
+<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1">#load datasets</span>
+datasets <span class="o">&lt;-</span> list_nodes_all<span class="p">(</span>filters <span class="o">=</span> <span class="kt">c</span><span class="p">(</span>type<span class="o">=</span><span class="s">&#34;dataset&#34;</span><span class="p">))</span>
+
+<span class="c1">#view a snapshot</span>
+datasets</code></pre></div>
+<p>Viewing the datasets gives the following output</p>
+<div class="highlight"><pre class="chroma"># A tibble: 100 x 16
+   nid   vid   type   language title      uid   status created changed comment
+ * &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  
+ 1 523   1026  datas~ und      List of S~ 5     1      152445~ 152446~ 0      
+ 2 519   1021  datas~ und      List of S~ 5     1      152445~ 152445~ 0      
+ 3 516   1017  datas~ und      List of P~ 5     1      152445~ 152445~ 0      
+ 4 513   1027  datas~ und      List of P~ 5     1      152436~ 152446~ 0      
+ 5 510   1063  datas~ und      List of S~ 5     1      152436~ 152482~ 0      
+ 6 507   1062  datas~ und      List of Y~ 5     1      152429~ 152482~ 0      
+ 7 504   978   datas~ und      List of P~ 5     1      152429~ 152429~ 0      
+ 8 501   969   datas~ und      Primary E~ 6     1      152422~ 152423~ 0      
+ 9 498   967   datas~ und      &#34;Number o~ 6     1      152422~ 152423~ 0      
+10 495   965   datas~ und      Number of~ 6     1      152422~ 152423~ 0      
+# ... with 90 more rows, and 6 more variables: promote &lt;chr&gt;, sticky &lt;chr&gt;,
+#   tnid &lt;chr&gt;, translate &lt;chr&gt;, uuid &lt;chr&gt;, uri &lt;chr&gt;</pre></div>
+<p>We can see there are 100 entries (100 datasets) with 16 metadata fields. Use the following command to display dataset with relevant metadata:</p>
+<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1">#show attributes available</span>
+<span class="kp">names</span><span class="p">(</span>datasets<span class="p">)</span>
+
+<span class="c1">#show all titles available</span>
+datasets<span class="o">$</span>title </code></pre></div>
+<h2 id="exploring-a-particular-dataset">Exploring a particular dataset</h2>
+
+<p>Once you have identified a particular dataset you are interested in exploring, you can display it&rsquo;s relevant metadata. The datasets are identified by the <code>node ID</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1">#find datasets which contain a particular string in title</span>
+
+<span class="c1">#prints rows containing word &#34;Education&#34; in title</span>
+datasets <span class="o">%&gt;%</span>
+     filter<span class="p">(</span>str_detect<span class="p">(</span>title<span class="p">,</span><span class="s">&#34;Education&#34;</span><span class="p">))</span> <span class="o">%&gt;%</span>
+     select<span class="p">(</span>nid<span class="p">,</span>title<span class="p">)</span></code></pre></div>
+<p>After identifying the <code>nid</code>, you can retrieve the metadata of the particular dataset. For instance, for the dataset &ldquo;Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex&rdquo;, the <strong>dataset</strong> <code>nid</code> is 495:</p>
+<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1">#retrieve metadata for the dataset</span>
+metadata <span class="o">&lt;-</span> retrieve_node<span class="p">(</span>nid <span class="o">=</span><span class="s">&#39;495&#39;</span><span class="p">,</span> as <span class="o">=</span> <span class="s">&#39;list&#39;</span><span class="p">)</span>
+
+<span class="c1">#display all attributes available</span>
+<span class="kp">names</span><span class="p">(</span>metadata<span class="p">)</span></code></pre></div>
+<h2 id="explore-a-specific-resource">Explore a specific resource</h2>
+
+<p>Several resources can be associated with a particular dataset. You can list the resources available with the particular dataset, then use the <strong>resource</strong> <code>nid</code> to retrieve metadata of the particular resource.</p>
+<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1">#show resources associated with dataset</span>
+get_resource_nids<span class="p">(</span>metadata<span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1">#two resources are available for the dataset</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="s">&#34;496&#34;</span> <span class="s">&#34;497&#34;</span>
+
+<span class="c1">#get resources metadata</span>
+resource <span class="o">&lt;-</span> retrieve_node<span class="p">(</span>nid <span class="o">=</span><span class="s">&#39;496&#39;</span><span class="p">,</span> as <span class="o">=</span> <span class="s">&#39;list&#39;</span><span class="p">)</span>
+resource2 <span class="o">&lt;-</span> retrieve_node<span class="p">(</span>nid <span class="o">=</span><span class="s">&#39;497&#39;</span><span class="p">,</span> as <span class="o">=</span> <span class="s">&#39;list&#39;</span><span class="p">)</span>
+
+<span class="c1">#show </span>
+resource
+ <span class="o">&lt;</span>DKAN Node<span class="o">&gt;</span> <span class="c1">#496 </span>
+  Type<span class="o">:</span> resource
+  Title<span class="o">:</span> DATA<span class="o">-</span>Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex<span class="p">,</span> <span class="m">2000</span> <span class="o">-</span> <span class="m">2015</span>
+  UUID<span class="o">:</span> <span class="m">1</span>df7bd18<span class="o">-</span>fa9c<span class="m">-440</span><span class="kt">c</span><span class="m">-94</span>a6<span class="o">-</span>e1087497f6ef
+  Created<span class="o">/</span>Modified<span class="o">:</span> <span class="m">1524222774</span> <span class="o">/</span> <span class="m">1524222774</span>
+
+resource2
+<span class="o">&lt;</span>DKAN Node<span class="o">&gt;</span> <span class="c1">#497 </span>
+  Type<span class="o">:</span> resource
+  Title<span class="o">:</span> METADATA <span class="o">-</span> Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex<span class="p">,</span> <span class="m">2000</span> <span class="o">-</span> <span class="m">2015</span>
+  UUID<span class="o">:</span> b94db7c8<span class="o">-</span>a487<span class="m">-46</span>b4<span class="o">-</span>ac98<span class="m">-6</span>dff6253ff10
+  Created<span class="o">/</span>Modified<span class="o">:</span> <span class="m">1524222788</span> <span class="o">/</span> <span class="m">1524222788</span></code></pre></div>
+<p>Once we have the required resources, we can download the data. We are interested in resource <code>#496</code>, &ldquo;DATA-Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex, 2000 - 2015&rdquo;.</p>
+
+<p>Data can be downloaded either using the resource url or via the DKAN Datastore API.</p>
+<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1">#check if data required is available in datastore</span>
+ds_is_available<span class="p">(</span>resource<span class="p">)</span>
+
+<span class="c1">## [1] FALSE</span></code></pre></div>
+<p>Unfortunately, the requested resource is not available in the DKAN datastore. We proceed by downloading the resource using the url.</p>
+<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1">#retrieve the resource url from the resource metadata</span>
+resource_url <span class="o">&lt;-</span> get_resource_url<span class="p">(</span>resource<span class="p">)</span>
+
+<span class="c1">##[1] &#34;https://data.govmu.org/dkan//sites//default//files//DATA-Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex, 2000 - 2015.csv&#34;</span></code></pre></div>
+<p>The <code>resource_url</code> is a string and needs to be encoded to a URL. You can then use the <code>read.csv2</code> function to load the data from the url.</p>
+<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1">#encode url</span>
+resource_url_encoded <span class="o">&lt;-</span> URLencode<span class="p">(</span>resource_url<span class="p">)</span>
+
+<span class="c1"># &#34;https://data.govmu.org/dkan//sites//default//files//DATA-Number%20of%20Mauritian%20Students%20Pursuing%20%20Tertiary%20Education%20Overseas%20by%20sex,%202000%20-%202015.csv&#34;</span>
+
+<span class="c1">#load data</span>
+resource_data <span class="o">&lt;-</span> read.csv2<span class="p">(</span>resource_url_encoded<span class="p">,</span>sep<span class="o">=</span><span class="s">&#39;,&#39;</span><span class="p">,</span>header <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+
+<span class="c1">#show first 10 rows</span>
+<span class="kp">head</span><span class="p">(</span>resource_data<span class="p">,</span><span class="m">10</span><span class="p">)</span></code></pre></div>
+<h2 id="play-with-data">Play with data</h2>
+
+<p>After downloading the data, you can start exploring it.</p>
+<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="kp">mean</span><span class="p">(</span>resource_data<span class="o">$</span>Number.of.Mauritian.Students.Pursuing.Tertiary.Education..Overseas.Male<span class="p">)</span>
+
+<span class="kp">max</span><span class="p">(</span>resource_data<span class="o">$</span>Number.of.Mauritian.Students.Pursuing.Tertiary.Education..Overseas.Total<span class="p">)</span></code></pre></div>
+<p>You can use the <code>plot()</code> function to draw charts. For the above resource, you can plot a line chart with &ldquo;Year&rdquo; as x-axis and &ldquo;Total number of Students(both sex)&rdquo; as y-axis.</p>
+<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1">#plot a line chart</span>
+
+plot<span class="p">(</span>resource_data<span class="o">$</span>Year<span class="p">,</span>resource_data<span class="o">$</span>Number.of.Mauritian.Students.Pursuing.Tertiary.Education..Overseas.Total<span class="p">,</span> type <span class="o">=</span> <span class="s">&#34;o&#34;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#34;Year&#34;</span><span class="p">,</span> ylab <span class="o">=</span> <span class="s">&#34;Total number of students&#34;</span><span class="p">)</span>
+
+<span class="c1">#give the chart a title</span>
+title<span class="p">(</span>main <span class="o">=</span> <span class="s">&#34;Number of Mauritian Students(Both Sex)\nPursuing Tertiary Education Overseas, 2000-2015&#34;</span><span class="p">)</span></code></pre></div>
+<div align="center">
+<p><img src="/img/opendata-dkanr/opendata-dkanr.png" alt="line chart visualisation"></p> 
+ </div>
+
+<h2 id="wrap-up">Wrap up</h2>
+
+<p>Data from Open Data Mauritius portal can be loaded directly into R using the <code>dkanr</code> package. You can manipulate, visualise or analyse the data. The possibilities are endless.</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1"><a href="https://data.govmu.org/dkan/">Open Data Mauritius</a>
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2"><a href="https://getdkan.org/">DKAN Open Data Platform</a>
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+<li id="fn:3"><a href="https://docs.getdkan.com/en/latest/apis/index.html">DKAN API Guide</a>
+ <a class="footnote-return" href="#fnref:3"><sup>[return]</sup></a></li>
+<li id="fn:4"><a href="https://cran.r-project.org/web/packages/dkanr/vignettes/getting_started_with_dkanr.html">Getting Started with <code>dkanr</code></a>
+ <a class="footnote-return" href="#fnref:4"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+
+        
+
+        
+
+      <section>
+        <hr/>
+      <p>Enjoyed this post?</p> Consider supporting me on
+      <a href="https://paypal.me/rahulthakoor" title="PayPal">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-paypal fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    
+      <p>Follow me on 
+          <a href="https://twitter.com/rahulthakoor" title="PayPal">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+            </span>
+          </a></p>
+    
+    
+        </section>
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://rahul-thakoor.github.io/an-i2c-rust-driver-for-mma7660fc-based-3-axis-digital-accelerometer/" data-toggle="tooltip" data-placement="top" title="An I2C Rust driver for mma7660fc-based 3-Axis Digital Accelerometer">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:rahul.thakoor@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/rahul-thakoor" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/rahulthakoor" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/rahul-thakoor-a50706138" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://paypal.me/rahulthakoor" title="PayPal">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-paypal fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Rahul Thakoor
+            
+          
+
+          &nbsp;&bull;&nbsp;
+          2018
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://rahul-thakoor.github.io">rahul thakoor</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.37.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://rahul-thakoor.github.io/js/main.js"></script>
+<script src="https://rahul-thakoor.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+<script src="https://rahul-thakoor.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
+
