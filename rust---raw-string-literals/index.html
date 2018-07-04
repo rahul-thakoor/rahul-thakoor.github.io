@@ -5,12 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>rust_gpiozero</title>
-  <meta property="og:title" content="rust_gpiozero" />
-  <meta name="twitter:title" content="rust_gpiozero" />
-  <meta name="description" content="A simple interface to GPIO devices with Raspberry Pi.">
-  <meta property="og:description" content="A simple interface to GPIO devices with Raspberry Pi.">
-  <meta name="twitter:description" content="A simple interface to GPIO devices with Raspberry Pi.">
+  <title>Rust - Raw string literals</title>
+  <meta property="og:title" content="Rust - Raw string literals" />
+  <meta name="twitter:title" content="Rust - Raw string literals" />
+  <meta name="description" content="r#&#34;What is this?&#34;#">
+  <meta property="og:description" content="r#&#34;What is this?&#34;#">
+  <meta name="twitter:description" content="r#&#34;What is this?&#34;#">
   <meta name="author" content="Rahul Thakoor"/>
   <link href='https://rahul-thakoor.github.io/img/favicon_r.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://rahul-thakoor.github.io/img/profile.png" />
@@ -18,12 +18,12 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@rahulthakoor" />
   <meta name="twitter:creator" content="@rahulthakoor" />
-  <meta property="og:url" content="https://rahul-thakoor.github.io/page/rust_gpiozero/" />
+  <meta property="og:url" content="https://rahul-thakoor.github.io/rust---raw-string-literals/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="rahul thakoor" />
 
   <meta name="generator" content="Hugo 0.37.1" />
-  <link rel="canonical" href="https://rahul-thakoor.github.io/page/rust_gpiozero/" />
+  <link rel="canonical" href="https://rahul-thakoor.github.io/rust---raw-string-literals/" />
   <link rel="alternate" href="https://rahul-thakoor.github.io/index.xml" type="application/rss+xml" title="rahul thakoor">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -165,14 +165,27 @@ ga('send', 'pageview');
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="page-heading">
-              <h1>rust_gpiozero</h1>
+            <div class="post-heading">
+              <h1>Rust - Raw string literals</h1>
                 
                   
-                    <hr class="small">
-                    <span class="page-subheading">A simple interface to GPIO devices with Raspberry Pi.</span>
+                    <h2 class="post-subheading">r#&#34;What is this?&#34;#</h2>
                   
                 
+                
+                  <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on June 29, 2018
+  
+  
+  &nbsp;|&nbsp;
+  <i class="fa fa-clock-o"></i> 2 minutes (396 words)
+  
+  
+</span>
+
+
                 
             </div>
           </div>
@@ -189,68 +202,89 @@ ga('send', 'pageview');
       <article role="main" class="blog-post">
         
 
-<p>This library is based on <a href="https://gpiozero.readthedocs.io/en/stable/index.html">GPIOZero</a>
-library.</p>
+<p>While working with Rust, you will often come across <code>r#&quot;something like this&quot;#</code>, especially when working with <code>JSON</code> and <code>TOML</code> files. It defines a <strong>raw string literal</strong>. When would you use a raw string literal and what makes a valid raw string literal?</p>
 
-<p><em>Note: This is a work in progress. The library will eventually support <code>embedded-hal</code> based drivers</em></p>
+<h2 id="when-would-you-use-a-raw-string-literal">When would you use a raw string literal?</h2>
 
-<p>The idea is to get started with physical computing using Rust with little coding
-by hiding the underlying complexity.</p>
+<p>First, let&rsquo;s understand what a string literal is. According to the The Rust Reference<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>, <em>A string literal is a sequence of any Unicode characters enclosed within two U+0022 (double-quote) characters, with the exception of U+0022 itself<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>.</em> Escape characters in the string literal body <strong>are</strong> processed. The string body cannot contain a double-quote. If you need to insert one, you have to escape it like this: <code>\&quot;</code>.</p>
 
-<p>The library uses <a href="https://pinout.xyz/">BCM Pin numbering</a></p>
+<p>Escaping double-quotes can be cumbersome in some cases such as writing regular expressions or defining a JSON object as a string literal. In these situations, <strong>raw string literals</strong> are helpful since they allow you to write the literal without requiring escapes.</p>
 
-<h3 id="example-blinking-an-led">Example : Blinking an LED</h3>
-<div class="highlight"><pre class="chroma"><code class="language-rust" data-lang="rust"><span class="k">extern</span><span class="w"> </span><span class="k">crate</span><span class="w"> </span><span class="n">rust_gpiozero</span><span class="p">;</span><span class="w">
-</span><span class="w"></span><span class="k">use</span><span class="w"> </span><span class="n">rust_gpiozero</span>::<span class="o">*</span><span class="p">;</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="c1">// Create a new LED attached to Pin 17
-</span><span class="c1"></span><span class="w">
-</span><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">led</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LED</span>::<span class="n">new</span><span class="p">(</span><span class="mi">17</span><span class="p">);</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="c1">// blink the LED
-</span><span class="c1">// on_time: 2 seconds and off_time: 3 seconds
-</span><span class="c1"></span><span class="w">
-</span><span class="w"></span><span class="n">led</span><span class="p">.</span><span class="n">blink</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="p">}</span></code></pre></div>
-<h3 id="example-wait-for-a-button-press">Example : Wait for a Button Press</h3>
-<div class="highlight"><pre class="chroma"><code class="language-rust" data-lang="rust"><span class="k">extern</span><span class="w"> </span><span class="k">crate</span><span class="w"> </span><span class="n">rust_gpiozero</span><span class="p">;</span><span class="w">
-</span><span class="w"></span><span class="k">use</span><span class="w"> </span><span class="n">rust_gpiozero</span>::<span class="o">*</span><span class="p">;</span><span class="w">
-</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">    </span><span class="c1">// Create a button which is attached to Pin 17
-</span><span class="c1"></span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Button</span>::<span class="n">new</span><span class="p">(</span><span class="mi">17</span><span class="p">);</span><span class="w">
-</span><span class="w">    </span><span class="n">button</span><span class="p">.</span><span class="n">wait_for_press</span><span class="p">();</span><span class="w">
-</span><span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;button pressed&#34;</span><span class="p">);</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="p">}</span></code></pre></div>
-<p>Compare this to using the crate <code>sysfs_gpio</code> to blink an LED on the Raspberry Pi :</p>
-<div class="highlight"><pre class="chroma"><code class="language-rust" data-lang="rust"><span class="k">extern</span><span class="w"> </span><span class="k">crate</span><span class="w"> </span><span class="n">sysfs_gpio</span><span class="p">;</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="k">use</span><span class="w"> </span><span class="n">sysfs_gpio</span>::<span class="p">{</span><span class="n">Direction</span><span class="p">,</span><span class="w"> </span><span class="n">Pin</span><span class="p">};</span><span class="w">
-</span><span class="w"></span><span class="k">use</span><span class="w"> </span><span class="n">std</span>::<span class="n">thread</span>::<span class="n">sleep</span><span class="p">;</span><span class="w">
-</span><span class="w"></span><span class="k">use</span><span class="w"> </span><span class="n">std</span>::<span class="n">time</span>::<span class="n">Duration</span><span class="p">;</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">my_led</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Pin</span>::<span class="n">new</span><span class="p">(</span><span class="mi">127</span><span class="p">);</span><span class="w"> </span><span class="c1">// number depends on chip, etc.
-</span><span class="c1"></span><span class="w">    </span><span class="n">my_led</span><span class="p">.</span><span class="n">with_exported</span><span class="p">(</span><span class="o">||</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">        </span><span class="k">loop</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">            </span><span class="n">my_led</span><span class="p">.</span><span class="n">set_value</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span><span class="w">
-</span><span class="w">            </span><span class="n">sleep</span><span class="p">(</span><span class="n">Duration</span>::<span class="n">from_millis</span><span class="p">(</span><span class="mi">200</span><span class="p">));</span><span class="w">
-</span><span class="w">            </span><span class="n">my_led</span><span class="p">.</span><span class="n">set_value</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span><span class="w">
-</span><span class="w">            </span><span class="n">sleep</span><span class="p">(</span><span class="n">Duration</span>::<span class="n">from_millis</span><span class="p">(</span><span class="mi">200</span><span class="p">));</span><span class="w">
-</span><span class="w">        </span><span class="p">}</span><span class="w">
-</span><span class="w">    </span><span class="p">}).</span><span class="n">unwrap</span><span class="p">();</span><span class="w">
-</span><span class="w"></span><span class="p">}</span></code></pre></div>
+<p>Here is a snippet from the <code>toml</code><sup class="footnote-ref" id="fnref:4"><a href="#fn:4">3</a></sup> crate:
+<script src="https://gist.github.com/rahul-thakoor/4c158ef09016973bcc6176c04678e30a.js"></script></p>
 
+<p>Or another from <code>serde-rs</code><sup class="footnote-ref" id="fnref:5"><a href="#fn:5">4</a></sup>:
+<script src="https://gist.github.com/rahul-thakoor/449ea0438a8f6eee39edad0a97204ed9.js"></script></p>
+
+<p>So, raw string literals are helpful, but what makes a valid one?</p>
+
+<h2 id="what-makes-a-raw-string-literal">What makes a raw string literal?</h2>
+
+<p>The Rust Reference defines a raw string literal as starting  <em>with the character U+0072 (r), followed by zero or more of the character U+0023 (#) and a U+0022 (double-quote) character. The raw string body can contain any sequence of Unicode characters and is terminated only by another U+0022 (double-quote) character, followed by the same number of U+0023 (#) characters that preceded the opening U+0022 (double-quote) character.</em><sup class="footnote-ref" id="fnref:3"><a href="#fn:3">5</a></sup></p>
+
+<p>Escape characters in the raw string body are <strong>not</strong> processed.</p>
+
+<p>Therefore the following raw string literals are all valid:</p>
+
+<script src="https://gist.github.com/rahul-thakoor/f07fe1a2603fb07a12ca572e639c9328.js"></script>
+
+<p><a href="https://play.rust-lang.org/?gist=f07fe1a2603fb07a12ca572e639c9328" target="_blank">Try it on playpen</a></p>
+
+<p>If you need to include double-quote character in a raw string, you must tag the start and end of the raw string with hash/pound signs(<code>#</code>).</p>
+
+<script src="https://gist.github.com/rahul-thakoor/3e109456fcdd387c6789c0d3ada68194.js"></script>
+
+<p><a href="https://play.rust-lang.org/?gist=3e109456fcdd387c6789c0d3ada68194" target="_blank">Try it on playpen</a></p>
+
+<p>The raw string body can contain any sequence of UNICODE characters except <code>&quot;#</code> since it would terminate the literal. If you want to include the particular sequence, you have to change the number of <code>#</code> that precede the opening double-quote. For instance:</p>
+
+<p><script src="https://gist.github.com/rahul-thakoor/2dc72c16c57c4fd594bb648bd30452a4.js"></script>
+<a href="https://play.rust-lang.org/?gist=2dc72c16c57c4fd594bb648bd30452a4" target="_blank">Try it on playpen</a></p>
+
+<p>Likewise, if <code>&quot;##</code> is to be included, you can add another <code>#</code> to the starting and ending delimiters.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>This article briefly covers what raw string literals are and what makes valid raw string literals.</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1"><a href="https://doc.rust-lang.org/stable/reference/">https://doc.rust-lang.org/stable/reference/</a>
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2"><a href="https://doc.rust-lang.org/stable/reference/tokens.html#string-literals">https://doc.rust-lang.org/stable/reference/tokens.html#string-literals</a>
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+<li id="fn:4"><a href="https://github.com/alexcrichton/toml-rs/blob/master/examples/decode.rs">https://github.com/alexcrichton/toml-rs/blob/master/examples/decode.rs</a>
+ <a class="footnote-return" href="#fnref:4"><sup>[return]</sup></a></li>
+<li id="fn:5"><a href="https://github.com/serde-rs/json">https://github.com/serde-rs/json</a>
+ <a class="footnote-return" href="#fnref:5"><sup>[return]</sup></a></li>
+<li id="fn:3"><a href="https://doc.rust-lang.org/stable/reference/tokens.html#raw-string-literals">https://doc.rust-lang.org/stable/reference/tokens.html#raw-string-literals</a>
+ <a class="footnote-return" href="#fnref:3"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://rahul-thakoor.github.io/tags/rust/">rust</a>&nbsp;
+            
+          </div>
         
 
         
       </article>
 
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://rahul-thakoor.github.io/explore-opendata-on-data.govmu.org-using-r/" data-toggle="tooltip" data-placement="top" title="Explore OpenData on data.govmu.org using R">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
       
 
 

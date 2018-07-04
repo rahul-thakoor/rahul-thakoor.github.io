@@ -8,10 +8,20 @@
     <language>en-us</language>
     <managingEditor>rahul.thakoor@gmail.com (Rahul Thakoor)</managingEditor>
     <webMaster>rahul.thakoor@gmail.com (Rahul Thakoor)</webMaster>
-    <lastBuildDate>Mon, 07 May 2018 15:02:31 +0400</lastBuildDate>
+    <lastBuildDate>Fri, 29 Jun 2018 22:45:43 +0400</lastBuildDate>
     
 	<atom:link href="https://rahul-thakoor.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Rust - Raw string literals</title>
+      <link>https://rahul-thakoor.github.io/rust---raw-string-literals/</link>
+      <pubDate>Fri, 29 Jun 2018 22:45:43 +0400</pubDate>
+      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      <guid>https://rahul-thakoor.github.io/rust---raw-string-literals/</guid>
+      <description>While working with Rust, you will often come across r#&amp;quot;something like this&amp;quot;#, especially when working with JSON and TOML files. It defines a raw string literal. When would you use a raw string literal and what makes a valid raw string literal?
+When would you use a raw string literal? First, let&amp;rsquo;s understand what a string literal is. According to the The Rust Reference1, A string literal is a sequence of any Unicode characters enclosed within two U+0022 (double-quote) characters, with the exception of U+0022 itself2.</description>
+    </item>
     
     <item>
       <title>Explore OpenData on data.govmu.org using R</title>

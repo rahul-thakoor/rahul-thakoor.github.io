@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rahul-thakoor.github.io/rust---raw-string-literals/</loc>
+    <lastmod>2018-06-29T22:45:43+04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rahul-thakoor.github.io/explore-opendata-on-data.govmu.org-using-r/</loc>
     <lastmod>2018-05-07T15:02:31+04:00</lastmod>
   </url>
@@ -154,7 +159,7 @@
   
   <url>
     <loc>https://rahul-thakoor.github.io/post/</loc>
-    <lastmod>2018-05-07T15:02:31+04:00</lastmod>
+    <lastmod>2018-06-29T22:45:43+04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -172,7 +177,7 @@
   
   <url>
     <loc>https://rahul-thakoor.github.io/tags/rust/</loc>
-    <lastmod>2018-05-01T22:44:18+04:00</lastmod>
+    <lastmod>2018-06-29T22:45:43+04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -184,7 +189,7 @@
   
   <url>
     <loc>https://rahul-thakoor.github.io/</loc>
-    <lastmod>2018-05-07T15:02:31+04:00</lastmod>
+    <lastmod>2018-06-29T22:45:43+04:00</lastmod>
     <priority>0</priority>
   </url>
   
