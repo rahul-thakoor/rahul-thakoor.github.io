@@ -8,10 +8,20 @@
     <language>en-us</language>
     <managingEditor>rahul.thakoor@gmail.com (Rahul Thakoor)</managingEditor>
     <webMaster>rahul.thakoor@gmail.com (Rahul Thakoor)</webMaster>
-    <lastBuildDate>Fri, 29 Jun 2018 22:45:43 +0400</lastBuildDate>
+    <lastBuildDate>Sat, 07 Jul 2018 23:06:32 +0400</lastBuildDate>
     
 	<atom:link href="https://rahul-thakoor.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Physical Computing With Rust On Raspberry Pi</title>
+      <link>https://rahul-thakoor.github.io/physical-computing-with-rust-on-raspberry-pi/</link>
+      <pubDate>Sat, 07 Jul 2018 23:06:32 +0400</pubDate>
+      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      <guid>https://rahul-thakoor.github.io/physical-computing-with-rust-on-raspberry-pi/</guid>
+      <description>A couple of months ago I released the rust_gpiozero1 crate. It is a port of the GPIO Zero2 library by the Raspberry Pi Foundation. The library provides a simple interface to control GPIO devices with a Raspberry Pi. I recently ported the Raspberry Pi Foundation&amp;rsquo;s &amp;ldquo;Physical Computing with Python&amp;rdquo;3 guide for Rust.
+Why did I create the rust_gpiozero crate? After going through &amp;ldquo;The Rust Programming language&amp;rdquo; book, I decided to work on a side project to practice some of the concepts.</description>
+    </item>
     
     <item>
       <title>Rust: Raw string literals</title>

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rahul-thakoor.github.io/physical-computing-with-rust-on-raspberry-pi/</loc>
+    <lastmod>2018-07-07T23:06:32+04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rahul-thakoor.github.io/rust-raw-string-literals/</loc>
     <lastmod>2018-06-29T22:45:43+04:00</lastmod>
   </url>
@@ -159,7 +164,7 @@
   
   <url>
     <loc>https://rahul-thakoor.github.io/post/</loc>
-    <lastmod>2018-06-29T22:45:43+04:00</lastmod>
+    <lastmod>2018-07-07T23:06:32+04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -189,7 +194,7 @@
   
   <url>
     <loc>https://rahul-thakoor.github.io/</loc>
-    <lastmod>2018-06-29T22:45:43+04:00</lastmod>
+    <lastmod>2018-07-07T23:06:32+04:00</lastmod>
     <priority>0</priority>
   </url>
   
