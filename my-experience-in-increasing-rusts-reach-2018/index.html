@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>My Experience in Increasing Rust&#39;s Reach 2018</title>
+  <meta property="og:title" content="My Experience in Increasing Rust&#39;s Reach 2018" />
+  <meta name="twitter:title" content="My Experience in Increasing Rust&#39;s Reach 2018" />
+  <meta name="description" content="I recently had the privilege of participating the Increasing Rust&rsquo;s Reach(IRR) program. The program aims to grow Rust&rsquo;s community of project collaborators and leaders. Increasing Rust&rsquo;s Reach brings together Rust team members and individuals who are underrepresented in Rust&rsquo;s community and the tech industry for a partnership of three (3) months, from mid-May to mid-August. Each partnership agrees to a commitment of 3–5 hours per week working on a Rust Project.">
+  <meta property="og:description" content="I recently had the privilege of participating the Increasing Rust&rsquo;s Reach(IRR) program. The program aims to grow Rust&rsquo;s community of project collaborators and leaders. Increasing Rust&rsquo;s Reach brings together Rust team members and individuals who are underrepresented in Rust&rsquo;s community and the tech industry for a partnership of three (3) months, from mid-May to mid-August. Each partnership agrees to a commitment of 3–5 hours per week working on a Rust Project.">
+  <meta name="twitter:description" content="I recently had the privilege of participating the Increasing Rust&rsquo;s Reach(IRR) program. The program aims to grow Rust&rsquo;s community of project collaborators and leaders. Increasing …">
+  <meta name="author" content="Rahul Thakoor"/>
+  <link href='https://rahul-thakoor.github.io/img/favicon_r.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://rahul-thakoor.github.io/img/profile.png" />
+  <meta name="twitter:image" content="https://rahul-thakoor.github.io/img/profile.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@rahulthakoor" />
+  <meta name="twitter:creator" content="@rahulthakoor" />
+  <meta property="og:url" content="https://rahul-thakoor.github.io/my-experience-in-increasing-rusts-reach-2018/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="rahul thakoor" />
+
+  <meta name="generator" content="Hugo 0.37.1" />
+  <link rel="canonical" href="https://rahul-thakoor.github.io/my-experience-in-increasing-rusts-reach-2018/" />
+  <link rel="alternate" href="https://rahul-thakoor.github.io/index.xml" type="application/rss+xml" title="rahul thakoor">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://rahul-thakoor.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://rahul-thakoor.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://rahul-thakoor.github.io/css/codeblock.css" />
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-118403602-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://rahul-thakoor.github.io">rahul thakoor</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Home" href="/">Home</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">Projects</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/nodebotsmu">Nodebots Mauritius</a>
+                
+                  <a href="/page/rust_gpiozero">rust_gpiozero</a>
+                
+              </div>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1 style="font-size: 50px">My Experience in Increasing Rust&#39;s Reach 2018</h1>
+                
+                
+                  <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on September 16, 2018
+  
+  
+  &nbsp;|&nbsp;
+  <i class="fa fa-clock-o"></i> 5 minutes (908 words)
+  
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p>I recently had the privilege of participating the Increasing Rust&rsquo;s Reach(IRR) program. The program aims to <em>grow Rust&rsquo;s community of project collaborators and leaders. Increasing Rust&rsquo;s Reach brings together Rust team members and individuals who are underrepresented in Rust&rsquo;s community and the tech industry for a partnership of three (3) months, from mid-May to mid-August. Each partnership agrees to a commitment of 3–5 hours per week working on a Rust Project.</em><sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup></p>
+
+<p>The 2018 cohort included 14 participants<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup> , spanning 9 timezones and 11 countries! This year&rsquo;s projects included WebAssembly, <code>rust-lang.org</code>&rsquo;s Design and Internationalisation(Internationalization), Embedded, Diesel, CLI and Clap-rs. I worked on the <code>rust-lang.org</code>&rsquo;s Internationalisation along with Rui Zhao and mentored by Ashley Williams.</p>
+
+<p>This is my story of how I got into Rust, how the IRR program went and how I intend to keep contributing in the Rust community.</p>
+
+<h2 id="how-i-got-into-rust">How I got into Rust</h2>
+
+<p>How I got into programming itself and eventually Rust can be a post in itself. I started programming only three years ago(in 2015) while I was studying Medicine in China. I first tried and failed at learning Java on Udacity back in 2012. What followed were several enrollments in numerous courses on different MOOC platforms and eventually abandoning them. I really started learning it again when I bought my first Arduino in 2015. I enjoyed physical computing and learnt a lot by experimenting and building DIY projects. I also realised the importance of documenting and sharing my findings since I was myself learning from a myriad of open educational resources.<sup class="footnote-ref" id="fnref:3"><a href="#fn:3">3</a></sup></p>
+
+<p>Then in 2016, after completing my medical degree, I decided to officially learn computer science. I decided  to learn Rust after it was chosen as the Most Loved Language in the 2017 Stack Overflow Survey<sup class="footnote-ref" id="fnref:4"><a href="#fn:4">4</a></sup> and <em><strong>discovering</strong></em> Jorge Aparicio&rsquo;s book<sup class="footnote-ref" id="fnref:5"><a href="#fn:5">5</a></sup>.</p>
+
+<p>After reading the first edition of The Rust Programming Language(TRPL) Book, I decided to start a project of my own to practice the concepts I was learning. Since I like working with microcontrollers and single board computers, I decided to port the awesome python based <code>GPIOZERO</code><sup class="footnote-ref" id="fnref:6"><a href="#fn:6">6</a></sup> library for the Raspberry Pi and made <code>rust_gpiozero</code><sup class="footnote-ref" id="fnref:7"><a href="#fn:7">7</a></sup>. After that I made a driver<sup class="footnote-ref" id="fnref:8"><a href="#fn:8">8</a></sup> for the MMA7660FC 3-Axis Accelerometer based on <code>embedded-hal</code> by Jorge Aparicio. I also started contributing on the <strong>Awesome Embedded Rust</strong><sup class="footnote-ref" id="fnref:9"><a href="#fn:9">9</a></sup> list.</p>
+
+<h2 id="increasing-rust-s-reach">Increasing Rust&rsquo;s Reach</h2>
+
+<p>The program started on 14th May. I had one weekly call with Ashley and one with IRR&rsquo;s participants, mentors and the awesome guests from the Rust community. These were all put together by Ashley! Despite still having classes, I aimed to attend all the group meetings since they were very enriching and inspiring. I even attended one using cellular data while traveling on the bus on my way home!</p>
+
+<p>During the first few weeks, Ashley gave me the opportunity to further my knowledge in Rust. I started reading through the second edition of TRPL book. I decided to work on the <strong>Physical Computing with Rust</strong><sup class="footnote-ref" id="fnref:10"><a href="#fn:10">10</a></sup> tutorial which is based on the <strong>Physical Computing with Python</strong><sup class="footnote-ref" id="fnref:11"><a href="#fn:11">11</a></sup> by the Raspberry Pi Foundation and complemented <code>rust_gpiozero</code> project. This allowed me to write Rust for the tutorial itself, and also discover <code>mdbook</code><sup class="footnote-ref" id="fnref:12"><a href="#fn:12">12</a></sup>. I also researched and learnt about Internationalization (i18n) and Localization (L10n).</p>
+
+<p>By mid June, we started wrapping up the side projects and started working on the new <code>rust-lang.org</code> website.</p>
+
+<p>During the program we sure talked a lot about Rust. However, the program is not only about Rust. I had exposure to diverse ideas either during weekly calls, researching about particular language constructs/syntax, working on the side projects or engaging with the <em><strong>awesome Rust community</strong></em> ❤️.</p>
+
+<p>Here are some more ideas I explored or technology I worked with during the program:</p>
+
+<ul>
+<li>Mozilla Pontoon<sup class="footnote-ref" id="fnref:13"><a href="#fn:13">13</a></sup></li>
+<li>Fluent<sup class="footnote-ref" id="fnref:14"><a href="#fn:14">14</a></sup></li>
+<li>Foreign Function Interface</li>
+<li>Cross compilation for the Raspberry Pi</li>
+<li>Constructionism, Logo and research by Seymour Papert</li>
+<li>Making a tool for making publishing crates easier</li>
+<li>Webassembly</li>
+<li>Rocket<sup class="footnote-ref" id="fnref:15"><a href="#fn:15">15</a></sup></li>
+<li>Raw strings in Rust, I wrote a post<sup class="footnote-ref" id="fnref:16"><a href="#fn:16">16</a></sup> about it</li>
+<li>RFCs</li>
+<li>Traits</li>
+<li>Handlebars.js, SCSS, HTML and Twitter cards</li>
+</ul>
+
+<h2 id="going-forward">Going Forward</h2>
+
+<p>It was a wonderful experience participating in the IRR program and an absolute delight being mentored by Ashley. Now that the program is over 😔, I will continue learning, contributing and experimenting. Things I&rsquo;m looking forward to:</p>
+
+<ol>
+<li>Continue working on <code>rust_gpiozero</code> and develop more tutorials accordingly for <strong>Physical Computing with Rust</strong></li>
+<li>Explore Rust across several domains, especially in Webassembly and Embedded by experimenting and doing some proof-of-concept projects and writing tools which may include:
+
+<ul>
+<li>Making Rust more accessible on embedded platforms by writing tutorials, developing drivers , hal&rsquo;s or even a framework similar to <strong>Johnny-Five</strong><sup class="footnote-ref" id="fnref:17"><a href="#fn:17">17</a></sup></li>
+<li>Porting some projects I already worked on in different languages to Rust like writing a CHIP-8 emulator<sup class="footnote-ref" id="fnref:18"><a href="#fn:18">18</a></sup>, implement some webapps using Rocket, writing a firewall in <code>eBPF</code><sup class="footnote-ref" id="fnref:19"><a href="#fn:19">19</a></sup> and <code>BCC</code><sup class="footnote-ref" id="fnref:20"><a href="#fn:20">20</a></sup> tools, and more</li>
+<li>Making themes for mdbook</li>
+</ul></li>
+<li>Contribute in the Community Team<sup class="footnote-ref" id="fnref:21"><a href="#fn:21">21</a></sup> and Rustbridge<sup class="footnote-ref" id="fnref:22"><a href="#fn:22">22</a></sup> and build a Rust community in my country</li>
+<li>Understand ownership better and learn advanced topics like Macros, Concurrency, Smart Pointers and more</li>
+</ol>
+
+<p>There is so much to learn and I, for one am eager to discover what lies ahead.</p>
+
+<h2 id="references">References</h2>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1"><a href="http://reach.`rust-lang.org`/">Increasing Rust&rsquo;s Reach</a>
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2"><a href="http://reach.`rust-lang.org`/2018/participants">IRR 2018 Participants</a>
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+<li id="fn:3"><a href="https://www.instructables.com/id/ESP8266-ESP-12Standalone-Blynk-101/">My first instructable</a>
+ <a class="footnote-return" href="#fnref:3"><sup>[return]</sup></a></li>
+<li id="fn:4"><a href="https://insights.stackoverflow.com/survey/2016#most-loved-dreaded-and-wanted">Stack Overflow Developer Survey Results 2017</a>
+ <a class="footnote-return" href="#fnref:4"><sup>[return]</sup></a></li>
+<li id="fn:5"><a href="https://rust-embedded.github.io/discovery/">Discovery by Jorge Aparicio</a>
+ <a class="footnote-return" href="#fnref:5"><sup>[return]</sup></a></li>
+<li id="fn:6"><a href="https://gpiozero.readthedocs.io">Gpiozero</a>
+ <a class="footnote-return" href="#fnref:6"><sup>[return]</sup></a></li>
+<li id="fn:7"><a href="https://crates.io/crates/rust_gpiozero">rust_gpiozero</a>
+ <a class="footnote-return" href="#fnref:7"><sup>[return]</sup></a></li>
+<li id="fn:8"><a href="https://crates.io/crates/mma7660fc">mma7660fc</a>
+ <a class="footnote-return" href="#fnref:8"><sup>[return]</sup></a></li>
+<li id="fn:9"><a href="https://github.com/rust-embedded/awesome-embedded-rust">Awesome Embedded Rust</a>
+ <a class="footnote-return" href="#fnref:9"><sup>[return]</sup></a></li>
+<li id="fn:10"><a href="https://rahul-thakoor.github.io/physical-computing-rust/">Physical Computing with Rust</a>
+ <a class="footnote-return" href="#fnref:10"><sup>[return]</sup></a></li>
+<li id="fn:11"><a href="https://projects.raspberrypi.org/en/projects/physical-computing">Physical Computing with Python</a>
+ <a class="footnote-return" href="#fnref:11"><sup>[return]</sup></a></li>
+<li id="fn:12"><a href="https://github.com/rust-lang-nursery/mdBook">mdbook</a>
+ <a class="footnote-return" href="#fnref:12"><sup>[return]</sup></a></li>
+<li id="fn:13"><a href="https://pontoon.mozilla.org/">Mozilla Pontoon</a>
+ <a class="footnote-return" href="#fnref:13"><sup>[return]</sup></a></li>
+<li id="fn:14"><a href="https://projectfluent.org/">Fluent</a>
+ <a class="footnote-return" href="#fnref:14"><sup>[return]</sup></a></li>
+<li id="fn:15"><a href="https://rocket.rs/">Rocket</a>
+ <a class="footnote-return" href="#fnref:15"><sup>[return]</sup></a></li>
+<li id="fn:16"><a href="https://medium.com/@rahulthakoor/rust-raw-string-literals-9579c4feb231">Rust: Raw string literals</a>
+ <a class="footnote-return" href="#fnref:16"><sup>[return]</sup></a></li>
+<li id="fn:17"><a href="http://johnny-five.io/">Johnny-Five</a>
+ <a class="footnote-return" href="#fnref:17"><sup>[return]</sup></a></li>
+<li id="fn:18"><a href="https://en.wikipedia.org/wiki/CHIP-8">Chip-8</a>
+ <a class="footnote-return" href="#fnref:18"><sup>[return]</sup></a></li>
+<li id="fn:19"><a href="https://en.wikipedia.org/wiki/Berkeley_Packet_Filter">BPF &amp; eBPF</a>
+ <a class="footnote-return" href="#fnref:19"><sup>[return]</sup></a></li>
+<li id="fn:20"><a href="https://iovisor.github.io/bcc/">BCC Tools</a>
+ <a class="footnote-return" href="#fnref:20"><sup>[return]</sup></a></li>
+<li id="fn:21"><a href="https://www.rust-lang.org/en-US/team.html">The Rust Team</a>
+ <a class="footnote-return" href="#fnref:21"><sup>[return]</sup></a></li>
+<li id="fn:22"><a href="https://github.com/rustbridge/rustbridge.io">Rustbridge</a>
+ <a class="footnote-return" href="#fnref:22"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+
+        
+
+        
+         <p>Enjoyed this post?</p>
+         <style>.bmc-button img{width: 27px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{line-height: 36px !important;height:37px !important;text-decoration: none !important;display:inline-flex !important;color:#FFFFFF !important;background-color:#FF813F !important;border-radius: 3px !important;border: 1px solid transparent !important;padding: 1px 9px !important;font-size: 23px !important;letter-spacing:0.6px !important;;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#FFFFFF !important;}</style><link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/wKLeVt2"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://rahul-thakoor.github.io/physical-computing-with-rust-on-raspberry-pi/" data-toggle="tooltip" data-placement="top" title="Physical Computing With Rust On Raspberry Pi">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:rahul.thakoor@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/rahul-thakoor" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/rahulthakoor" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/rahul-thakoor-a50706138" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://paypal.me/rahulthakoor" title="PayPal">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-paypal fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Rahul Thakoor
+            
+          
+
+          &nbsp;&bull;&nbsp;
+          2018
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://rahul-thakoor.github.io">rahul thakoor</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.37.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://rahul-thakoor.github.io/js/main.js"></script>
+<script src="https://rahul-thakoor.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+<script src="https://rahul-thakoor.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
+
