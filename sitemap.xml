@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rahul-thakoor.github.io/releasing-rust_gpiozero-v0.2.0/</loc>
+    <lastmod>2019-02-27T17:43:48+04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rahul-thakoor.github.io/my-experience-in-increasing-rusts-reach-2018/</loc>
     <lastmod>2018-09-16T08:49:37+04:00</lastmod>
   </url>
@@ -168,8 +173,14 @@
   </url>
   
   <url>
+    <loc>https://rahul-thakoor.github.io/tags/physical-computing/</loc>
+    <lastmod>2019-02-27T17:43:48+04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://rahul-thakoor.github.io/post/</loc>
-    <lastmod>2018-09-16T08:49:37+04:00</lastmod>
+    <lastmod>2019-02-27T17:43:48+04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -186,8 +197,14 @@
   </url>
   
   <url>
+    <loc>https://rahul-thakoor.github.io/tags/raspberry-pi/</loc>
+    <lastmod>2019-02-27T17:43:48+04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://rahul-thakoor.github.io/tags/rust/</loc>
-    <lastmod>2018-09-16T08:49:37+04:00</lastmod>
+    <lastmod>2019-02-27T17:43:48+04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -205,7 +222,7 @@
   
   <url>
     <loc>https://rahul-thakoor.github.io/</loc>
-    <lastmod>2018-09-16T08:49:37+04:00</lastmod>
+    <lastmod>2019-02-27T17:43:48+04:00</lastmod>
     <priority>0</priority>
   </url>
   
