@@ -84,10 +84,10 @@ The Device The MMA7660FC is a ±1.5 g 3-Axis Accelerometer with Digital Output (
     
     <item>
       <title>How to get started with NodeBots? - The hardware</title>
-      <link>https://rahul-thakoor.github.io/how-to-get-started-with-nodebots---the-hardware/</link>
+      <link>https://rahul-thakoor.github.io/how-to-get-started-with-nodebots-the-hardware/</link>
       <pubDate>Sun, 09 Apr 2017 08:37:00 +0000</pubDate>
       <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
-      <guid>https://rahul-thakoor.github.io/how-to-get-started-with-nodebots---the-hardware/</guid>
+      <guid>https://rahul-thakoor.github.io/how-to-get-started-with-nodebots-the-hardware/</guid>
       <description>When it comes to starting a DIY Electronics project, one can be overwhelmed by the myriad of choices. With so many varieties out there, how to get started?
 The basic components include: Processing, Input/Output, Circuits and Wiring and Power.
  Processing: the brain of the project, typically development boards which enable us to run our program logic.
