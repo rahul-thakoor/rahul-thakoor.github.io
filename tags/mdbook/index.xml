@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mdbook on rahul thakoor</title>
+    <link>https://rahul-thakoor.github.io/tags/mdbook/</link>
+    <description>Recent content in Mdbook on rahul thakoor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>rahul.thakoor@gmail.com (Rahul Thakoor)</managingEditor>
+    <webMaster>rahul.thakoor@gmail.com (Rahul Thakoor)</webMaster>
+    <lastBuildDate>Mon, 04 Mar 2019 18:06:48 +0400</lastBuildDate>
+    
+	<atom:link href="https://rahul-thakoor.github.io/tags/mdbook/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Making mdBooks work offline</title>
+      <link>https://rahul-thakoor.github.io/making-mdbooks-work-offline/</link>
+      <pubDate>Mon, 04 Mar 2019 18:06:48 +0400</pubDate>
+      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      <guid>https://rahul-thakoor.github.io/making-mdbooks-work-offline/</guid>
+      <description>mdBook1 is a great utility to create online books from Markdown files. It is used extensively in the Rust community. Here are some books made with mdBook:
+ The Rust Programming Language (&amp;ldquo;the book&amp;rdquo;)2 Embedded Book 3 mdBook user guide4  Motivation  I usually read the books while commuting and this usually consumes mobile data. Given the contents don&amp;rsquo;t change that often, I thought it would be useful if they were cached.</description>
+    </item>
+    
+  </channel>
+</rss>

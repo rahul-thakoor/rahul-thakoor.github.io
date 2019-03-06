@@ -65,9 +65,9 @@
 Note: This is a work in progress. The library will eventually support embedded-hal based drivers
 The idea is to get started with physical computing using Rust with little coding by hiding the underlying complexity.
 The library uses BCM Pin numbering
-Example : Blinking an LED externcraterust_gpiozero;userust_gpiozero::*;fn main(){// Create a new LED attached to Pin 17 letmutled=LED::new(17);// blink the LED // on_time: 2 seconds and off_time: 3 seconds led.",
+Example : Blinking an LED extern crate rust_gpiozero; use rust_gpiozero::*; fn main() { // Create a new LED attached to Pin 17 let mut led = LED::new(17); // blink the LED // on_time: 2 seconds and off_time: 3 seconds led.",
   "inLanguage" : "en",
-  "wordCount": 119,
+  "wordCount": 171,
   "datePublished" : "0001-01-01T00:00:00",
   "dateModified" : "0001-01-01T00:00:00",
   "image" : "https://rahul-thakoor.github.io",
@@ -284,54 +284,65 @@ by hiding the underlying complexity.</p>
 <p>The library uses <a href="https://pinout.xyz/">BCM Pin numbering</a></p>
 
 <h3 id="example-blinking-an-led">Example : Blinking an LED</h3>
-<div class="highlight"><pre class="chroma"><code class="language-rust" data-lang="rust"><span class="k">extern</span><span class="w"> </span><span class="k">crate</span><span class="w"> </span><span class="n">rust_gpiozero</span><span class="p">;</span><span class="w">
-</span><span class="w"></span><span class="k">use</span><span class="w"> </span><span class="n">rust_gpiozero</span>::<span class="o">*</span><span class="p">;</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="c1">// Create a new LED attached to Pin 17
-</span><span class="c1"></span><span class="w">
-</span><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">led</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LED</span>::<span class="n">new</span><span class="p">(</span><span class="mi">17</span><span class="p">);</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="c1">// blink the LED
-</span><span class="c1">// on_time: 2 seconds and off_time: 3 seconds
-</span><span class="c1"></span><span class="w">
-</span><span class="w"></span><span class="n">led</span><span class="p">.</span><span class="n">blink</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="p">}</span><span class="w">
-</span></code></pre></div>
+
+<pre><code class="language-rust">
+extern crate rust_gpiozero;
+use rust_gpiozero::*;
+
+fn main() {
+
+// Create a new LED attached to Pin 17
+
+let mut led = LED::new(17);
+
+// blink the LED
+// on_time: 2 seconds and off_time: 3 seconds
+
+led.blink(2,3);
+
+}
+
+</code></pre>
+
 <h3 id="example-wait-for-a-button-press">Example : Wait for a Button Press</h3>
-<div class="highlight"><pre class="chroma"><code class="language-rust" data-lang="rust"><span class="k">extern</span><span class="w"> </span><span class="k">crate</span><span class="w"> </span><span class="n">rust_gpiozero</span><span class="p">;</span><span class="w">
-</span><span class="w"></span><span class="k">use</span><span class="w"> </span><span class="n">rust_gpiozero</span>::<span class="o">*</span><span class="p">;</span><span class="w">
-</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">    </span><span class="c1">// Create a button which is attached to Pin 17
-</span><span class="c1"></span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Button</span>::<span class="n">new</span><span class="p">(</span><span class="mi">17</span><span class="p">);</span><span class="w">
-</span><span class="w">    </span><span class="n">button</span><span class="p">.</span><span class="n">wait_for_press</span><span class="p">();</span><span class="w">
-</span><span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;button pressed&#34;</span><span class="p">);</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="p">}</span><span class="w">
-</span></code></pre></div>
+
+<pre><code class="language-rust">extern crate rust_gpiozero;
+use rust_gpiozero::*;
+
+
+fn main() {
+    // Create a button which is attached to Pin 17
+    let button = Button::new(17);
+    button.wait_for_press();
+    println!(&quot;button pressed&quot;);
+
+}
+
+</code></pre>
+
 <p>Compare this to using the crate <code>sysfs_gpio</code> to blink an LED on the Raspberry Pi :</p>
-<div class="highlight"><pre class="chroma"><code class="language-rust" data-lang="rust"><span class="k">extern</span><span class="w"> </span><span class="k">crate</span><span class="w"> </span><span class="n">sysfs_gpio</span><span class="p">;</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="k">use</span><span class="w"> </span><span class="n">sysfs_gpio</span>::<span class="p">{</span><span class="n">Direction</span><span class="p">,</span><span class="w"> </span><span class="n">Pin</span><span class="p">};</span><span class="w">
-</span><span class="w"></span><span class="k">use</span><span class="w"> </span><span class="n">std</span>::<span class="n">thread</span>::<span class="n">sleep</span><span class="p">;</span><span class="w">
-</span><span class="w"></span><span class="k">use</span><span class="w"> </span><span class="n">std</span>::<span class="n">time</span>::<span class="n">Duration</span><span class="p">;</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">my_led</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Pin</span>::<span class="n">new</span><span class="p">(</span><span class="mi">127</span><span class="p">);</span><span class="w"> </span><span class="c1">// number depends on chip, etc.
-</span><span class="c1"></span><span class="w">    </span><span class="n">my_led</span><span class="p">.</span><span class="n">with_exported</span><span class="p">(</span><span class="o">||</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">        </span><span class="k">loop</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">            </span><span class="n">my_led</span><span class="p">.</span><span class="n">set_value</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span><span class="w">
-</span><span class="w">            </span><span class="n">sleep</span><span class="p">(</span><span class="n">Duration</span>::<span class="n">from_millis</span><span class="p">(</span><span class="mi">200</span><span class="p">));</span><span class="w">
-</span><span class="w">            </span><span class="n">my_led</span><span class="p">.</span><span class="n">set_value</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span><span class="w">
-</span><span class="w">            </span><span class="n">sleep</span><span class="p">(</span><span class="n">Duration</span>::<span class="n">from_millis</span><span class="p">(</span><span class="mi">200</span><span class="p">));</span><span class="w">
-</span><span class="w">        </span><span class="p">}</span><span class="w">
-</span><span class="w">    </span><span class="p">}).</span><span class="n">unwrap</span><span class="p">();</span><span class="w">
-</span><span class="w"></span><span class="p">}</span><span class="w">
-</span></code></pre></div>
+
+<pre><code class="language-rust">
+extern crate sysfs_gpio;
+
+use sysfs_gpio::{Direction, Pin};
+use std::thread::sleep;
+use std::time::Duration;
+
+fn main() {
+    let my_led = Pin::new(127); // number depends on chip, etc.
+    my_led.with_exported(|| {
+        loop {
+            my_led.set_value(0).unwrap();
+            sleep(Duration::from_millis(200));
+            my_led.set_value(1).unwrap();
+            sleep(Duration::from_millis(200));
+        }
+    }).unwrap();
+}
+
+</code></pre>
+
 
         
 

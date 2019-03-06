@@ -63,7 +63,7 @@
   "headline": "Explore OpenData on data.govmu.org using R",
   "description" : "A guide to exploring data on open data platform powered by DKAN, using dkanr package and the R programming language",
   "inLanguage" : "en",
-  "wordCount": 1102,
+  "wordCount": 1103,
   "datePublished" : "2018-05-07T15:02:31",
   "dateModified" : "2018-05-07T15:02:31",
   "image" : "https://rahul-thakoor.github.io",
@@ -299,36 +299,49 @@ if (!doNotTrack) {
 <h2 id="installing-necessary-packages">Installing necessary packages</h2>
 
 <p>We will use the <code>purrr</code>, <code>dplyr</code> , <code>stringr</code> and <code>dkanr</code> packages. Install them by using the following command in the console:</p>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R">install.packages<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&#34;purrr&#34;</span><span class="p">,</span><span class="s">&#34;dplyr&#34;</span><span class="p">,</span><span class="s">&#34;dkanr&#34;</span><span class="p">,</span><span class="s">&#34;stringr&#34;</span><span class="p">))</span></code></pre></div>
+
+<pre><code class="language-R">install.packages(c(&quot;purrr&quot;,&quot;dplyr&quot;,&quot;dkanr&quot;,&quot;stringr&quot;))
+</code></pre>
+
 <h2 id="setup-and-establish-connection-with-data-govmu-org">Setup and Establish connection with data.govmu.org</h2>
 
 <p>First import the necessary libraries and then set up a connection without using authentication.</p>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1">#use libraries</span>
-<span class="kn">library</span><span class="p">(</span>purrr<span class="p">)</span>
-<span class="kn">library</span><span class="p">(</span>dplyr<span class="p">)</span>
-<span class="kn">library</span><span class="p">(</span>dkanr<span class="p">)</span>
-<span class="kn">library</span><span class="p">(</span>stringr<span class="p">)</span>
 
-<span class="c1">#setup dkanr to use data.govmu.org</span>
-dkanr_setup<span class="p">(</span>url <span class="o">=</span> <span class="s">&#39;https://data.govmu.org/dkan/&#39;</span><span class="p">)</span>
+<pre><code class="language-R">#use libraries
+library(purrr)
+library(dplyr)
+library(dkanr)
+library(stringr)
 
-<span class="c1">#confirm connection</span>
-dkanr_settings<span class="p">()</span></code></pre></div>
+#setup dkanr to use data.govmu.org
+dkanr_setup(url = 'https://data.govmu.org/dkan/')
+
+#confirm connection
+dkanr_settings()
+</code></pre>
+
 <p>The `dkanr_settings() function should output the following:</p>
-<div class="highlight"><pre class="chroma">&lt;dkanr settings&gt;
+
+<pre><code>&lt;dkanr settings&gt;
   Base URL:  https://data.govmu.org/dkan/ 
   Cookie:  
-  Token:  </pre></div>
+  Token:  
+</code></pre>
+
 <h2 id="explore-all-datasets">Explore all datasets</h2>
 
 <p>After establishing connection with the open data platform, we can start explopring. First, let&rsquo;s get all the datasets:</p>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1">#load datasets</span>
-datasets <span class="o">&lt;-</span> list_nodes_all<span class="p">(</span>filters <span class="o">=</span> <span class="kt">c</span><span class="p">(</span>type<span class="o">=</span><span class="s">&#34;dataset&#34;</span><span class="p">))</span>
 
-<span class="c1">#view a snapshot</span>
-datasets</code></pre></div>
+<pre><code class="language-R">#load datasets
+datasets &lt;- list_nodes_all(filters = c(type=&quot;dataset&quot;))
+
+#view a snapshot
+datasets
+</code></pre>
+
 <p>Viewing the datasets gives the following output</p>
-<div class="highlight"><pre class="chroma"># A tibble: 100 x 16
+
+<pre><code># A tibble: 100 x 16
    nid   vid   type   language title      uid   status created changed comment
  * &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  
  1 523   1026  datas~ und      List of S~ 5     1      152445~ 152446~ 0      
@@ -339,107 +352,139 @@ datasets</code></pre></div>
  6 507   1062  datas~ und      List of Y~ 5     1      152429~ 152482~ 0      
  7 504   978   datas~ und      List of P~ 5     1      152429~ 152429~ 0      
  8 501   969   datas~ und      Primary E~ 6     1      152422~ 152423~ 0      
- 9 498   967   datas~ und      &#34;Number o~ 6     1      152422~ 152423~ 0      
+ 9 498   967   datas~ und      &quot;Number o~ 6     1      152422~ 152423~ 0      
 10 495   965   datas~ und      Number of~ 6     1      152422~ 152423~ 0      
 # ... with 90 more rows, and 6 more variables: promote &lt;chr&gt;, sticky &lt;chr&gt;,
-#   tnid &lt;chr&gt;, translate &lt;chr&gt;, uuid &lt;chr&gt;, uri &lt;chr&gt;</pre></div>
-<p>We can see there are 100 entries (100 datasets) with 16 metadata fields. Use the following command to display dataset with relevant metadata:</p>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1">#show attributes available</span>
-<span class="kp">names</span><span class="p">(</span>datasets<span class="p">)</span>
+#   tnid &lt;chr&gt;, translate &lt;chr&gt;, uuid &lt;chr&gt;, uri &lt;chr&gt;
+</code></pre>
 
-<span class="c1">#show all titles available</span>
-datasets<span class="o">$</span>title 
-  <span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="s">&#34;List of Sports Federation in Mauritius&#34;</span>                                                                                           
-  <span class="p">[</span><span class="m">2</span><span class="p">]</span> <span class="s">&#34;List of Secondary Schools in Rodrigues&#34;</span>                                                                                           
-  <span class="p">[</span><span class="m">3</span><span class="p">]</span> <span class="s">&#34;List of Primary Schools in Rodrigues&#34;</span>                                                                                             
-  <span class="p">[</span><span class="m">4</span><span class="p">]</span> <span class="s">&#34;List of Primary Schools in Mauritius&#34;</span>                                                                                             
-  <span class="p">[</span><span class="m">5</span><span class="p">]</span> <span class="s">&#34;List of Secondary Schools in Mauritius&#34;</span>                                                                                           
-  <span class="p">[</span><span class="m">6</span><span class="p">]</span> <span class="s">&#34;List of Youth Centres in Mauritius&#34;</span>                                                                                               
-  <span class="p">[</span><span class="m">7</span><span class="p">]</span> <span class="s">&#34;List of Police Stations in Mauritius&#34;</span>                                                                                             
-  <span class="p">[</span><span class="m">8</span><span class="p">]</span> <span class="s">&#34;Primary Enrolment and Gross Enrolment Ratio1 by sex, Island of Mauritius&#34;</span>                                                         
-  <span class="p">[</span><span class="m">9</span><span class="p">]</span> <span class="s">&#34;Number of primary schools, pupils, personnel and pupil/teacher ratio, Republic of Mauritius, 1967 - 2016\t\t&#34;</span>                     
- <span class="p">[</span><span class="m">10</span><span class="p">]</span> <span class="s">&#34;Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex&#34;</span>                                                        
- <span class="p">[</span><span class="m">11</span><span class="p">]</span> <span class="s">&#34;New Admissions on Tertiary Education Level Programmes by source&#34;</span>                                                                  
- <span class="p">[</span><span class="m">12</span><span class="p">]</span> <span class="s">&#34;Gross Tertiary Enrolment Rate (GTER) in Tertiary Education by sex, 2000 - 2015&#34;</span>                                                   
- <span class="p">[</span><span class="m">13</span><span class="p">]</span> <span class="s">&#34;Enrolment of International Students in Tertiary Education locally by sex&#34;</span>                                                         
- <span class="p">[</span><span class="m">14</span><span class="p">]</span> <span class="s">&#34;Enrolment in Special Education needs in schools - Island of Mauritius, Island of Rodrigues &amp; Republic of Mauritius, 2010 - 2016&#34;</span>  
-<span class="kc">...</span> truncated</code></pre></div>
+<p>We can see there are 100 entries (100 datasets) with 16 metadata fields. Use the following command to display dataset with relevant metadata:</p>
+
+<pre><code class="language-R">#show attributes available
+names(datasets)
+
+#show all titles available
+datasets$title 
+  [1] &quot;List of Sports Federation in Mauritius&quot;                                                                                           
+  [2] &quot;List of Secondary Schools in Rodrigues&quot;                                                                                           
+  [3] &quot;List of Primary Schools in Rodrigues&quot;                                                                                             
+  [4] &quot;List of Primary Schools in Mauritius&quot;                                                                                             
+  [5] &quot;List of Secondary Schools in Mauritius&quot;                                                                                           
+  [6] &quot;List of Youth Centres in Mauritius&quot;                                                                                               
+  [7] &quot;List of Police Stations in Mauritius&quot;                                                                                             
+  [8] &quot;Primary Enrolment and Gross Enrolment Ratio1 by sex, Island of Mauritius&quot;                                                         
+  [9] &quot;Number of primary schools, pupils, personnel and pupil/teacher ratio, Republic of Mauritius, 1967 - 2016\t\t&quot;                     
+ [10] &quot;Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex&quot;                                                        
+ [11] &quot;New Admissions on Tertiary Education Level Programmes by source&quot;                                                                  
+ [12] &quot;Gross Tertiary Enrolment Rate (GTER) in Tertiary Education by sex, 2000 - 2015&quot;                                                   
+ [13] &quot;Enrolment of International Students in Tertiary Education locally by sex&quot;                                                         
+ [14] &quot;Enrolment in Special Education needs in schools - Island of Mauritius, Island of Rodrigues &amp; Republic of Mauritius, 2010 - 2016&quot;  
+... truncated
+</code></pre>
+
 <h2 id="exploring-a-particular-dataset">Exploring a particular dataset</h2>
 
 <p>Once you have identified a particular dataset you are interested in exploring, you can display it&rsquo;s relevant metadata. The datasets are identified by the <code>node ID</code>.</p>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1">#find datasets which contain a particular string in title</span>
 
-<span class="c1">#prints rows containing word &#34;Education&#34; in title</span>
-datasets <span class="o">%&gt;%</span>
-     filter<span class="p">(</span>str_detect<span class="p">(</span>title<span class="p">,</span><span class="s">&#34;Education&#34;</span><span class="p">))</span> <span class="o">%&gt;%</span>
-     select<span class="p">(</span>nid<span class="p">,</span>title<span class="p">)</span></code></pre></div>
+<pre><code class="language-R">#find datasets which contain a particular string in title
+
+#prints rows containing word &quot;Education&quot; in title
+datasets %&gt;%
+     filter(str_detect(title,&quot;Education&quot;)) %&gt;%
+     select(nid,title)
+</code></pre>
+
 <p>After identifying the <code>nid</code>, you can retrieve the metadata of the particular dataset. For instance, for the dataset &ldquo;Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex&rdquo;, the <strong>dataset</strong> <code>nid</code> is 495:</p>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1">#retrieve metadata for the dataset</span>
-metadata <span class="o">&lt;-</span> retrieve_node<span class="p">(</span>nid <span class="o">=</span><span class="s">&#39;495&#39;</span><span class="p">,</span> as <span class="o">=</span> <span class="s">&#39;list&#39;</span><span class="p">)</span>
 
-<span class="c1">#display all attributes available</span>
-<span class="kp">names</span><span class="p">(</span>metadata<span class="p">)</span></code></pre></div>
+<pre><code class="language-R">#retrieve metadata for the dataset
+metadata &lt;- retrieve_node(nid ='495', as = 'list')
+
+#display all attributes available
+names(metadata)
+</code></pre>
+
 <h2 id="explore-a-specific-resource">Explore a specific resource</h2>
 
 <p>Several resources can be associated with a particular dataset. You can list the resources available with the particular dataset, then use the <strong>resource</strong> <code>nid</code> to retrieve metadata of the particular resource.</p>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1">#show resources associated with dataset</span>
-get_resource_nids<span class="p">(</span>metadata<span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1">#two resources are available for the dataset</span>
-<span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="s">&#34;496&#34;</span> <span class="s">&#34;497&#34;</span>
 
-<span class="c1">#get resources metadata</span>
-resource <span class="o">&lt;-</span> retrieve_node<span class="p">(</span>nid <span class="o">=</span><span class="s">&#39;496&#39;</span><span class="p">,</span> as <span class="o">=</span> <span class="s">&#39;list&#39;</span><span class="p">)</span>
-resource2 <span class="o">&lt;-</span> retrieve_node<span class="p">(</span>nid <span class="o">=</span><span class="s">&#39;497&#39;</span><span class="p">,</span> as <span class="o">=</span> <span class="s">&#39;list&#39;</span><span class="p">)</span>
+<pre><code class="language-R">#show resources associated with dataset
+get_resource_nids(metadata)
+</code></pre>
 
-<span class="c1">#show </span>
+<pre><code class="language-R">#two resources are available for the dataset
+[1] &quot;496&quot; &quot;497&quot;
+
+#get resources metadata
+resource &lt;- retrieve_node(nid ='496', as = 'list')
+resource2 &lt;- retrieve_node(nid ='497', as = 'list')
+
+#show 
 resource
- <span class="o">&lt;</span>DKAN Node<span class="o">&gt;</span> <span class="c1">#496 </span>
-  Type<span class="o">:</span> resource
-  Title<span class="o">:</span> DATA<span class="o">-</span>Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex<span class="p">,</span> <span class="m">2000</span> <span class="o">-</span> <span class="m">2015</span>
-  UUID<span class="o">:</span> <span class="m">1</span>df7bd18<span class="o">-</span>fa9c<span class="m">-440</span><span class="kt">c</span><span class="m">-94</span>a6<span class="o">-</span>e1087497f6ef
-  Created<span class="o">/</span>Modified<span class="o">:</span> <span class="m">1524222774</span> <span class="o">/</span> <span class="m">1524222774</span>
+ &lt;DKAN Node&gt; #496 
+  Type: resource
+  Title: DATA-Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex, 2000 - 2015
+  UUID: 1df7bd18-fa9c-440c-94a6-e1087497f6ef
+  Created/Modified: 1524222774 / 1524222774
 
 resource2
-<span class="o">&lt;</span>DKAN Node<span class="o">&gt;</span> <span class="c1">#497 </span>
-  Type<span class="o">:</span> resource
-  Title<span class="o">:</span> METADATA <span class="o">-</span> Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex<span class="p">,</span> <span class="m">2000</span> <span class="o">-</span> <span class="m">2015</span>
-  UUID<span class="o">:</span> b94db7c8<span class="o">-</span>a487<span class="m">-46</span>b4<span class="o">-</span>ac98<span class="m">-6</span>dff6253ff10
-  Created<span class="o">/</span>Modified<span class="o">:</span> <span class="m">1524222788</span> <span class="o">/</span> <span class="m">1524222788</span></code></pre></div>
+&lt;DKAN Node&gt; #497 
+  Type: resource
+  Title: METADATA - Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex, 2000 - 2015
+  UUID: b94db7c8-a487-46b4-ac98-6dff6253ff10
+  Created/Modified: 1524222788 / 1524222788
+</code></pre>
+
 <p>Once we have the required resources, we can download the data. We are interested in resource <code>#496</code>, &ldquo;DATA-Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex, 2000 - 2015&rdquo;.</p>
 
 <p>Data can be downloaded either using the resource url or via the DKAN Datastore API.</p>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1">#check if data required is available in datastore</span>
-ds_is_available<span class="p">(</span>resource<span class="p">)</span>
 
-<span class="c1">## [1] FALSE</span></code></pre></div>
+<pre><code class="language-R">#check if data required is available in datastore
+ds_is_available(resource)
+
+## [1] FALSE
+</code></pre>
+
 <p>Unfortunately, the requested resource is not available in the DKAN datastore. We proceed by downloading the resource using the url.</p>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1">#retrieve the resource url from the resource metadata</span>
-resource_url <span class="o">&lt;-</span> get_resource_url<span class="p">(</span>resource<span class="p">)</span>
 
-<span class="c1">##[1] &#34;https://data.govmu.org/dkan//sites//default//files//DATA-Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex, 2000 - 2015.csv&#34;</span></code></pre></div>
+<pre><code class="language-R">#retrieve the resource url from the resource metadata
+resource_url &lt;- get_resource_url(resource)
+
+##[1] &quot;https://data.govmu.org/dkan//sites//default//files//DATA-Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex, 2000 - 2015.csv&quot;
+</code></pre>
+
 <p>The <code>resource_url</code> is a string and needs to be encoded to a URL. You can then use the <code>read.csv2</code> function to load the data from the url.</p>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1">#encode url</span>
-resource_url_encoded <span class="o">&lt;-</span> URLencode<span class="p">(</span>resource_url<span class="p">)</span>
 
-<span class="c1"># &#34;https://data.govmu.org/dkan//sites//default//files//DATA-Number%20of%20Mauritian%20Students%20Pursuing%20%20Tertiary%20Education%20Overseas%20by%20sex,%202000%20-%202015.csv&#34;</span>
+<pre><code class="language-R">#encode url
+resource_url_encoded &lt;- URLencode(resource_url)
 
-<span class="c1">#load data</span>
-resource_data <span class="o">&lt;-</span> read.csv2<span class="p">(</span>resource_url_encoded<span class="p">,</span>sep<span class="o">=</span><span class="s">&#39;,&#39;</span><span class="p">,</span>header <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+# &quot;https://data.govmu.org/dkan//sites//default//files//DATA-Number%20of%20Mauritian%20Students%20Pursuing%20%20Tertiary%20Education%20Overseas%20by%20sex,%202000%20-%202015.csv&quot;
 
-<span class="c1">#show first 10 rows</span>
-<span class="kp">head</span><span class="p">(</span>resource_data<span class="p">,</span><span class="m">10</span><span class="p">)</span></code></pre></div>
+#load data
+resource_data &lt;- read.csv2(resource_url_encoded,sep=',',header = TRUE)
+
+#show first 10 rows
+head(resource_data,10)
+</code></pre>
+
 <h2 id="play-with-data">Play with data</h2>
 
 <p>After downloading the data, you can start exploring it.</p>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="kp">mean</span><span class="p">(</span>resource_data<span class="o">$</span>Number.of.Mauritian.Students.Pursuing.Tertiary.Education..Overseas.Male<span class="p">)</span>
 
-<span class="kp">max</span><span class="p">(</span>resource_data<span class="o">$</span>Number.of.Mauritian.Students.Pursuing.Tertiary.Education..Overseas.Total<span class="p">)</span></code></pre></div>
+<pre><code class="language-R">mean(resource_data$Number.of.Mauritian.Students.Pursuing.Tertiary.Education..Overseas.Male)
+
+max(resource_data$Number.of.Mauritian.Students.Pursuing.Tertiary.Education..Overseas.Total)
+</code></pre>
+
 <p>You can use the <code>plot()</code> function to draw charts. For the above resource, you can plot a line chart with &ldquo;Year&rdquo; as x-axis and &ldquo;Total number of Students(both sex)&rdquo; as y-axis.</p>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1">#plot a line chart</span>
 
-plot<span class="p">(</span>resource_data<span class="o">$</span>Year<span class="p">,</span>resource_data<span class="o">$</span>Number.of.Mauritian.Students.Pursuing.Tertiary.Education..Overseas.Total<span class="p">,</span> type <span class="o">=</span> <span class="s">&#34;o&#34;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#34;Year&#34;</span><span class="p">,</span> ylab <span class="o">=</span> <span class="s">&#34;Total number of students&#34;</span><span class="p">)</span>
+<pre><code class="language-R">#plot a line chart
 
-<span class="c1">#give the chart a title</span>
-title<span class="p">(</span>main <span class="o">=</span> <span class="s">&#34;Number of Mauritian Students(Both Sexes)\nPursuing Tertiary Education Overseas, 2000-2015&#34;</span><span class="p">,</span> sub<span class="o">=</span><span class="s">&#34;Source:data.govmu.org&#34;</span><span class="p">,</span> cex.sub <span class="o">=</span> <span class="m">0.75</span><span class="p">,</span> font.sub <span class="o">=</span> <span class="m">3</span><span class="p">)</span> </code></pre></div>
+plot(resource_data$Year,resource_data$Number.of.Mauritian.Students.Pursuing.Tertiary.Education..Overseas.Total, type = &quot;o&quot;, xlab = &quot;Year&quot;, ylab = &quot;Total number of students&quot;)
+
+#give the chart a title
+title(main = &quot;Number of Mauritian Students(Both Sexes)\nPursuing Tertiary Education Overseas, 2000-2015&quot;, sub=&quot;Source:data.govmu.org&quot;, cex.sub = 0.75, font.sub = 3) 
+</code></pre>
+
 <div align="center">
 <p><img src="/img/opendata-dkanr/opendata-dkanr-annotation.png" alt="line chart visualisation"></p> 
  </div>

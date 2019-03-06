@@ -8,10 +8,20 @@
     <language>en-us</language>
     <managingEditor>rahul.thakoor@gmail.com (Rahul Thakoor)</managingEditor>
     <webMaster>rahul.thakoor@gmail.com (Rahul Thakoor)</webMaster>
-    <lastBuildDate>Wed, 27 Feb 2019 17:43:48 +0400</lastBuildDate>
+    <lastBuildDate>Mon, 04 Mar 2019 18:06:48 +0400</lastBuildDate>
     
 	<atom:link href="https://rahul-thakoor.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Making mdBooks work offline</title>
+      <link>https://rahul-thakoor.github.io/making-mdbooks-work-offline/</link>
+      <pubDate>Mon, 04 Mar 2019 18:06:48 +0400</pubDate>
+      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      <guid>https://rahul-thakoor.github.io/making-mdbooks-work-offline/</guid>
+      <description>mdBook1 is a great utility to create online books from Markdown files. It is used extensively in the Rust community. Here are some books made with mdBook:
+ The Rust Programming Language (&amp;ldquo;the book&amp;rdquo;)2 Embedded Book 3 mdBook user guide4  Motivation  I usually read the books while commuting and this usually consumes mobile data. Given the contents don&amp;rsquo;t change that often, I thought it would be useful if they were cached.</description>
+    </item>
     
     <item>
       <title>Releasing rust_gpiozero v0.2.0</title>
@@ -151,7 +161,7 @@ Whether you are a web developer, skilled developer or a non-technical person, yo
 Note: This is a work in progress. The library will eventually support embedded-hal based drivers
 The idea is to get started with physical computing using Rust with little coding by hiding the underlying complexity.
 The library uses BCM Pin numbering
-Example : Blinking an LED externcraterust_gpiozero;userust_gpiozero::*;fn main(){// Create a new LED attached to Pin 17 letmutled=LED::new(17);// blink the LED // on_time: 2 seconds and off_time: 3 seconds led.</description>
+Example : Blinking an LED extern crate rust_gpiozero; use rust_gpiozero::*; fn main() { // Create a new LED attached to Pin 17 let mut led = LED::new(17); // blink the LED // on_time: 2 seconds and off_time: 3 seconds led.</description>
     </item>
     
   </channel>
