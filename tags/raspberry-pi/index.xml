@@ -8,7 +8,7 @@
     <language>en-us</language>
     <managingEditor>rahul.thakoor@gmail.com (Rahul Thakoor)</managingEditor>
     <webMaster>rahul.thakoor@gmail.com (Rahul Thakoor)</webMaster>
-    <lastBuildDate>Wed, 27 Feb 2019 17:43:48 +0400</lastBuildDate>
+    <lastBuildDate>Wed, 27 Feb 2019 13:43:48 +0000</lastBuildDate>
     
 	<atom:link href="https://rahul-thakoor.github.io/tags/raspberry-pi/index.xml" rel="self" type="application/rss+xml" />
     
@@ -16,10 +16,10 @@
     <item>
       <title>Releasing rust_gpiozero v0.2.0</title>
       <link>https://rahul-thakoor.github.io/releasing-rust_gpiozero-v0.2.0/</link>
-      <pubDate>Wed, 27 Feb 2019 17:43:48 +0400</pubDate>
+      <pubDate>Wed, 27 Feb 2019 13:43:48 +0000</pubDate>
       <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
       <guid>https://rahul-thakoor.github.io/releasing-rust_gpiozero-v0.2.0/</guid>
-      <description>For the past month I have been working on rust_gpiozero. This new release is a complete rewrite and uses Rene van der Meer(@golemparts)&amp;rsquo;s rppal crate under the hood. It also uses Rust 2018 edition.
+      <description>For the past month I have been working on rust_gpiozero. This new release is a complete rewrite and uses Rene van der Meer(@golemparts)&amp;rsquo;s [rppal](https://github.com/golemparts/rppal) crate under the hood. It also uses Rust 2018 edition.
 Why rppal? Simply because Rene has done an incredible work on rppal. It provides first class support for the Raspberry Pis. Instead of trying to (poorly) reimplement the features, I think it is best to build upon the rppal.</description>
     </item>
     

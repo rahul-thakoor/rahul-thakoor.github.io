@@ -8,10 +8,21 @@
     <language>en-us</language>
     <managingEditor>rahul.thakoor@gmail.com (Rahul Thakoor)</managingEditor>
     <webMaster>rahul.thakoor@gmail.com (Rahul Thakoor)</webMaster>
-    <lastBuildDate>Mon, 04 Mar 2019 18:06:48 +0400</lastBuildDate>
+    <lastBuildDate>Sun, 29 Mar 2020 08:00:00 +0400</lastBuildDate>
     
 	<atom:link href="https://rahul-thakoor.github.io/tags/rust/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using no standard library crates with Webassembly</title>
+      <link>https://rahul-thakoor.github.io/using-no-standard-library-crates-with-webassembly/</link>
+      <pubDate>Sun, 29 Mar 2020 08:00:00 +0400</pubDate>
+      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      <guid>https://rahul-thakoor.github.io/using-no-standard-library-crates-with-webassembly/</guid>
+      <description>When working with Rust + Webassembly, you might want to use some crates in your project. Not all crates work out of the box with Webassembly yet, especially those that rely on System Libraries, File I/O, Networking, etc. With proposals such as WASI or WebAssembly Interface Types, these might work eventually but it isn&amp;rsquo;t the case yet.
+The Rust Wasm book suggests:
+ A good rule of thumb is that if a crate supports embedded and #!</description>
+    </item>
     
     <item>
       <title>Making mdBooks work offline</title>
@@ -26,10 +37,10 @@
     <item>
       <title>Releasing rust_gpiozero v0.2.0</title>
       <link>https://rahul-thakoor.github.io/releasing-rust_gpiozero-v0.2.0/</link>
-      <pubDate>Wed, 27 Feb 2019 17:43:48 +0400</pubDate>
+      <pubDate>Wed, 27 Feb 2019 13:43:48 +0000</pubDate>
       <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
       <guid>https://rahul-thakoor.github.io/releasing-rust_gpiozero-v0.2.0/</guid>
-      <description>For the past month I have been working on rust_gpiozero. This new release is a complete rewrite and uses Rene van der Meer(@golemparts)&amp;rsquo;s rppal crate under the hood. It also uses Rust 2018 edition.
+      <description>For the past month I have been working on rust_gpiozero. This new release is a complete rewrite and uses Rene van der Meer(@golemparts)&amp;rsquo;s [rppal](https://github.com/golemparts/rppal) crate under the hood. It also uses Rust 2018 edition.
 Why rppal? Simply because Rene has done an incredible work on rppal. It provides first class support for the Raspberry Pis. Instead of trying to (poorly) reimplement the features, I think it is best to build upon the rppal.</description>
     </item>
     

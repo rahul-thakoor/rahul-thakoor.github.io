@@ -61,7 +61,7 @@
     <item>
       <title>Embedded</title>
       <link>https://rahul-thakoor.github.io/tags/embedded/</link>
-      <pubDate>Tue, 01 May 2018 22:44:18 +0400</pubDate>
+      <pubDate>Sun, 29 Mar 2020 08:00:00 +0400</pubDate>
       <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
       <guid>https://rahul-thakoor.github.io/tags/embedded/</guid>
       <description></description>
@@ -160,7 +160,7 @@
     <item>
       <title>Physical Computing</title>
       <link>https://rahul-thakoor.github.io/tags/physical-computing/</link>
-      <pubDate>Wed, 27 Feb 2019 17:43:48 +0400</pubDate>
+      <pubDate>Wed, 27 Feb 2019 13:43:48 +0000</pubDate>
       <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
       <guid>https://rahul-thakoor.github.io/tags/physical-computing/</guid>
       <description></description>
@@ -178,7 +178,7 @@
     <item>
       <title>Raspberry Pi</title>
       <link>https://rahul-thakoor.github.io/tags/raspberry-pi/</link>
-      <pubDate>Wed, 27 Feb 2019 17:43:48 +0400</pubDate>
+      <pubDate>Wed, 27 Feb 2019 13:43:48 +0000</pubDate>
       <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
       <guid>https://rahul-thakoor.github.io/tags/raspberry-pi/</guid>
       <description></description>
@@ -187,7 +187,7 @@
     <item>
       <title>Rust</title>
       <link>https://rahul-thakoor.github.io/tags/rust/</link>
-      <pubDate>Mon, 04 Mar 2019 18:06:48 +0400</pubDate>
+      <pubDate>Sun, 29 Mar 2020 08:00:00 +0400</pubDate>
       <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
       <guid>https://rahul-thakoor.github.io/tags/rust/</guid>
       <description></description>
@@ -199,6 +199,15 @@
       <pubDate>Sun, 16 Sep 2018 08:49:37 +0400</pubDate>
       <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
       <guid>https://rahul-thakoor.github.io/tags/rustreach/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wasm</title>
+      <link>https://rahul-thakoor.github.io/tags/wasm/</link>
+      <pubDate>Sun, 29 Mar 2020 08:00:00 +0400</pubDate>
+      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      <guid>https://rahul-thakoor.github.io/tags/wasm/</guid>
       <description></description>
     </item>
     

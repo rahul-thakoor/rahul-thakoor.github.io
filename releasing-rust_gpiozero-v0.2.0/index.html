@@ -61,12 +61,12 @@
     "name" : "Rahul Thakoor"
   },
   "headline": "Releasing rust_gpiozero v0.2.0",
-  "description" : "For the past month I have been working on rust_gpiozero. This new release is a complete rewrite and uses Rene van der Meer(@golemparts)&amp;rsquo;s rppal crate under the hood. It also uses Rust 2018 edition.
+  "description" : "For the past month I have been working on rust_gpiozero. This new release is a complete rewrite and uses Rene van der Meer(@golemparts)&amp;rsquo;s [rppal](https://github.com/golemparts/rppal) crate under the hood. It also uses Rust 2018 edition.
 Why rppal? Simply because Rene has done an incredible work on rppal. It provides first class support for the Raspberry Pis. Instead of trying to (poorly) reimplement the features, I think it is best to build upon the rppal.",
   "inLanguage" : "en",
-  "wordCount": 348,
-  "datePublished" : "2019-02-27T17:43:48",
-  "dateModified" : "2019-02-27T17:43:48",
+  "wordCount": 347,
+  "datePublished" : "2019-02-27T13:43:48",
+  "dateModified" : "2019-02-27T13:43:48",
   "image" : "https://rahul-thakoor.github.io",
   "keywords" : [ "rust, raspberry pi, physical computing" ],
   "mainEntityOfPage" : "https://rahul-thakoor.github.io/releasing-rust_gpiozero-v0.2.0/",
@@ -289,7 +289,7 @@ if (!doNotTrack) {
       <article role="main" class="blog-post">
         
 
-<p>For the past month I have been working on <code>rust_gpiozero</code>. This new release is a complete rewrite and uses <a href="https://twitter.com/golemparts">Rene van der Meer(@golemparts)</a>&rsquo;s  <a href="https://github.com/golemparts/rppal"><code>rppal</code></a> crate under the hood. It also uses Rust 2018 edition.</p>
+<p>For the past month I have been working on <code>rust_gpiozero</code>. This new release is a complete rewrite and uses <a href="https://twitter.com/golemparts">Rene van der Meer(@golemparts)</a>&rsquo;s  <code>[rppal](https://github.com/golemparts/rppal)</code> crate under the hood. It also uses Rust 2018 edition.</p>
 
 <h2 id="why-rppal">Why <code>rppal</code>?</h2>
 
@@ -297,7 +297,7 @@ if (!doNotTrack) {
 
 <h2 id="what-s-new">What&rsquo;s new?</h2>
 
-<p>The main goal for this release was to provide software-based PWM components. At first I experimented with <code>wiring_pi</code>. Fortunately, Rene added softpwm  in <a href="https://github.com/golemparts/rppal/releases/tag/0.11.0"><code>rppal</code></a> v0.11.0 after I requested which made implementing the following components a breeze:</p>
+<p>The main goal for this release was to provide software-based PWM components. At first I experimented with <code>wiring_pi</code>. Fortunately, Rene added softpwm  in <code>[rppal](https://github.com/golemparts/rppal/releases/tag/0.11.0)</code> v0.11.0 after I requested which made implementing the following components a breeze:</p>
 
 <ul>
 <li>Adding <code>speed</code> feature for <code>Motor</code> component</li>
@@ -313,13 +313,10 @@ if (!doNotTrack) {
 <p>I started <code>rust_gpiozero</code> as an educational project and this release was very instructive:</p>
 
 <ul>
-<li><p>I worked with threads in Rust which helped me better understand the borrowing, thread safety and closures. I worked with <code>std::sync::Arc</code>and <code>std::sync::Mutex</code>. However, I think there is still more to learn and discover.</p></li>
-
-<li><p>I used <code>macro_rules!</code> for the first time. While previously using <code>traits</code>, I felt not being able to override functions and also have access to struct data implementing the traits a challenge. With <code>macro_rules!</code>, I wrote organised common implementations accordingly and implemented them where needed. It also made the code &ldquo;DRYer&rdquo;.</p></li>
-
-<li><p>I got a better understanding of Pulse Width Modulation</p></li>
-
-<li><p>I formatted the code with <code>rustfmt</code> and <code>clippy</code> ❤️</p></li>
+<li>I worked with threads in Rust which helped me better understand the borrowing, thread safety and closures. I worked with <code>std::sync::Arc</code>and <code>std::sync::Mutex</code>. However, I think there is still more to learn and discover.</li>
+<li>I used <code>macro_rules!</code> for the first time. While previously using <code>traits</code>, I felt not being able to override functions and also have access to struct data implementing the traits a challenge. With <code>macro_rules!</code>, I organised common implementations accordingly and implemented them where needed. It also made the code <em>&ldquo;DRYer&rdquo;</em>.</li>
+<li>I got a better understanding of Pulse Width Modulation</li>
+<li>I formatted the code with <code>rustfmt</code> and <code>clippy</code> ❤️</li>
 </ul>
 
 <h2 id="what-s-next">What&rsquo;s next?</h2>
@@ -501,7 +498,7 @@ if (!doNotTrack) {
 
           &nbsp;&bull;&nbsp;&copy;
           
-            2019
+            2020
           
 
           

@@ -3,13 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rahul-thakoor.github.io/using-no-standard-library-crates-with-webassembly/</loc>
+    <lastmod>2020-03-29T08:00:00+04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rahul-thakoor.github.io/making-mdbooks-work-offline/</loc>
     <lastmod>2019-03-04T18:06:48+04:00</lastmod>
   </url>
   
   <url>
     <loc>https://rahul-thakoor.github.io/releasing-rust_gpiozero-v0.2.0/</loc>
-    <lastmod>2019-02-27T17:43:48+04:00</lastmod>
+    <lastmod>2019-02-27T13:43:48+00:00</lastmod>
   </url>
   
   <url>
@@ -110,7 +115,7 @@
   
   <url>
     <loc>https://rahul-thakoor.github.io/tags/embedded/</loc>
-    <lastmod>2018-05-01T22:44:18+04:00</lastmod>
+    <lastmod>2020-03-29T08:00:00+04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -185,13 +190,13 @@
   
   <url>
     <loc>https://rahul-thakoor.github.io/tags/physical-computing/</loc>
-    <lastmod>2019-02-27T17:43:48+04:00</lastmod>
+    <lastmod>2019-02-27T13:43:48+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rahul-thakoor.github.io/post/</loc>
-    <lastmod>2019-03-04T18:06:48+04:00</lastmod>
+    <lastmod>2020-03-29T08:00:00+04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -209,13 +214,13 @@
   
   <url>
     <loc>https://rahul-thakoor.github.io/tags/raspberry-pi/</loc>
-    <lastmod>2019-02-27T17:43:48+04:00</lastmod>
+    <lastmod>2019-02-27T13:43:48+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rahul-thakoor.github.io/tags/rust/</loc>
-    <lastmod>2019-03-04T18:06:48+04:00</lastmod>
+    <lastmod>2020-03-29T08:00:00+04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -232,6 +237,12 @@
   </url>
   
   <url>
+    <loc>https://rahul-thakoor.github.io/tags/wasm/</loc>
+    <lastmod>2020-03-29T08:00:00+04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://rahul-thakoor.github.io/tags/web/</loc>
     <lastmod>2019-03-04T18:06:48+04:00</lastmod>
     <priority>0</priority>
@@ -239,7 +250,7 @@
   
   <url>
     <loc>https://rahul-thakoor.github.io/</loc>
-    <lastmod>2019-03-04T18:06:48+04:00</lastmod>
+    <lastmod>2020-03-29T08:00:00+04:00</lastmod>
     <priority>0</priority>
   </url>
   
