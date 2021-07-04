@@ -19,14 +19,14 @@
     "@type": "WebSite",
     "name": "rahul thakoor",
     
-    "url": "https:\/\/rahul-thakoor.github.io"
+    "url": "https://rahul-thakoor.github.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https:\/\/rahul-thakoor.github.io"
+  "url": "https://rahul-thakoor.github.io"
   
   
   
@@ -41,14 +41,14 @@
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https:\/\/rahul-thakoor.github.io",
+          "@id": "https://rahul-thakoor.github.io",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/rahul-thakoor.github.io\/using-firmata-on-arduino-compatible-boards\/",
+          "@id": "https://rahul-thakoor.github.io/using-firmata-on-arduino-compatible-boards/",
           "name": "Using firmata on arduino compatible boards"
         }
     }]
@@ -63,18 +63,18 @@
   "headline": "Using Firmata On Arduino Compatible Boards",
   "description" : "Using Firmata On Arduino Compatible Boards",
   "inLanguage" : "en",
-  "wordCount":  686 ,
+  "wordCount": 686,
   "datePublished" : "2017-06-25T08:12:00",
   "dateModified" : "2017-06-25T08:12:00",
-  "image" : "https:\/\/rahul-thakoor.github.io",
+  "image" : "https://rahul-thakoor.github.io",
   "keywords" : [ "NodeBots, Johnny-Five, Maker, DIY, Firmata" ],
-  "mainEntityOfPage" : "https:\/\/rahul-thakoor.github.io\/using-firmata-on-arduino-compatible-boards\/",
+  "mainEntityOfPage" : "https://rahul-thakoor.github.io/using-firmata-on-arduino-compatible-boards/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https:\/\/rahul-thakoor.github.io",
+    "name" : "https://rahul-thakoor.github.io",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https:\/\/rahul-thakoor.github.io",
+        "url" : "https://rahul-thakoor.github.io",
         "height" :  60 ,
         "width" :  60
     }
@@ -100,7 +100,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="rahul thakoor" />
 
-  <meta name="generator" content="Hugo 0.84.4" />
+  <meta name="generator" content="Hugo 0.54.0" />
   <link rel="alternate" href="https://rahul-thakoor.github.io/index.xml" type="application/rss+xml" title="rahul thakoor">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -251,7 +251,7 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;
+  <i class="fas fa-calendar"></i>&nbsp;Posted on June 25, 2017
   
   
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
@@ -278,17 +278,29 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <h2 id="what-is-arduino">What is Arduino?</h2>
+        
+
+<h2 id="what-is-arduino">What is Arduino?</h2>
+
 <p>Arduino is an open-source electronics prototyping platform. An Arduino board is development hardware consisting of a programmable microcontroller. The boards can collect information(inputs), act on the inputs(processing) and finally produce outputs. Typically, Arduino boards are programmed using the Arduino programming language through the Arduino IDE using custom firmware(sketches). Arduino exists in many forms and flavours, from the official boards such as the UNO, ArduinoBoard 101 and MEGA, to Arduino-compatible ones like the NodeMCU.</p>
-<p><img src="https://github.com/rahul-thakoor/kws/raw/master/firmata%20on%20arduino/arduino.jpg" alt="Components"></p>
+
+<p><img src="https://github.com/rahul-thakoor/kws/raw/master/firmata%20on%20arduino/arduino.jpg" alt="Components" /></p>
+
 <h2 id="firmata">Firmata</h2>
+
 <p>Arduino boards are usually based on microcontrollers with low CPU clock speed (around 16 to 32 MHz) and limited memory space. The Firmata protocol provides a way to harness the power of a more powerful machine to run complex processing while using the arduino being used to collect data from sensors and execute desired outputs.</p>
+
 <p>Firmata is a protocol allowing communication between software and microcontrollers. It thus provides a common language with which both the software and hardware can communicate. It works as a host-client method where the microcontroller acts as the client and a more powerful device (smartphone, tablet or computer) acts as the host communicating through a channel such as WiFi, Bluetooth or USB connection. Basically, Firmata makes the board Input/Output pins available via serial communication.</p>
+
 <p>The protocol has two implementations : Firmware and Client Libraries.
 The firmware runs on the development board and establishes a method for communication with software running on a host machine. The Arduino IDE provides a Firmata library, implementing the Firmata protocol.</p>
+
 <p>The client libraries are software implementation of the Firmata protocol running on the host machine. Several Firmata client libraries and frameworks have been implemented in a variety of popular programming languages, namely Processing, Javascript, Python, Java and even Go!</p>
-<p><img src="https://github.com/rahul-thakoor/kws/raw/master/firmata%20on%20arduino/firmata%20protocol.jpg" alt="Components"></p>
+
+<p><img src="https://github.com/rahul-thakoor/kws/raw/master/firmata%20on%20arduino/firmata%20protocol.jpg" alt="Components" /></p>
+
 <h3 id="advantages">Advantages</h3>
+
 <ul>
 <li>The protocol can be implemented in firmware on any microcontroller architecture</li>
 <li>The protocol can be implemented in software in any programming language</li>
@@ -296,33 +308,56 @@ The firmware runs on the development board and establishes a method for communic
 <li>The microcontoller is able to communicate with different host machines - it does not run a single-purpose program</li>
 <li>No compilation is needed to run the program - just start another script on the host machine</li>
 </ul>
+
 <h3 id="disadvantages">Disadvantages</h3>
+
 <ul>
 <li>The board depends on the host machine - it can only operate as long as the host machine is running the software</li>
 <li>The board may need to be constantly powered on</li>
 </ul>
+
 <h2 id="connectivity">Connectivity</h2>
+
 <p>The client hardware can be connected to the host machine either physically (through a cable) or wirelessly. There Arduino IDE provides different implementations of the firmware taking into consideration the different means of communication such as Serial, Ethernet, WiFi and Bluetooth.</p>
+
 <h2 id="getting-started-on-arduino-compatible-boards">Getting Started on Arduino-Compatible Boards</h2>
+
 <h3 id="flashing-firmata-firmware">Flashing Firmata Firmware</h3>
+
 <p>Download and install the <a href="https://www.arduino.cc/en/Main/Software" target="_blank">Arduino IDE</a>.</p>
+
 <p>Arduino provides Firmata as sketches. The StandardFirmata sketch is the most widely used. It allows communication via a serial port such as USB.
 To flash it, naviagte to File &ndash;&gt; Examples &ndash;&gt; Firmata &ndash;&gt; Standard Firmata. Choose the appropriate options for your board in the Tools section and finally upload the sketch to the arduino board.</p>
-<p><img src="https://github.com/rahul-thakoor/kws/raw/master/firmata%20on%20arduino/arduino-firmata-library.png" alt="Components"></p>
+
+<p><img src="https://github.com/rahul-thakoor/kws/raw/master/firmata%20on%20arduino/arduino-firmata-library.png" alt="Components" /></p>
+
 <h3 id="testing">Testing</h3>
+
 <h4 id="via-firmata-test-program">Via Firmata Test Program</h4>
+
 <p>Firmata provides a test program for boards running StandardFirmata. It allows quick testing of all I/O pins. It runs without installation and works on Windows, MacOs, and Linux. The binaries can be found <a href="https://github.com/firmata/firmata_test/downloads" target="_blank">here</a>.</p>
-<p><img src="https://github.com/rahul-thakoor/kws/raw/master/firmata%20on%20arduino/firmata_test.png" alt="Components"></p>
+
+<p><img src="https://github.com/rahul-thakoor/kws/raw/master/firmata%20on%20arduino/firmata_test.png" alt="Components" /></p>
+
 <h4 id="via-education-lab-for-arduino-and-firmata-by-quai-lab">Via Education LAB for Arduino and Firmata by Quai-Lab</h4>
+
 <p>It is similar to the Firmata Test program, however it is available as a chrome extension.
 It has a RECORDER feature that enables the recording and the replay of the actions done with the interface and an OSCILLOSCOPE feature which allows to observe voltage changes on one of the analog input.</p>
-<p><img src="https://github.com/rahul-thakoor/kws/raw/master/firmata%20on%20arduino/education-lab.png" alt="Components"></p>
+
+<p><img src="https://github.com/rahul-thakoor/kws/raw/master/firmata%20on%20arduino/education-lab.png" alt="Components" /></p>
+
 <h3 id="writing-software">Writing Software</h3>
+
 <p>Once the board running Firmata firmware has been tested, software can be implemented in different programming languages. There are different client libraries.</p>
-<p><img src="https://github.com/rahul-thakoor/kws/raw/master/firmata%20on%20arduino/pymata.png" alt="Components"></p>
+
+<p><img src="https://github.com/rahul-thakoor/kws/raw/master/firmata%20on%20arduino/pymata.png" alt="Components" /></p>
+
 <p>Also, there are frameworks using the libraries which makes it easier to write software for the board. The most popular frameworks use Javascript and include Johnny-Five and Cylon.Js.</p>
-<p><img src="https://github.com/rahul-thakoor/kws/raw/master/firmata%20on%20arduino/j5-blink.png" alt="Components"></p>
+
+<p><img src="https://github.com/rahul-thakoor/kws/raw/master/firmata%20on%20arduino/j5-blink.png" alt="Components" /></p>
+
 <h2 id="references">References</h2>
+
 <ol>
 <li>Arduino, <a href="https://www.arduino.cc/" target="_blank"><a href="https://www.arduino.cc/">https://www.arduino.cc/</a></a></li>
 <li>Firmata Procotol, <a href="https://github.com/firmata/protocol" target="_blank"><a href="https://github.com/firmata/protocol">https://github.com/firmata/protocol</a></a></li>
@@ -445,14 +480,6 @@ It has a RECORDER feature that enables the recording and the replay of the actio
         <ul class="list-inline text-center footer-links">
           
               <li>
-                <a href="mailto:rahul.thakoor@gmail.com" title="Email me">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
                 <a href="https://github.com/rahul-thakoor" title="GitHub">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
@@ -465,14 +492,6 @@ It has a RECORDER feature that enables the recording and the replay of the actio
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://linkedin.com/in/rahul-thakoor-a50706138" title="LinkedIn">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
@@ -505,7 +524,7 @@ It has a RECORDER feature that enables the recording and the replay of the actio
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.84.4</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

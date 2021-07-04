@@ -1,19 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>OpenData on rahul thakoor</title>
+    <title>Opendata on rahul thakoor</title>
     <link>https://rahul-thakoor.github.io/tags/opendata/</link>
-    <description>Recent content in OpenData on rahul thakoor</description>
+    <description>Recent content in Opendata on rahul thakoor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>rahul.thakoor@gmail.com (Rahul Thakoor)</managingEditor>
-    <webMaster>rahul.thakoor@gmail.com (Rahul Thakoor)</webMaster>
-    <lastBuildDate>Mon, 07 May 2018 15:02:31 +0400</lastBuildDate><atom:link href="https://rahul-thakoor.github.io/tags/opendata/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 May 2018 15:02:31 +0400</lastBuildDate>
+    
+	<atom:link href="https://rahul-thakoor.github.io/tags/opendata/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Explore OpenData on data.govmu.org using R</title>
       <link>https://rahul-thakoor.github.io/explore-opendata-on-data.govmu.org-using-r/</link>
       <pubDate>Mon, 07 May 2018 15:02:31 +0400</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/explore-opendata-on-data.govmu.org-using-r/</guid>
       <description>The National Computer Board(NCB) of Mauritius recently announced the Open Data Mauritius portal1. It contains 100 datasets on topics such as Agriculture, Crime, Justice and Security, Health and Tourism. The portal is powered by the DKAN Open Data Platform2, which is a community-driven, free and open source open data platform that gives organizations and individuals ultimate freedom to publish and consume structured information.
 DKAN includes a number of APIs3 to allow it to communicate with external applications.</description>

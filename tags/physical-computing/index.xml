@@ -1,19 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>physical computing on rahul thakoor</title>
+    <title>Physical Computing on rahul thakoor</title>
     <link>https://rahul-thakoor.github.io/tags/physical-computing/</link>
-    <description>Recent content in physical computing on rahul thakoor</description>
+    <description>Recent content in Physical Computing on rahul thakoor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>rahul.thakoor@gmail.com (Rahul Thakoor)</managingEditor>
-    <webMaster>rahul.thakoor@gmail.com (Rahul Thakoor)</webMaster>
-    <lastBuildDate>Wed, 27 Feb 2019 13:43:48 +0000</lastBuildDate><atom:link href="https://rahul-thakoor.github.io/tags/physical-computing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Feb 2019 13:43:48 +0000</lastBuildDate>
+    
+	<atom:link href="https://rahul-thakoor.github.io/tags/physical-computing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Releasing rust_gpiozero v0.2.0</title>
       <link>https://rahul-thakoor.github.io/releasing-rust_gpiozero-v0.2.0/</link>
       <pubDate>Wed, 27 Feb 2019 13:43:48 +0000</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/releasing-rust_gpiozero-v0.2.0/</guid>
       <description>For the past month I have been working on rust_gpiozero. This new release is a complete rewrite and uses Rene van der Meer(@golemparts)&amp;rsquo;s [rppal](https://github.com/golemparts/rppal) crate under the hood. It also uses Rust 2018 edition.
 Why rppal? Simply because Rene has done an incredible work on rppal. It provides first class support for the Raspberry Pis. Instead of trying to (poorly) reimplement the features, I think it is best to build upon the rppal.</description>
@@ -23,7 +25,7 @@ Why rppal? Simply because Rene has done an incredible work on rppal. It provides
       <title>Physical Computing With Rust On Raspberry Pi</title>
       <link>https://rahul-thakoor.github.io/physical-computing-with-rust-on-raspberry-pi/</link>
       <pubDate>Sat, 07 Jul 2018 23:06:32 +0400</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/physical-computing-with-rust-on-raspberry-pi/</guid>
       <description>A couple of months ago I released the rust_gpiozero1 crate. It is a port of the GPIO Zero2 library by the Raspberry Pi Foundation. The library provides a simple interface to control GPIO devices with a Raspberry Pi. Following this, recently ported the Raspberry Pi Foundation&amp;rsquo;s Physical Computing with Python3 guide for Rust.
 Why did I create the rust_gpiozero crate? After going through The Rust Programming language book, I decided to work on a side project to practice some of the concepts.</description>

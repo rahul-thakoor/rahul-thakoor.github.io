@@ -1,19 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>wasm on rahul thakoor</title>
+    <title>Wasm on rahul thakoor</title>
     <link>https://rahul-thakoor.github.io/tags/wasm/</link>
-    <description>Recent content in wasm on rahul thakoor</description>
+    <description>Recent content in Wasm on rahul thakoor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>rahul.thakoor@gmail.com (Rahul Thakoor)</managingEditor>
-    <webMaster>rahul.thakoor@gmail.com (Rahul Thakoor)</webMaster>
-    <lastBuildDate>Sun, 29 Mar 2020 08:00:00 +0400</lastBuildDate><atom:link href="https://rahul-thakoor.github.io/tags/wasm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Mar 2020 08:00:00 +0400</lastBuildDate>
+    
+	<atom:link href="https://rahul-thakoor.github.io/tags/wasm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Using no standard library crates with Webassembly</title>
       <link>https://rahul-thakoor.github.io/using-no-standard-library-crates-with-webassembly/</link>
       <pubDate>Sun, 29 Mar 2020 08:00:00 +0400</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/using-no-standard-library-crates-with-webassembly/</guid>
       <description>When working with Rust + Webassembly, you might want to use some crates in your project. Not all crates work out of the box with Webassembly yet, especially those that rely on System Libraries, File I/O, Networking, etc. With proposals such as WASI or WebAssembly Interface Types, these might work eventually but it isn&amp;rsquo;t the case yet.
 The Rust Wasm book suggests:

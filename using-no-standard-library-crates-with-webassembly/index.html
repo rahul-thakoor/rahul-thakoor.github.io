@@ -19,14 +19,14 @@
     "@type": "WebSite",
     "name": "rahul thakoor",
     
-    "url": "https:\/\/rahul-thakoor.github.io"
+    "url": "https://rahul-thakoor.github.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https:\/\/rahul-thakoor.github.io"
+  "url": "https://rahul-thakoor.github.io"
   
   
   
@@ -41,14 +41,14 @@
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https:\/\/rahul-thakoor.github.io",
+          "@id": "https://rahul-thakoor.github.io",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/rahul-thakoor.github.io\/using-no-standard-library-crates-with-webassembly\/",
+          "@id": "https://rahul-thakoor.github.io/using-no-standard-library-crates-with-webassembly/",
           "name": "Using no standard library crates with webassembly"
         }
     }]
@@ -61,20 +61,22 @@
     "name" : "Rahul Thakoor"
   },
   "headline": "Using no standard library crates with Webassembly",
-  "description" : "When working with Rust \u002b Webassembly, you might want to use some crates in your project. Not all crates work out of the box with Webassembly yet, especially those that rely on System Libraries, File I\/O, Networking, etc. With proposals such as WASI or WebAssembly Interface Types, these might work eventually but it isn\u0026rsquo;t the case yet.\nThe Rust Wasm book suggests:\n A good rule of thumb is that if a crate supports embedded and #!",
+  "description" : "When working with Rust &#43; Webassembly, you might want to use some crates in your project. Not all crates work out of the box with Webassembly yet, especially those that rely on System Libraries, File I/O, Networking, etc. With proposals such as WASI or WebAssembly Interface Types, these might work eventually but it isn&amp;rsquo;t the case yet.
+The Rust Wasm book suggests:
+ A good rule of thumb is that if a crate supports embedded and #!",
   "inLanguage" : "en",
-  "wordCount":  404 ,
+  "wordCount": 404,
   "datePublished" : "2020-03-29T08:00:00",
   "dateModified" : "2020-03-29T08:00:00",
-  "image" : "https:\/\/rahul-thakoor.github.io",
+  "image" : "https://rahul-thakoor.github.io",
   "keywords" : [ "embedded, rust, wasm" ],
-  "mainEntityOfPage" : "https:\/\/rahul-thakoor.github.io\/using-no-standard-library-crates-with-webassembly\/",
+  "mainEntityOfPage" : "https://rahul-thakoor.github.io/using-no-standard-library-crates-with-webassembly/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https:\/\/rahul-thakoor.github.io",
+    "name" : "https://rahul-thakoor.github.io",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https:\/\/rahul-thakoor.github.io",
+        "url" : "https://rahul-thakoor.github.io",
         "height" :  60 ,
         "width" :  60
     }
@@ -104,7 +106,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="rahul thakoor" />
 
-  <meta name="generator" content="Hugo 0.84.4" />
+  <meta name="generator" content="Hugo 0.54.0" />
   <link rel="alternate" href="https://rahul-thakoor.github.io/index.xml" type="application/rss+xml" title="rahul thakoor">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -259,7 +261,7 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;
+  <i class="fas fa-calendar"></i>&nbsp;Posted on March 29, 2020
   
   
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
@@ -286,22 +288,38 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>When working with Rust + Webassembly, you might want to use some crates in your project. Not all crates work out of the box with Webassembly yet, especially those that rely on System Libraries, File I/O, Networking, etc. With proposals such as <a href="https://wasi.dev/" title="WebAssembly System Interface">WASI</a> or <a href="https://github.com/WebAssembly/interface-types/blob/master/proposals/interface-types/Explainer.md" title="WebAssembly Interface Types">WebAssembly Interface Types</a>, these might work eventually but it isn&rsquo;t the case yet.</p>
+        
+
+<p>When working with Rust + Webassembly, you might want to use some crates in your project. Not all crates work out of the box with Webassembly yet, especially those that rely on System Libraries, File I/O, Networking, etc. With proposals such as <a href="https://wasi.dev/" title="WebAssembly System Interface">WASI</a> or <a href="https://github.com/WebAssembly/interface-types/blob/master/proposals/interface-types/Explainer.md" title="WebAssembly Interface Types">WebAssembly Interface Types</a>, these might work eventually but it isn&rsquo;t the case yet.</p>
+
 <p>The Rust Wasm book suggests:</p>
+
 <blockquote>
 <p>A good rule of thumb is that if a crate supports embedded and <code>#![no_std]</code> usage, it probably also supports WebAssembly.</p>
 </blockquote>
-<h2 id="what-are-no_std-crates">What are no_std crates?</h2>
+
+<h2 id="what-are-no-std-crates">What are no_std crates?</h2>
+
 <p>Rust has an extensive standard library and every time you use some functionality, they need to be imported into scope. This can get very verbose and tedious! Rust automatically imports some things into every program and this is known as the prelude. The list of contents to be included in defined in the  <code>std::prelude</code> module.</p>
+
 <p>However, when working with Webassembly or Embedded systems, the environment where the code is executed might not have access to System Interface that the std library requires. <code>#![no_std]</code> is an attribute that indicates to Rust that the crate will link to the <a href="https://doc.rust-lang.org/stable/core/index.html" title="libcore">core crate</a> instead which is a quasi dependency-free and platform-agnostic Rust library defining essential primitives.</p>
+
 <p>The <a href="https://rust-embedded.github.io/book/intro/no-std.html">Rust-Embedded book</a> has a great explanation about <code>no_std</code> environment.</p>
+
 <p>You can find <code>no_std</code> crates on <a href="https://crates.io/categories/no-std" title="no_std lib">crates.io</a> and the <a href="https://github.com/rust-embedded/awesome-embedded-rust#no-std-crates">Awesome Embedded Rust list</a>.</p>
+
 <h2 id="an-example">An example</h2>
-<p><img src="/img/embedded-graphics-web-simulator.jpg" alt="A screenshot of the simulator" title="Embedded Graphics Web Simulator"></p>
+
+<p><img src="/img/embedded-graphics-web-simulator.jpg" alt="A screenshot of the simulator" title="Embedded Graphics Web Simulator" /></p>
+
 <p>I&rsquo;ve been experimenting with Webassembly lately and thought it would be a good educative project to make a <a href="https://docs.rs/embedded-graphics-simulator/0.2.0/embedded_graphics_simulator/">Simulator</a> that runs on the web for the <a href="https://github.com/jamwaffles/embedded-graphics">Embedded Graphics</a> by<a href="https://twitter.com/jam_waffles"> James Waples</a>. The library already includes a Simulator but requires installing SDL and its development libraries even to run the demos. With Webassembly we can easily run this on a web page without installing any dependencies!</p>
+
 <p>Thanks to the awesome work by James and the Rust Wasm team, it was quite trivial to implement this. I created the project using wasm-pack which is great for getting started with Rust + Webassembly work. The Embedded Graphics has great documentation on how to implement a display driver. I implemented the <a href="https://docs.rs/embedded-graphics/0.6.0/embedded_graphics/prelude/trait.DrawTarget.html">DrawTarget trait</a> for drawing pixels on a <code>&lt;canvas&gt;</code> element which in turn the workflow was made great by the <code>wasm_bindgen</code>, <code>js-sys</code> and <code>web-sys crates</code>.</p>
+
 <p>You can see a <a href="https://rahul-thakoor.github.io/embedded-graphics-web-simulator/">demo</a> of the built project and find the<a href="https://github.com/rahul-thakoor/embedded-graphics-web-simulator"> source code on GitHub</a>. Feel free to make code reviews or contribute or notify me if I&rsquo;ve made mistakes.</p>
+
 <h2 id="references">References</h2>
+
 <ol>
 <li><a href="https://doc.rust-lang.org/stable/reference/crates-and-source-files.html?highlight=std#preludes-and-no_std">Preludes and no_std</a></li>
 <li><a href="https://rustwasm.github.io/docs/book/">Rust Wasm book</a></li>
@@ -413,14 +431,6 @@ if (!doNotTrack) {
         <ul class="list-inline text-center footer-links">
           
               <li>
-                <a href="mailto:rahul.thakoor@gmail.com" title="Email me">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
                 <a href="https://github.com/rahul-thakoor" title="GitHub">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
@@ -433,14 +443,6 @@ if (!doNotTrack) {
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://linkedin.com/in/rahul-thakoor-a50706138" title="LinkedIn">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
@@ -473,7 +475,7 @@ if (!doNotTrack) {
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.84.4</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

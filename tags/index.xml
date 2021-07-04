@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on rahul thakoor</title>
@@ -6,105 +6,44 @@
     <description>Recent content in Tags on rahul thakoor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>rahul.thakoor@gmail.com (Rahul Thakoor)</managingEditor>
-    <webMaster>rahul.thakoor@gmail.com (Rahul Thakoor)</webMaster>
-    <lastBuildDate>Sun, 29 Mar 2020 08:00:00 +0400</lastBuildDate><atom:link href="https://rahul-thakoor.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 May 2016 20:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://rahul-thakoor.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
-      <title>embedded</title>
-      <link>https://rahul-thakoor.github.io/tags/embedded/</link>
-      <pubDate>Sun, 29 Mar 2020 08:00:00 +0400</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
-      <guid>https://rahul-thakoor.github.io/tags/embedded/</guid>
+      <title>Blynk</title>
+      <link>https://rahul-thakoor.github.io/tags/blynk/</link>
+      <pubDate>Sun, 01 May 2016 20:00:00 +0000</pubDate>
+      
+      <guid>https://rahul-thakoor.github.io/tags/blynk/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>rust</title>
-      <link>https://rahul-thakoor.github.io/tags/rust/</link>
-      <pubDate>Sun, 29 Mar 2020 08:00:00 +0400</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
-      <guid>https://rahul-thakoor.github.io/tags/rust/</guid>
+      <title>Devconmru</title>
+      <link>https://rahul-thakoor.github.io/tags/devconmru/</link>
+      <pubDate>Sun, 02 Apr 2017 08:37:00 +0000</pubDate>
+      
+      <guid>https://rahul-thakoor.github.io/tags/devconmru/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>wasm</title>
-      <link>https://rahul-thakoor.github.io/tags/wasm/</link>
-      <pubDate>Sun, 29 Mar 2020 08:00:00 +0400</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
-      <guid>https://rahul-thakoor.github.io/tags/wasm/</guid>
+      <title>Diy</title>
+      <link>https://rahul-thakoor.github.io/tags/diy/</link>
+      <pubDate>Sun, 25 Jun 2017 08:12:00 +0000</pubDate>
+      
+      <guid>https://rahul-thakoor.github.io/tags/diy/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>mdbook</title>
-      <link>https://rahul-thakoor.github.io/tags/mdbook/</link>
-      <pubDate>Mon, 04 Mar 2019 18:06:48 +0400</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
-      <guid>https://rahul-thakoor.github.io/tags/mdbook/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web</title>
-      <link>https://rahul-thakoor.github.io/tags/web/</link>
-      <pubDate>Mon, 04 Mar 2019 18:06:48 +0400</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
-      <guid>https://rahul-thakoor.github.io/tags/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>physical computing</title>
-      <link>https://rahul-thakoor.github.io/tags/physical-computing/</link>
-      <pubDate>Wed, 27 Feb 2019 13:43:48 +0000</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
-      <guid>https://rahul-thakoor.github.io/tags/physical-computing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>raspberry pi</title>
-      <link>https://rahul-thakoor.github.io/tags/raspberry-pi/</link>
-      <pubDate>Wed, 27 Feb 2019 13:43:48 +0000</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
-      <guid>https://rahul-thakoor.github.io/tags/raspberry-pi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>rustreach</title>
-      <link>https://rahul-thakoor.github.io/tags/rustreach/</link>
-      <pubDate>Sun, 16 Sep 2018 08:49:37 +0400</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
-      <guid>https://rahul-thakoor.github.io/tags/rustreach/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>DKAN</title>
+      <title>Dkan</title>
       <link>https://rahul-thakoor.github.io/tags/dkan/</link>
       <pubDate>Mon, 07 May 2018 15:02:31 +0400</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/tags/dkan/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>OpenData</title>
-      <link>https://rahul-thakoor.github.io/tags/opendata/</link>
-      <pubDate>Mon, 07 May 2018 15:02:31 +0400</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
-      <guid>https://rahul-thakoor.github.io/tags/opendata/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>https://rahul-thakoor.github.io/tags/r/</link>
-      <pubDate>Mon, 07 May 2018 15:02:31 +0400</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
-      <guid>https://rahul-thakoor.github.io/tags/r/</guid>
       <description></description>
     </item>
     
@@ -112,17 +51,17 @@
       <title>Driver</title>
       <link>https://rahul-thakoor.github.io/tags/driver/</link>
       <pubDate>Tue, 01 May 2018 22:44:18 +0400</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/tags/driver/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>DIY</title>
-      <link>https://rahul-thakoor.github.io/tags/diy/</link>
-      <pubDate>Sun, 25 Jun 2017 08:12:00 +0000</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
-      <guid>https://rahul-thakoor.github.io/tags/diy/</guid>
+      <title>Embedded</title>
+      <link>https://rahul-thakoor.github.io/tags/embedded/</link>
+      <pubDate>Sun, 29 Mar 2020 08:00:00 +0400</pubDate>
+      
+      <guid>https://rahul-thakoor.github.io/tags/embedded/</guid>
       <description></description>
     </item>
     
@@ -130,16 +69,34 @@
       <title>Firmata</title>
       <link>https://rahul-thakoor.github.io/tags/firmata/</link>
       <pubDate>Sun, 25 Jun 2017 08:12:00 +0000</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/tags/firmata/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Johnny-Five</title>
+      <title>Instructables</title>
+      <link>https://rahul-thakoor.github.io/tags/instructables/</link>
+      <pubDate>Mon, 23 Jan 2017 22:10:00 +0000</pubDate>
+      
+      <guid>https://rahul-thakoor.github.io/tags/instructables/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Iot</title>
+      <link>https://rahul-thakoor.github.io/tags/iot/</link>
+      <pubDate>Sun, 01 May 2016 20:00:00 +0000</pubDate>
+      
+      <guid>https://rahul-thakoor.github.io/tags/iot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Johnny Five</title>
       <link>https://rahul-thakoor.github.io/tags/johnny-five/</link>
       <pubDate>Sun, 25 Jun 2017 08:12:00 +0000</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/tags/johnny-five/</guid>
       <description></description>
     </item>
@@ -148,71 +105,116 @@
       <title>Maker</title>
       <link>https://rahul-thakoor.github.io/tags/maker/</link>
       <pubDate>Sun, 25 Jun 2017 08:12:00 +0000</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/tags/maker/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>NodeBots</title>
-      <link>https://rahul-thakoor.github.io/tags/nodebots/</link>
-      <pubDate>Sun, 25 Jun 2017 08:12:00 +0000</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
-      <guid>https://rahul-thakoor.github.io/tags/nodebots/</guid>
+      <title>Mdbook</title>
+      <link>https://rahul-thakoor.github.io/tags/mdbook/</link>
+      <pubDate>Mon, 04 Mar 2019 18:06:48 +0400</pubDate>
+      
+      <guid>https://rahul-thakoor.github.io/tags/mdbook/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>DevConMru</title>
-      <link>https://rahul-thakoor.github.io/tags/devconmru/</link>
-      <pubDate>Sun, 02 Apr 2017 08:37:00 +0000</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
-      <guid>https://rahul-thakoor.github.io/tags/devconmru/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>MSCC</title>
+      <title>Mscc</title>
       <link>https://rahul-thakoor.github.io/tags/mscc/</link>
       <pubDate>Sun, 02 Apr 2017 08:37:00 +0000</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/tags/mscc/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>MSPMauritius</title>
+      <title>Mspmauritius</title>
       <link>https://rahul-thakoor.github.io/tags/mspmauritius/</link>
       <pubDate>Sun, 02 Apr 2017 08:37:00 +0000</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/tags/mspmauritius/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>instructables</title>
-      <link>https://rahul-thakoor.github.io/tags/instructables/</link>
-      <pubDate>Mon, 23 Jan 2017 22:10:00 +0000</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
-      <guid>https://rahul-thakoor.github.io/tags/instructables/</guid>
+      <title>Nodebots</title>
+      <link>https://rahul-thakoor.github.io/tags/nodebots/</link>
+      <pubDate>Sun, 25 Jun 2017 08:12:00 +0000</pubDate>
+      
+      <guid>https://rahul-thakoor.github.io/tags/nodebots/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Blynk</title>
-      <link>https://rahul-thakoor.github.io/tags/blynk/</link>
-      <pubDate>Sun, 01 May 2016 20:00:00 +0000</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
-      <guid>https://rahul-thakoor.github.io/tags/blynk/</guid>
+      <title>Opendata</title>
+      <link>https://rahul-thakoor.github.io/tags/opendata/</link>
+      <pubDate>Mon, 07 May 2018 15:02:31 +0400</pubDate>
+      
+      <guid>https://rahul-thakoor.github.io/tags/opendata/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>IoT</title>
-      <link>https://rahul-thakoor.github.io/tags/iot/</link>
-      <pubDate>Sun, 01 May 2016 20:00:00 +0000</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
-      <guid>https://rahul-thakoor.github.io/tags/iot/</guid>
+      <title>Physical Computing</title>
+      <link>https://rahul-thakoor.github.io/tags/physical-computing/</link>
+      <pubDate>Wed, 27 Feb 2019 13:43:48 +0000</pubDate>
+      
+      <guid>https://rahul-thakoor.github.io/tags/physical-computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://rahul-thakoor.github.io/tags/r/</link>
+      <pubDate>Mon, 07 May 2018 15:02:31 +0400</pubDate>
+      
+      <guid>https://rahul-thakoor.github.io/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Raspberry Pi</title>
+      <link>https://rahul-thakoor.github.io/tags/raspberry-pi/</link>
+      <pubDate>Wed, 27 Feb 2019 13:43:48 +0000</pubDate>
+      
+      <guid>https://rahul-thakoor.github.io/tags/raspberry-pi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rust</title>
+      <link>https://rahul-thakoor.github.io/tags/rust/</link>
+      <pubDate>Sun, 29 Mar 2020 08:00:00 +0400</pubDate>
+      
+      <guid>https://rahul-thakoor.github.io/tags/rust/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rustreach</title>
+      <link>https://rahul-thakoor.github.io/tags/rustreach/</link>
+      <pubDate>Sun, 16 Sep 2018 08:49:37 +0400</pubDate>
+      
+      <guid>https://rahul-thakoor.github.io/tags/rustreach/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wasm</title>
+      <link>https://rahul-thakoor.github.io/tags/wasm/</link>
+      <pubDate>Sun, 29 Mar 2020 08:00:00 +0400</pubDate>
+      
+      <guid>https://rahul-thakoor.github.io/tags/wasm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web</title>
+      <link>https://rahul-thakoor.github.io/tags/web/</link>
+      <pubDate>Mon, 04 Mar 2019 18:06:48 +0400</pubDate>
+      
+      <guid>https://rahul-thakoor.github.io/tags/web/</guid>
       <description></description>
     </item>
     

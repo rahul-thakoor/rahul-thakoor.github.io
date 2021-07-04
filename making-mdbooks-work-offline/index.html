@@ -19,14 +19,14 @@
     "@type": "WebSite",
     "name": "rahul thakoor",
     
-    "url": "https:\/\/rahul-thakoor.github.io"
+    "url": "https://rahul-thakoor.github.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https:\/\/rahul-thakoor.github.io"
+  "url": "https://rahul-thakoor.github.io"
   
   
   
@@ -41,14 +41,14 @@
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https:\/\/rahul-thakoor.github.io",
+          "@id": "https://rahul-thakoor.github.io",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/rahul-thakoor.github.io\/making-mdbooks-work-offline\/",
+          "@id": "https://rahul-thakoor.github.io/making-mdbooks-work-offline/",
           "name": "Making md books work offline"
         }
     }]
@@ -63,18 +63,18 @@
   "headline": "Making mdBooks work offline",
   "description" : "Use workbox to cache your mdBook contents",
   "inLanguage" : "en",
-  "wordCount":  840 ,
+  "wordCount": 854,
   "datePublished" : "2019-03-04T18:06:48",
   "dateModified" : "2019-03-04T18:06:48",
-  "image" : "https:\/\/rahul-thakoor.github.io",
+  "image" : "https://rahul-thakoor.github.io",
   "keywords" : [ "rust, mdbook, web" ],
-  "mainEntityOfPage" : "https:\/\/rahul-thakoor.github.io\/making-mdbooks-work-offline\/",
+  "mainEntityOfPage" : "https://rahul-thakoor.github.io/making-mdbooks-work-offline/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https:\/\/rahul-thakoor.github.io",
+    "name" : "https://rahul-thakoor.github.io",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https:\/\/rahul-thakoor.github.io",
+        "url" : "https://rahul-thakoor.github.io",
         "height" :  60 ,
         "width" :  60
     }
@@ -104,7 +104,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="rahul thakoor" />
 
-  <meta name="generator" content="Hugo 0.84.4" />
+  <meta name="generator" content="Hugo 0.54.0" />
   <link rel="alternate" href="https://rahul-thakoor.github.io/index.xml" type="application/rss+xml" title="rahul thakoor">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -255,10 +255,10 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;
+  <i class="fas fa-calendar"></i>&nbsp;Posted on March 4, 2019
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
   
   
   
@@ -282,208 +282,233 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p><code>mdBook</code><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> is a great utility to create online books from Markdown files. It is used extensively in the Rust community. Here are some books made with <code>mdBook</code>:</p>
+        
+
+<p><code>mdBook</code><sup class="footnote-ref" id="fnref:mdbook"><a href="#fn:mdbook">1</a></sup> is a great utility to create online books from Markdown files. It is used extensively in the Rust community. Here are some books made with <code>mdBook</code>:</p>
+
 <ul>
-<li>The Rust Programming Language (<em>&ldquo;the book&rdquo;</em>)<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></li>
-<li>Embedded Book <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></li>
-<li>mdBook user guide<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></li>
+<li>The Rust Programming Language (<em>&ldquo;the book&rdquo;</em>)<sup class="footnote-ref" id="fnref:thebook"><a href="#fn:thebook">2</a></sup></li>
+<li>Embedded Book <sup class="footnote-ref" id="fnref:embedded"><a href="#fn:embedded">3</a></sup></li>
+<li>mdBook user guide<sup class="footnote-ref" id="fnref:mdbook-user-guide"><a href="#fn:mdbook-user-guide">4</a></sup></li>
 </ul>
+
 <h2 id="motivation">Motivation</h2>
+
 <ul>
 <li>I usually read the books while commuting and this usually consumes mobile data. Given the contents don&rsquo;t change that often, I thought it would be useful if they were cached.</li>
 <li>Prevent the dreaded <em>&ldquo;no internet connection&rdquo;</em> screen (downasaur).</li>
-<li>I want to eventually convert an <code>mdBook</code> into a PWA<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>. Offline support is important for reliability.</li>
+<li>I want to eventually convert an <code>mdBook</code> into a PWA<sup class="footnote-ref" id="fnref:pwa"><a href="#fn:pwa">5</a></sup>. Offline support is important for reliability.</li>
 </ul>
+
 <h2 id="google-workbox">Google Workbox</h2>
-<p>A service worker<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup> is responsible for caching and retrieving resources from the cache (among other things). Google&rsquo;s Workbox<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup> <em>is a library that bakes in a set of best practices and removes the boilerplate every developer writes when working with service workers.</em> It allows us to precache assets, and also cache assets at runtime. There are several caching strategies<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup> which can be selected depending on your specific use-case.</p>
+
+<p>A service worker<sup class="footnote-ref" id="fnref:sw"><a href="#fn:sw">6</a></sup> is responsible for caching and retrieving resources from the cache (among other things). Google&rsquo;s Workbox<sup class="footnote-ref" id="fnref:wb"><a href="#fn:wb">7</a></sup> <em>is a library that bakes in a set of best practices and removes the boilerplate every developer writes when working with service workers.</em> It allows us to precache assets, and also cache assets at runtime. There are several caching strategies<sup class="footnote-ref" id="fnref:strategies"><a href="#fn:strategies">8</a></sup> which can be selected depending on your specific use-case.</p>
+
 <h2 id="customising-the-mdbook">Customising the mdBook</h2>
-<p>I followed Google&rsquo;s workbox codelab<sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup> and modified the steps accordingly. mdBook allows us to add additional javascript via the <code>additional-js</code> option in <code>book.toml</code>. We need to add a service worker registration code in the template page:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// source: https://codelabs.developers.google.com/codelabs/workbox-lab/#2
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#e6db74">&#39;serviceWorker&#39;</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">navigator</span>) {
-    window.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;load&#39;</span>, () =&gt; {
-      <span style="color:#a6e22e">navigator</span>.<span style="color:#a6e22e">serviceWorker</span>.<span style="color:#a6e22e">register</span>(<span style="color:#e6db74">&#39;sw.js&#39;</span>)
-        .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">registration</span> =&gt; {
-          <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Service Worker registered! Scope: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">registration</span>.<span style="color:#a6e22e">scope</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+
+<p>I followed Google&rsquo;s workbox codelab<sup class="footnote-ref" id="fnref:codelab"><a href="#fn:codelab">9</a></sup> and modified the steps accordingly. mdBook allows us to add additional javascript via the <code>additional-js</code> option in <code>book.toml</code>. We need to add a service worker registration code in the template page:</p>
+
+<pre><code class="language-js">// source: https://codelabs.developers.google.com/codelabs/workbox-lab/#2
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () =&gt; {
+      navigator.serviceWorker.register('sw.js')
+        .then(registration =&gt; {
+          console.log(`Service Worker registered! Scope: ${registration.scope}`);
         })
-        .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">err</span> =&gt; {
-          <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Service Worker registration failed: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">err</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+        .catch(err =&gt; {
+          console.log(`Service Worker registration failed: ${err}`);
         });
     })
   }
-</code></pre></div><p>The code attempts to install a service worker(<code>sw.js</code>)</p>
+</code></pre>
+
+<p>The code attempts to install a service worker(<code>sw.js</code>)</p>
+
 <p>We can save the above code in a file, <code>register-sw.js</code> and save it at the root level of the book. Then in <code>book.toml</code> add the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">output</span>.<span style="color:#a6e22e">html</span>]
-<span style="color:#a6e22e">additional-js</span>=[<span style="color:#e6db74">&#34;register-sw.js&#34;</span>]
-</code></pre></div><p>Next I created a basic service worker file(<code>sw.js</code>) at the root level of the book.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// source: https://codelabs.developers.google.com/codelabs/workbox-lab/#3
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">importScripts</span>(<span style="color:#e6db74">&#39;https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox-sw.js&#39;</span>);
 
-<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">workbox</span>) {
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Yay! Workbox is loaded 🎉`</span>);
+<pre><code class="language-toml">[output.html]
+additional-js=[&quot;register-sw.js&quot;]
+</code></pre>
 
-  <span style="color:#a6e22e">workbox</span>.<span style="color:#a6e22e">precaching</span>.<span style="color:#a6e22e">precacheAndRoute</span>([]);
+<p>Next I created a basic service worker file(<code>sw.js</code>) at the root level of the book.</p>
 
-} <span style="color:#66d9ef">else</span> {
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Boo! Workbox didn&#39;t load 😬`</span>);
+<pre><code class="language-js">// source: https://codelabs.developers.google.com/codelabs/workbox-lab/#3
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox-sw.js');
+
+if (workbox) {
+  console.log(`Yay! Workbox is loaded 🎉`);
+
+  workbox.precaching.precacheAndRoute([]);
+
+} else {
+  console.log(`Boo! Workbox didn't load 😬`);
 }
-</code></pre></div><p>However, when I used the code above, routes with search parameters were not being served properly. I removed search parameters using <code>ignoreUrlParametersMatching</code><sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup>. Also, besides precaching, we need to cache some assets like google fonts which mdBook uses and then update the cache when new versions are available. I changed the <code>sw.js</code> to the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">importScripts</span>(
-  <span style="color:#e6db74">&#34;https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox-sw.js&#34;</span>
+</code></pre>
+
+<p>However, when I used the code above, routes with search parameters were not being served properly. I removed search parameters using <code>ignoreUrlParametersMatching</code><sup class="footnote-ref" id="fnref:url-param"><a href="#fn:url-param">10</a></sup>. Also, besides precaching, we need to cache some assets like google fonts which mdBook uses and then update the cache when new versions are available. I changed the <code>sw.js</code> to the following:</p>
+
+<pre><code class="language-js">importScripts(
+  &quot;https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox-sw.js&quot;
 );
 
-<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">workbox</span>) {
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Yay! Workbox is loaded 🎉`</span>);
+if (workbox) {
+  console.log(`Yay! Workbox is loaded 🎉`);
 
-  <span style="color:#a6e22e">workbox</span>.<span style="color:#a6e22e">precaching</span>.<span style="color:#a6e22e">precacheAndRoute</span>([], {
-    <span style="color:#a6e22e">ignoreUrlParametersMatching</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">/.*/</span>]
+  workbox.precaching.precacheAndRoute([], {
+    ignoreUrlParametersMatching: [/.*/]
   });
 
-  <span style="color:#75715e">// Cache the Google Fonts stylesheets with a stale while revalidate strategy.
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">workbox</span>.<span style="color:#a6e22e">routing</span>.<span style="color:#a6e22e">registerRoute</span>(
-    <span style="color:#e6db74">/^https:\/\/fonts\.googleapis\.com/</span>,
-    <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">workbox</span>.<span style="color:#a6e22e">strategies</span>.<span style="color:#a6e22e">CacheFirst</span>({
-      <span style="color:#a6e22e">cacheName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;google-fonts-stylesheets&#34;</span>
+  // Cache the Google Fonts stylesheets with a stale while revalidate strategy.
+  workbox.routing.registerRoute(
+    /^https:\/\/fonts\.googleapis\.com/,
+    new workbox.strategies.CacheFirst({
+      cacheName: &quot;google-fonts-stylesheets&quot;
     })
   );
 
-  <span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;activate&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">event</span>) {
+  self.addEventListener('activate', function(event) {
     
-    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">waitUntil</span>(
-      <span style="color:#a6e22e">caches</span>.<span style="color:#a6e22e">keys</span>().<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">cacheNames</span>) {
-        <span style="color:#66d9ef">return</span> Promise.<span style="color:#a6e22e">all</span>(
-          <span style="color:#a6e22e">cacheNames</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">cacheName</span>) {
+    event.waitUntil(
+      caches.keys().then(function(cacheNames) {
+        return Promise.all(
+          cacheNames.filter(function(cacheName) {
 
-          }).<span style="color:#a6e22e">map</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">cacheName</span>) {
-            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">caches</span>.<span style="color:#66d9ef">delete</span>(<span style="color:#a6e22e">cacheName</span>);
+          }).map(function(cacheName) {
+            return caches.delete(cacheName);
           })
         );
       })
     );
   });
 
-  <span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;message&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">event</span>) {
-    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">action</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;skipWaiting&#39;</span>) {
-      <span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">skipWaiting</span>();
+  self.addEventListener('message', function(event) {
+    if (event.data.action === 'skipWaiting') {
+      self.skipWaiting();
     }
   });
 
-} <span style="color:#66d9ef">else</span> {
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Boo! Workbox didn&#39;t load 😬`</span>);
+} else {
+  console.log(`Boo! Workbox didn't load 😬`);
 }
 
-</code></pre></div><p>I modified the <code>registration-sw.js</code> to prompt the user when updates are available based on suggestions on this post<sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">11</a></sup>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">indexController</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>;
+</code></pre>
 
-<span style="color:#66d9ef">if</span> (<span style="color:#e6db74">&#34;serviceWorker&#34;</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">navigator</span>) {
-  window.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;load&#34;</span>, () =&gt; {
-    <span style="color:#a6e22e">navigator</span>.<span style="color:#a6e22e">serviceWorker</span>
-      .<span style="color:#a6e22e">register</span>(<span style="color:#e6db74">&#34;sw.js&#34;</span>)
-      .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">registration</span> =&gt; {
-        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">registration</span>.<span style="color:#a6e22e">waiting</span>) {
-          <span style="color:#a6e22e">indexController</span>.<span style="color:#a6e22e">updateReady</span>(<span style="color:#a6e22e">registration</span>.<span style="color:#a6e22e">waiting</span>);
-          <span style="color:#66d9ef">return</span>;
+<p>I modified the <code>registration-sw.js</code> to prompt the user when updates are available based on suggestions on this post<sup class="footnote-ref" id="fnref:update"><a href="#fn:update">11</a></sup>.</p>
+
+<pre><code class="language-js">var indexController = this;
+
+if (&quot;serviceWorker&quot; in navigator) {
+  window.addEventListener(&quot;load&quot;, () =&gt; {
+    navigator.serviceWorker
+      .register(&quot;sw.js&quot;)
+      .then(registration =&gt; {
+        if (registration.waiting) {
+          indexController.updateReady(registration.waiting);
+          return;
         }
-        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">registration</span>.<span style="color:#a6e22e">installing</span>) {
-          <span style="color:#a6e22e">indexController</span>.<span style="color:#a6e22e">trackInstalling</span>(<span style="color:#a6e22e">registration</span>.<span style="color:#a6e22e">installing</span>);
-          <span style="color:#66d9ef">return</span>;
+        if (registration.installing) {
+          indexController.trackInstalling(registration.installing);
+          return;
         }
 
-        <span style="color:#a6e22e">registration</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;updatefound&#34;</span>, <span style="color:#66d9ef">function</span>() {
-          <span style="color:#a6e22e">indexController</span>.<span style="color:#a6e22e">trackInstalling</span>(<span style="color:#a6e22e">registration</span>.<span style="color:#a6e22e">installing</span>);
+        registration.addEventListener(&quot;updatefound&quot;, function() {
+          indexController.trackInstalling(registration.installing);
         });
 
-        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Service Worker registered! Scope: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">registration</span>.<span style="color:#a6e22e">scope</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+        console.log(`Service Worker registered! Scope: ${registration.scope}`);
       })
-      .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">err</span> =&gt; {
-        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Service Worker registration failed: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">err</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+      .catch(err =&gt; {
+        console.log(`Service Worker registration failed: ${err}`);
       });
   });
 }
 
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">trackInstalling</span>(<span style="color:#a6e22e">worker</span>) {
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">indexController</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>;
-  <span style="color:#a6e22e">worker</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;statechange&#34;</span>, <span style="color:#66d9ef">function</span>() {
-    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">worker</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;installed&#34;</span>) {
-      <span style="color:#a6e22e">indexController</span>.<span style="color:#a6e22e">updateReady</span>(<span style="color:#a6e22e">worker</span>);
+function trackInstalling(worker) {
+  var indexController = this;
+  worker.addEventListener(&quot;statechange&quot;, function() {
+    if (worker.state == &quot;installed&quot;) {
+      indexController.updateReady(worker);
     }
   });
 }
 
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">updateReady</span>(<span style="color:#a6e22e">worker</span>) {
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">res</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">confirm</span>(<span style="color:#e6db74">&#34;New version available, reload page?&#34;</span>);
-  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">res</span>) {
-    <span style="color:#a6e22e">worker</span>.<span style="color:#a6e22e">postMessage</span>({ <span style="color:#a6e22e">action</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;skipWaiting&#34;</span> });
-    <span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">reload</span>();
+function updateReady(worker) {
+  var res = confirm(&quot;New version available, reload page?&quot;);
+  if (res) {
+    worker.postMessage({ action: &quot;skipWaiting&quot; });
+    location.reload();
   }
 }
 
-</code></pre></div><p>Here we are showing a confirm box to prompt the user that there is a new version of the book available. It is based on Jake Archibald&rsquo;s suggestion<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">12</a></sup>. Ideally, you would show a banner when a service worker has updated and waiting to install.</p>
-<p>Now, everytime we build the book, we need to generate the proper &ldquo;revision hashes&rdquo; to the files in the manifest entries. We can use the <code>workbox-cli</code><sup id="fnref:13"><a href="#fn:13" class="footnote-ref" role="doc-noteref">13</a></sup> to inject a precache manifest into the service worker. You need <code>node.js</code> to use the cli. During the setup, we can choose which file types we want to cache. The configuration is saved in <code>workbox-config.js</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
-  <span style="color:#e6db74">&#34;globDirectory&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;book/&#34;</span>,
-  <span style="color:#e6db74">&#34;globPatterns&#34;</span><span style="color:#f92672">:</span> [
-    <span style="color:#e6db74">&#34;**/*.{css,js,html,png,eot,svg,ttf,woff,woff2,json}&#34;</span>
+</code></pre>
+
+<p>Here we are showing a confirm box to prompt the user that there is a new version of the book available. It is based on Jake Archibald&rsquo;s suggestion<sup class="footnote-ref" id="fnref:jaffa"><a href="#fn:jaffa">12</a></sup>. Ideally, you would show a banner when a service worker has updated and waiting to install.</p>
+
+<p>Now, everytime we build the book, we need to generate the proper &ldquo;revision hashes&rdquo; to the files in the manifest entries. We can use the <code>workbox-cli</code><sup class="footnote-ref" id="fnref:wbcli"><a href="#fn:wbcli">13</a></sup> to inject a precache manifest into the service worker. You need <code>node.js</code> to use the cli. During the setup, we can choose which file types we want to cache. The configuration is saved in <code>workbox-config.js</code>.</p>
+
+<pre><code class="language-js">module.exports = {
+  &quot;globDirectory&quot;: &quot;book/&quot;,
+  &quot;globPatterns&quot;: [
+    &quot;**/*.{css,js,html,png,eot,svg,ttf,woff,woff2,json}&quot;
   ],
-  <span style="color:#e6db74">&#34;swDest&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;book/sw.js&#34;</span>,
-  <span style="color:#e6db74">&#34;swSrc&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;sw.js&#34;</span>
+  &quot;swDest&quot;: &quot;book/sw.js&quot;,
+  &quot;swSrc&quot;: &quot;sw.js&quot;
 };
-</code></pre></div><p>You can modify the <code>globPatterns</code> accordingly. The production service worker will be <code>book/sw.js</code>. After building the book, we need to run the <code>workbox injectManifest workbox-config.js</code> command.</p>
-<p><img src="/img/mdbook_offline_new_version_prompt.png" alt="new versioon available"></p>
+</code></pre>
+
+<p>You can modify the <code>globPatterns</code> accordingly. The production service worker will be <code>book/sw.js</code>. After building the book, we need to run the <code>workbox injectManifest workbox-config.js</code> command.</p>
+
+<p><img src="/img/mdbook_offline_new_version_prompt.png" alt="new versioon available" /></p>
+
 <h2 id="automating-the-build-in-travis-ci">Automating the build in Travis CI</h2>
-<p>You can customise the build to generate the proper service worker every time there is a change. I made a sample repo<sup id="fnref:14"><a href="#fn:14" class="footnote-ref" role="doc-noteref">14</a></sup>.
+
+<p>You can customise the build to generate the proper service worker every time there is a change. I made a sample repo<sup class="footnote-ref" id="fnref:demo-repo"><a href="#fn:demo-repo">14</a></sup>.
 You should set an environment variable <code>GITHUB_TOKEN</code> in <code>Travis CI</code>. You’ll need to generate a personal access token with the <code>public_repo</code> or <code>repo</code> scope on <code>Github</code>. This can be done in <code>Settings</code> &gt; <code>Developer settings</code> &gt; <code>Personal access tokens</code> &gt; <code>Generate new token</code></p>
-<p><img src="/img/mdbook_offline_travis.png" alt="travis build success"></p>
-<h2 id="thats-it">That&rsquo;s it!</h2>
-<p>Hope you find this useful and integrate service workers in your mdBook so your users can enjoy your content wherever they are! If you want to help, you can contribute to make the sample repo<sup id="fnref:14"><a href="#fn:14" class="footnote-ref" role="doc-noteref">14</a></sup> better.</p>
+
+<p><img src="/img/mdbook_offline_travis.png" alt="travis build success" /></p>
+
+<h2 id="that-s-it">That&rsquo;s it!</h2>
+
+<p>Hope you find this useful and integrate service workers in your mdBook so your users can enjoy your content wherever they are! If you want to help, you can contribute to make the sample repo<sup class="footnote-ref" id="fnref:demo-repo"><a href="#fn:demo-repo">14</a></sup> better.</p>
+
 <h2 id="references">References</h2>
+
 <!-- [^pcwr]: https://rahul-thakoor.github.io/physical-computing-rust/ -->
-<section class="footnotes" role="doc-endnotes">
-<hr>
+<div class="footnotes">
+
+<hr />
+
 <ol>
-<li id="fn:1" role="doc-endnote">
-<p><a href="https://github.com/rust-lang-nursery/mdBook">mdBook</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2" role="doc-endnote">
-<p><a href="https://doc.rust-lang.org/book/">The Rust Programming Language</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:3" role="doc-endnote">
-<p><a href="https://rust-embedded.github.io/book/">Embedded Book</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:4" role="doc-endnote">
-<p><a href="https://rust-lang-nursery.github.io/mdBook/">mdBook user Documentation</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:5" role="doc-endnote">
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps">Progressive Web Apps</a>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:6" role="doc-endnote">
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Workers</a>&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:7" role="doc-endnote">
-<p><a href="https://developers.google.com/web/tools/workbox/">Workbox</a>&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:8" role="doc-endnote">
-<p><a href="https://developers.google.com/web/tools/workbox/modules/workbox-strategies">Workbox strategies</a>&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:9" role="doc-endnote">
-<p><a href="https://codelabs.developers.google.com/codelabs/workbox-lab">Workbox Codelab</a>&#160;<a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:10" role="doc-endnote">
-<p><a href="https://developers.google.com/web/tools/workbox/modules/workbox-precaching#ignore_url_parameters">Ignore URL Parameters</a>&#160;<a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:11" role="doc-endnote">
-<p><a href="https://stackoverflow.com/questions/40100922/activate-updated-service-worker-on-refresh">Activate updated service worker on refresh</a>&#160;<a href="#fnref:11" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:12" role="doc-endnote">
-<p><a href="https://github.com/jakearchibald/wittr/compare/task-update-notify...update-interaction">Toast to show sw updated</a>&#160;<a href="#fnref:12" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:13" role="doc-endnote">
-<p><a href="https://developers.google.com/web/tools/workbox/guides/precache-files/cli">Workbox CLI</a>&#160;<a href="#fnref:13" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:14" role="doc-endnote">
-<p><a href="https://github.com/rahul-thakoor/mdBook-offline-support">Sample repository</a>&#160;<a href="#fnref:14" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
+<li id="fn:mdbook"><a href="https://github.com/rust-lang-nursery/mdBook">mdBook</a>
+ <a class="footnote-return" href="#fnref:mdbook"><sup>[return]</sup></a></li>
+<li id="fn:thebook"><a href="https://doc.rust-lang.org/book/">The Rust Programming Language</a>
+ <a class="footnote-return" href="#fnref:thebook"><sup>[return]</sup></a></li>
+<li id="fn:embedded"><a href="https://rust-embedded.github.io/book/">Embedded Book</a>
+ <a class="footnote-return" href="#fnref:embedded"><sup>[return]</sup></a></li>
+<li id="fn:mdbook-user-guide"><a href="https://rust-lang-nursery.github.io/mdBook/">mdBook user Documentation</a>
+ <a class="footnote-return" href="#fnref:mdbook-user-guide"><sup>[return]</sup></a></li>
+<li id="fn:pwa"><a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps">Progressive Web Apps</a>
+ <a class="footnote-return" href="#fnref:pwa"><sup>[return]</sup></a></li>
+<li id="fn:sw"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Workers</a>
+ <a class="footnote-return" href="#fnref:sw"><sup>[return]</sup></a></li>
+<li id="fn:wb"><a href="https://developers.google.com/web/tools/workbox/">Workbox</a>
+ <a class="footnote-return" href="#fnref:wb"><sup>[return]</sup></a></li>
+<li id="fn:strategies"><a href="https://developers.google.com/web/tools/workbox/modules/workbox-strategies">Workbox strategies</a>
+ <a class="footnote-return" href="#fnref:strategies"><sup>[return]</sup></a></li>
+<li id="fn:codelab"><a href="https://codelabs.developers.google.com/codelabs/workbox-lab">Workbox Codelab</a>
+ <a class="footnote-return" href="#fnref:codelab"><sup>[return]</sup></a></li>
+<li id="fn:url-param"><a href="https://developers.google.com/web/tools/workbox/modules/workbox-precaching#ignore_url_parameters">Ignore URL Parameters</a>
+ <a class="footnote-return" href="#fnref:url-param"><sup>[return]</sup></a></li>
+<li id="fn:update"><a href="https://stackoverflow.com/questions/40100922/activate-updated-service-worker-on-refresh">Activate updated service worker on refresh</a>
+ <a class="footnote-return" href="#fnref:update"><sup>[return]</sup></a></li>
+<li id="fn:jaffa"><a href="https://github.com/jakearchibald/wittr/compare/task-update-notify...update-interaction">Toast to show sw updated</a>
+ <a class="footnote-return" href="#fnref:jaffa"><sup>[return]</sup></a></li>
+<li id="fn:wbcli"><a href="https://developers.google.com/web/tools/workbox/guides/precache-files/cli">Workbox CLI</a>
+ <a class="footnote-return" href="#fnref:wbcli"><sup>[return]</sup></a></li>
+<li id="fn:demo-repo"><a href="https://github.com/rahul-thakoor/mdBook-offline-support">Sample repository</a>
+ <a class="footnote-return" href="#fnref:demo-repo"><sup>[return]</sup></a></li>
 </ol>
-</section>
+</div>
 
 
         
@@ -593,14 +618,6 @@ You should set an environment variable <code>GITHUB_TOKEN</code> in <code>Travis
         <ul class="list-inline text-center footer-links">
           
               <li>
-                <a href="mailto:rahul.thakoor@gmail.com" title="Email me">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
                 <a href="https://github.com/rahul-thakoor" title="GitHub">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
@@ -613,14 +630,6 @@ You should set an environment variable <code>GITHUB_TOKEN</code> in <code>Travis
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://linkedin.com/in/rahul-thakoor-a50706138" title="LinkedIn">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
@@ -653,7 +662,7 @@ You should set an environment variable <code>GITHUB_TOKEN</code> in <code>Travis
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.84.4</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

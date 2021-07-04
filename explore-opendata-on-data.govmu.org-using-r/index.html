@@ -19,14 +19,14 @@
     "@type": "WebSite",
     "name": "rahul thakoor",
     
-    "url": "https:\/\/rahul-thakoor.github.io"
+    "url": "https://rahul-thakoor.github.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https:\/\/rahul-thakoor.github.io"
+  "url": "https://rahul-thakoor.github.io"
   
   
   
@@ -41,14 +41,14 @@
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https:\/\/rahul-thakoor.github.io",
+          "@id": "https://rahul-thakoor.github.io",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/rahul-thakoor.github.io\/explore-opendata-on-data.govmu.org-using-r\/",
+          "@id": "https://rahul-thakoor.github.io/explore-opendata-on-data.govmu.org-using-r/",
           "name": "Explore open data on data.govmu.org using r"
         }
     }]
@@ -63,18 +63,18 @@
   "headline": "Explore OpenData on data.govmu.org using R",
   "description" : "A guide to exploring data on open data platform powered by DKAN, using dkanr package and the R programming language",
   "inLanguage" : "en",
-  "wordCount":  1099 ,
+  "wordCount": 1103,
   "datePublished" : "2018-05-07T15:02:31",
   "dateModified" : "2018-05-07T15:02:31",
-  "image" : "https:\/\/rahul-thakoor.github.io",
+  "image" : "https://rahul-thakoor.github.io",
   "keywords" : [ "OpenData, R, DKAN" ],
-  "mainEntityOfPage" : "https:\/\/rahul-thakoor.github.io\/explore-opendata-on-data.govmu.org-using-r\/",
+  "mainEntityOfPage" : "https://rahul-thakoor.github.io/explore-opendata-on-data.govmu.org-using-r/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https:\/\/rahul-thakoor.github.io",
+    "name" : "https://rahul-thakoor.github.io",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https:\/\/rahul-thakoor.github.io",
+        "url" : "https://rahul-thakoor.github.io",
         "height" :  60 ,
         "width" :  60
     }
@@ -104,7 +104,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="rahul thakoor" />
 
-  <meta name="generator" content="Hugo 0.84.4" />
+  <meta name="generator" content="Hugo 0.54.0" />
   <link rel="alternate" href="https://rahul-thakoor.github.io/index.xml" type="application/rss+xml" title="rahul thakoor">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -255,7 +255,7 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;
+  <i class="fas fa-calendar"></i>&nbsp;Posted on May 7, 2018
   
   
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutes
@@ -282,43 +282,65 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>The National Computer Board(NCB) of Mauritius recently announced the Open Data Mauritius portal<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. It contains 100 datasets on topics such as Agriculture, Crime, Justice and Security, Health and Tourism. The portal is powered by the DKAN Open Data Platform<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, which is a community-driven, free and open source open data platform that gives organizations and individuals ultimate freedom to publish and consume structured information.</p>
-<p>DKAN includes a number of APIs<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> to allow it to communicate with external applications. In this guide we are going to use the <code>dkanr</code><sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> package, which is an R client for the DKAN REST API, to explore data on Open Data platforms powered by DKAN.</p>
+        
+
+<p>The National Computer Board(NCB) of Mauritius recently announced the Open Data Mauritius portal<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>. It contains 100 datasets on topics such as Agriculture, Crime, Justice and Security, Health and Tourism. The portal is powered by the DKAN Open Data Platform<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>, which is a community-driven, free and open source open data platform that gives organizations and individuals ultimate freedom to publish and consume structured information.</p>
+
+<p>DKAN includes a number of APIs<sup class="footnote-ref" id="fnref:3"><a href="#fn:3">3</a></sup> to allow it to communicate with external applications. In this guide we are going to use the <code>dkanr</code><sup class="footnote-ref" id="fnref:4"><a href="#fn:4">4</a></sup> package, which is an R client for the DKAN REST API, to explore data on Open Data platforms powered by DKAN.</p>
+
 <h2 id="prerequisites">Prerequisites</h2>
+
 <ol>
 <li><a href="http://cran.stat.ucla.edu/">R</a>  installed on your machine</li>
 <li>Basic command of the R programming language.
 <a href="https://www.statmethods.net/r-tutorial/index.html">Here&rsquo;s</a> a great primer for R.</li>
 </ol>
+
 <h2 id="installing-necessary-packages">Installing necessary packages</h2>
+
 <p>We will use the <code>purrr</code>, <code>dplyr</code> , <code>stringr</code> and <code>dkanr</code> packages. Install them by using the following command in the console:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#a6e22e">install.packages</span>(<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;purrr&#34;</span>,<span style="color:#e6db74">&#34;dplyr&#34;</span>,<span style="color:#e6db74">&#34;dkanr&#34;</span>,<span style="color:#e6db74">&#34;stringr&#34;</span>))
-</code></pre></div><h2 id="setup-and-establish-connection-with-datagovmuorg">Setup and Establish connection with data.govmu.org</h2>
+
+<pre><code class="language-R">install.packages(c(&quot;purrr&quot;,&quot;dplyr&quot;,&quot;dkanr&quot;,&quot;stringr&quot;))
+</code></pre>
+
+<h2 id="setup-and-establish-connection-with-data-govmu-org">Setup and Establish connection with data.govmu.org</h2>
+
 <p>First import the necessary libraries and then set up a connection without using authentication.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#75715e">#use libraries</span>
-<span style="color:#a6e22e">library</span>(purrr)
-<span style="color:#a6e22e">library</span>(dplyr)
-<span style="color:#a6e22e">library</span>(dkanr)
-<span style="color:#a6e22e">library</span>(stringr)
 
-<span style="color:#75715e">#setup dkanr to use data.govmu.org</span>
-<span style="color:#a6e22e">dkanr_setup</span>(url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://data.govmu.org/dkan/&#39;</span>)
+<pre><code class="language-R">#use libraries
+library(purrr)
+library(dplyr)
+library(dkanr)
+library(stringr)
 
-<span style="color:#75715e">#confirm connection</span>
-<span style="color:#a6e22e">dkanr_settings</span>()
-</code></pre></div><p>The `dkanr_settings() function should output the following:</p>
+#setup dkanr to use data.govmu.org
+dkanr_setup(url = 'https://data.govmu.org/dkan/')
+
+#confirm connection
+dkanr_settings()
+</code></pre>
+
+<p>The `dkanr_settings() function should output the following:</p>
+
 <pre><code>&lt;dkanr settings&gt;
   Base URL:  https://data.govmu.org/dkan/ 
   Cookie:  
   Token:  
-</code></pre><h2 id="explore-all-datasets">Explore all datasets</h2>
-<p>After establishing connection with the open data platform, we can start explopring. First, let&rsquo;s get all the datasets:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#75715e">#load datasets</span>
-datasets <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">list_nodes_all</span>(filters <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dataset&#34;</span>))
+</code></pre>
 
-<span style="color:#75715e">#view a snapshot</span>
+<h2 id="explore-all-datasets">Explore all datasets</h2>
+
+<p>After establishing connection with the open data platform, we can start explopring. First, let&rsquo;s get all the datasets:</p>
+
+<pre><code class="language-R">#load datasets
+datasets &lt;- list_nodes_all(filters = c(type=&quot;dataset&quot;))
+
+#view a snapshot
 datasets
-</code></pre></div><p>Viewing the datasets gives the following output</p>
+</code></pre>
+
+<p>Viewing the datasets gives the following output</p>
+
 <pre><code># A tibble: 100 x 16
    nid   vid   type   language title      uid   status created changed comment
  * &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  
@@ -334,122 +356,157 @@ datasets
 10 495   965   datas~ und      Number of~ 6     1      152422~ 152423~ 0      
 # ... with 90 more rows, and 6 more variables: promote &lt;chr&gt;, sticky &lt;chr&gt;,
 #   tnid &lt;chr&gt;, translate &lt;chr&gt;, uuid &lt;chr&gt;, uri &lt;chr&gt;
-</code></pre><p>We can see there are 100 entries (100 datasets) with 16 metadata fields. Use the following command to display dataset with relevant metadata:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#75715e">#show attributes available</span>
-<span style="color:#a6e22e">names</span>(datasets)
+</code></pre>
 
-<span style="color:#75715e">#show all titles available</span>
-datasets<span style="color:#f92672">$</span>title 
-  [1] <span style="color:#e6db74">&#34;List of Sports Federation in Mauritius&#34;</span>                                                                                           
-  [2] <span style="color:#e6db74">&#34;List of Secondary Schools in Rodrigues&#34;</span>                                                                                           
-  [3] <span style="color:#e6db74">&#34;List of Primary Schools in Rodrigues&#34;</span>                                                                                             
-  [4] <span style="color:#e6db74">&#34;List of Primary Schools in Mauritius&#34;</span>                                                                                             
-  [5] <span style="color:#e6db74">&#34;List of Secondary Schools in Mauritius&#34;</span>                                                                                           
-  [6] <span style="color:#e6db74">&#34;List of Youth Centres in Mauritius&#34;</span>                                                                                               
-  [7] <span style="color:#e6db74">&#34;List of Police Stations in Mauritius&#34;</span>                                                                                             
-  [8] <span style="color:#e6db74">&#34;Primary Enrolment and Gross Enrolment Ratio1 by sex, Island of Mauritius&#34;</span>                                                         
-  [9] <span style="color:#e6db74">&#34;Number of primary schools, pupils, personnel and pupil/teacher ratio, Republic of Mauritius, 1967 - 2016\t\t&#34;</span>                     
- [10] <span style="color:#e6db74">&#34;Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex&#34;</span>                                                        
- [11] <span style="color:#e6db74">&#34;New Admissions on Tertiary Education Level Programmes by source&#34;</span>                                                                  
- [12] <span style="color:#e6db74">&#34;Gross Tertiary Enrolment Rate (GTER) in Tertiary Education by sex, 2000 - 2015&#34;</span>                                                   
- [13] <span style="color:#e6db74">&#34;Enrolment of International Students in Tertiary Education locally by sex&#34;</span>                                                         
- [14] <span style="color:#e6db74">&#34;Enrolment in Special Education needs in schools - Island of Mauritius, Island of Rodrigues &amp; Republic of Mauritius, 2010 - 2016&#34;</span>  
-<span style="color:#66d9ef">...</span> truncated
-</code></pre></div><h2 id="exploring-a-particular-dataset">Exploring a particular dataset</h2>
+<p>We can see there are 100 entries (100 datasets) with 16 metadata fields. Use the following command to display dataset with relevant metadata:</p>
+
+<pre><code class="language-R">#show attributes available
+names(datasets)
+
+#show all titles available
+datasets$title 
+  [1] &quot;List of Sports Federation in Mauritius&quot;                                                                                           
+  [2] &quot;List of Secondary Schools in Rodrigues&quot;                                                                                           
+  [3] &quot;List of Primary Schools in Rodrigues&quot;                                                                                             
+  [4] &quot;List of Primary Schools in Mauritius&quot;                                                                                             
+  [5] &quot;List of Secondary Schools in Mauritius&quot;                                                                                           
+  [6] &quot;List of Youth Centres in Mauritius&quot;                                                                                               
+  [7] &quot;List of Police Stations in Mauritius&quot;                                                                                             
+  [8] &quot;Primary Enrolment and Gross Enrolment Ratio1 by sex, Island of Mauritius&quot;                                                         
+  [9] &quot;Number of primary schools, pupils, personnel and pupil/teacher ratio, Republic of Mauritius, 1967 - 2016\t\t&quot;                     
+ [10] &quot;Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex&quot;                                                        
+ [11] &quot;New Admissions on Tertiary Education Level Programmes by source&quot;                                                                  
+ [12] &quot;Gross Tertiary Enrolment Rate (GTER) in Tertiary Education by sex, 2000 - 2015&quot;                                                   
+ [13] &quot;Enrolment of International Students in Tertiary Education locally by sex&quot;                                                         
+ [14] &quot;Enrolment in Special Education needs in schools - Island of Mauritius, Island of Rodrigues &amp; Republic of Mauritius, 2010 - 2016&quot;  
+... truncated
+</code></pre>
+
+<h2 id="exploring-a-particular-dataset">Exploring a particular dataset</h2>
+
 <p>Once you have identified a particular dataset you are interested in exploring, you can display it&rsquo;s relevant metadata. The datasets are identified by the <code>node ID</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#75715e">#find datasets which contain a particular string in title</span>
 
-<span style="color:#75715e">#prints rows containing word &#34;Education&#34; in title</span>
-datasets <span style="color:#f92672">%&gt;%</span>
-     <span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">str_detect</span>(title,<span style="color:#e6db74">&#34;Education&#34;</span>)) <span style="color:#f92672">%&gt;%</span>
-     <span style="color:#a6e22e">select</span>(nid,title)
-</code></pre></div><p>After identifying the <code>nid</code>, you can retrieve the metadata of the particular dataset. For instance, for the dataset &ldquo;Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex&rdquo;, the <strong>dataset</strong> <code>nid</code> is 495:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#75715e">#retrieve metadata for the dataset</span>
-metadata <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">retrieve_node</span>(nid <span style="color:#f92672">=</span><span style="color:#e6db74">&#39;495&#39;</span>, as <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;list&#39;</span>)
+<pre><code class="language-R">#find datasets which contain a particular string in title
 
-<span style="color:#75715e">#display all attributes available</span>
-<span style="color:#a6e22e">names</span>(metadata)
-</code></pre></div><h2 id="explore-a-specific-resource">Explore a specific resource</h2>
+#prints rows containing word &quot;Education&quot; in title
+datasets %&gt;%
+     filter(str_detect(title,&quot;Education&quot;)) %&gt;%
+     select(nid,title)
+</code></pre>
+
+<p>After identifying the <code>nid</code>, you can retrieve the metadata of the particular dataset. For instance, for the dataset &ldquo;Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex&rdquo;, the <strong>dataset</strong> <code>nid</code> is 495:</p>
+
+<pre><code class="language-R">#retrieve metadata for the dataset
+metadata &lt;- retrieve_node(nid ='495', as = 'list')
+
+#display all attributes available
+names(metadata)
+</code></pre>
+
+<h2 id="explore-a-specific-resource">Explore a specific resource</h2>
+
 <p>Several resources can be associated with a particular dataset. You can list the resources available with the particular dataset, then use the <strong>resource</strong> <code>nid</code> to retrieve metadata of the particular resource.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#75715e">#show resources associated with dataset</span>
-<span style="color:#a6e22e">get_resource_nids</span>(metadata)
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#75715e">#two resources are available for the dataset</span>
-[1] <span style="color:#e6db74">&#34;496&#34;</span> <span style="color:#e6db74">&#34;497&#34;</span>
 
-<span style="color:#75715e">#get resources metadata</span>
-resource <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">retrieve_node</span>(nid <span style="color:#f92672">=</span><span style="color:#e6db74">&#39;496&#39;</span>, as <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;list&#39;</span>)
-resource2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">retrieve_node</span>(nid <span style="color:#f92672">=</span><span style="color:#e6db74">&#39;497&#39;</span>, as <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;list&#39;</span>)
+<pre><code class="language-R">#show resources associated with dataset
+get_resource_nids(metadata)
+</code></pre>
 
-<span style="color:#75715e">#show </span>
+<pre><code class="language-R">#two resources are available for the dataset
+[1] &quot;496&quot; &quot;497&quot;
+
+#get resources metadata
+resource &lt;- retrieve_node(nid ='496', as = 'list')
+resource2 &lt;- retrieve_node(nid ='497', as = 'list')
+
+#show 
 resource
- <span style="color:#f92672">&lt;</span>DKAN Node<span style="color:#f92672">&gt;</span> <span style="color:#75715e">#496 </span>
-  Type<span style="color:#f92672">:</span> resource
-  Title<span style="color:#f92672">:</span> DATA<span style="color:#f92672">-</span>Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex, <span style="color:#ae81ff">2000</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">2015</span>
-  UUID<span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>df7bd18<span style="color:#f92672">-</span>fa9c<span style="color:#ae81ff">-440</span>c<span style="color:#ae81ff">-94</span>a6<span style="color:#f92672">-</span>e1087497f6ef
-  Created<span style="color:#f92672">/</span>Modified<span style="color:#f92672">:</span> <span style="color:#ae81ff">1524222774</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">1524222774</span>
+ &lt;DKAN Node&gt; #496 
+  Type: resource
+  Title: DATA-Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex, 2000 - 2015
+  UUID: 1df7bd18-fa9c-440c-94a6-e1087497f6ef
+  Created/Modified: 1524222774 / 1524222774
 
 resource2
-<span style="color:#f92672">&lt;</span>DKAN Node<span style="color:#f92672">&gt;</span> <span style="color:#75715e">#497 </span>
-  Type<span style="color:#f92672">:</span> resource
-  Title<span style="color:#f92672">:</span> METADATA <span style="color:#f92672">-</span> Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex, <span style="color:#ae81ff">2000</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">2015</span>
-  UUID<span style="color:#f92672">:</span> b94db7c8<span style="color:#f92672">-</span>a487<span style="color:#ae81ff">-46</span>b4<span style="color:#f92672">-</span>ac98<span style="color:#ae81ff">-6</span>dff6253ff10
-  Created<span style="color:#f92672">/</span>Modified<span style="color:#f92672">:</span> <span style="color:#ae81ff">1524222788</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">1524222788</span>
-</code></pre></div><p>Once we have the required resources, we can download the data. We are interested in resource <code>#496</code>, &ldquo;DATA-Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex, 2000 - 2015&rdquo;.</p>
+&lt;DKAN Node&gt; #497 
+  Type: resource
+  Title: METADATA - Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex, 2000 - 2015
+  UUID: b94db7c8-a487-46b4-ac98-6dff6253ff10
+  Created/Modified: 1524222788 / 1524222788
+</code></pre>
+
+<p>Once we have the required resources, we can download the data. We are interested in resource <code>#496</code>, &ldquo;DATA-Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex, 2000 - 2015&rdquo;.</p>
+
 <p>Data can be downloaded either using the resource url or via the DKAN Datastore API.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#75715e">#check if data required is available in datastore</span>
-<span style="color:#a6e22e">ds_is_available</span>(resource)
 
-<span style="color:#75715e">## [1] FALSE</span>
-</code></pre></div><p>Unfortunately, the requested resource is not available in the DKAN datastore. We proceed by downloading the resource using the url.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#75715e">#retrieve the resource url from the resource metadata</span>
-resource_url <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">get_resource_url</span>(resource)
+<pre><code class="language-R">#check if data required is available in datastore
+ds_is_available(resource)
 
-<span style="color:#75715e">##[1] &#34;https://data.govmu.org/dkan//sites//default//files//DATA-Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex, 2000 - 2015.csv&#34;</span>
-</code></pre></div><p>The <code>resource_url</code> is a string and needs to be encoded to a URL. You can then use the <code>read.csv2</code> function to load the data from the url.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#75715e">#encode url</span>
-resource_url_encoded <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">URLencode</span>(resource_url)
+## [1] FALSE
+</code></pre>
 
-<span style="color:#75715e"># &#34;https://data.govmu.org/dkan//sites//default//files//DATA-Number%20of%20Mauritian%20Students%20Pursuing%20%20Tertiary%20Education%20Overseas%20by%20sex,%202000%20-%202015.csv&#34;</span>
+<p>Unfortunately, the requested resource is not available in the DKAN datastore. We proceed by downloading the resource using the url.</p>
 
-<span style="color:#75715e">#load data</span>
-resource_data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read.csv2</span>(resource_url_encoded,sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;,&#39;</span>,header <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+<pre><code class="language-R">#retrieve the resource url from the resource metadata
+resource_url &lt;- get_resource_url(resource)
 
-<span style="color:#75715e">#show first 10 rows</span>
-<span style="color:#a6e22e">head</span>(resource_data,<span style="color:#ae81ff">10</span>)
-</code></pre></div><h2 id="play-with-data">Play with data</h2>
+##[1] &quot;https://data.govmu.org/dkan//sites//default//files//DATA-Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex, 2000 - 2015.csv&quot;
+</code></pre>
+
+<p>The <code>resource_url</code> is a string and needs to be encoded to a URL. You can then use the <code>read.csv2</code> function to load the data from the url.</p>
+
+<pre><code class="language-R">#encode url
+resource_url_encoded &lt;- URLencode(resource_url)
+
+# &quot;https://data.govmu.org/dkan//sites//default//files//DATA-Number%20of%20Mauritian%20Students%20Pursuing%20%20Tertiary%20Education%20Overseas%20by%20sex,%202000%20-%202015.csv&quot;
+
+#load data
+resource_data &lt;- read.csv2(resource_url_encoded,sep=',',header = TRUE)
+
+#show first 10 rows
+head(resource_data,10)
+</code></pre>
+
+<h2 id="play-with-data">Play with data</h2>
+
 <p>After downloading the data, you can start exploring it.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#a6e22e">mean</span>(resource_data<span style="color:#f92672">$</span>Number.of.Mauritian.Students.Pursuing.Tertiary.Education..Overseas.Male)
 
-<span style="color:#a6e22e">max</span>(resource_data<span style="color:#f92672">$</span>Number.of.Mauritian.Students.Pursuing.Tertiary.Education..Overseas.Total)
-</code></pre></div><p>You can use the <code>plot()</code> function to draw charts. For the above resource, you can plot a line chart with &ldquo;Year&rdquo; as x-axis and &ldquo;Total number of Students(both sex)&rdquo; as y-axis.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#75715e">#plot a line chart</span>
+<pre><code class="language-R">mean(resource_data$Number.of.Mauritian.Students.Pursuing.Tertiary.Education..Overseas.Male)
 
-<span style="color:#a6e22e">plot</span>(resource_data<span style="color:#f92672">$</span>Year,resource_data<span style="color:#f92672">$</span>Number.of.Mauritian.Students.Pursuing.Tertiary.Education..Overseas.Total, type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;o&#34;</span>, xlab <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Year&#34;</span>, ylab <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Total number of students&#34;</span>)
+max(resource_data$Number.of.Mauritian.Students.Pursuing.Tertiary.Education..Overseas.Total)
+</code></pre>
 
-<span style="color:#75715e">#give the chart a title</span>
-<span style="color:#a6e22e">title</span>(main <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Number of Mauritian Students(Both Sexes)\nPursuing Tertiary Education Overseas, 2000-2015&#34;</span>, sub<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Source:data.govmu.org&#34;</span>, cex.sub <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.75</span>, font.sub <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>) 
-</code></pre></div><div align="center">
+<p>You can use the <code>plot()</code> function to draw charts. For the above resource, you can plot a line chart with &ldquo;Year&rdquo; as x-axis and &ldquo;Total number of Students(both sex)&rdquo; as y-axis.</p>
+
+<pre><code class="language-R">#plot a line chart
+
+plot(resource_data$Year,resource_data$Number.of.Mauritian.Students.Pursuing.Tertiary.Education..Overseas.Total, type = &quot;o&quot;, xlab = &quot;Year&quot;, ylab = &quot;Total number of students&quot;)
+
+#give the chart a title
+title(main = &quot;Number of Mauritian Students(Both Sexes)\nPursuing Tertiary Education Overseas, 2000-2015&quot;, sub=&quot;Source:data.govmu.org&quot;, cex.sub = 0.75, font.sub = 3) 
+</code></pre>
+
+<div align="center">
 <p><img src="/img/opendata-dkanr/opendata-dkanr-annotation.png" alt="line chart visualisation"></p> 
  </div>
+
 <h2 id="wrap-up">Wrap up</h2>
+
 <p>Data from Open Data Mauritius portal can be loaded directly into R using the <code>dkanr</code> package. You can manipulate, visualise or analyse the data. The possibilities are endless.</p>
-<section class="footnotes" role="doc-endnotes">
-<hr>
+<div class="footnotes">
+
+<hr />
+
 <ol>
-<li id="fn:1" role="doc-endnote">
-<p><a href="https://data.govmu.org/dkan/">Open Data Mauritius</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2" role="doc-endnote">
-<p><a href="https://getdkan.org/">DKAN Open Data Platform</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:3" role="doc-endnote">
-<p><a href="https://docs.getdkan.com/en/latest/apis/index.html">DKAN API Guide</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:4" role="doc-endnote">
-<p><a href="https://cran.r-project.org/web/packages/dkanr/vignettes/getting_started_with_dkanr.html">Getting Started with <code>dkanr</code></a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
+<li id="fn:1"><a href="https://data.govmu.org/dkan/">Open Data Mauritius</a>
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2"><a href="https://getdkan.org/">DKAN Open Data Platform</a>
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+<li id="fn:3"><a href="https://docs.getdkan.com/en/latest/apis/index.html">DKAN API Guide</a>
+ <a class="footnote-return" href="#fnref:3"><sup>[return]</sup></a></li>
+<li id="fn:4"><a href="https://cran.r-project.org/web/packages/dkanr/vignettes/getting_started_with_dkanr.html">Getting Started with <code>dkanr</code></a>
+ <a class="footnote-return" href="#fnref:4"><sup>[return]</sup></a></li>
 </ol>
-</section>
+</div>
 
 
         
@@ -559,14 +616,6 @@ resource_data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22
         <ul class="list-inline text-center footer-links">
           
               <li>
-                <a href="mailto:rahul.thakoor@gmail.com" title="Email me">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
                 <a href="https://github.com/rahul-thakoor" title="GitHub">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
@@ -579,14 +628,6 @@ resource_data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://linkedin.com/in/rahul-thakoor-a50706138" title="LinkedIn">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
@@ -619,7 +660,7 @@ resource_data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.84.4</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

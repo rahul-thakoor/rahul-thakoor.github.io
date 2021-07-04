@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on rahul thakoor</title>
@@ -6,14 +6,16 @@
     <description>Recent content in Posts on rahul thakoor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>rahul.thakoor@gmail.com (Rahul Thakoor)</managingEditor>
-    <webMaster>rahul.thakoor@gmail.com (Rahul Thakoor)</webMaster>
-    <lastBuildDate>Sun, 29 Mar 2020 08:00:00 +0400</lastBuildDate><atom:link href="https://rahul-thakoor.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Mar 2020 08:00:00 +0400</lastBuildDate>
+    
+	<atom:link href="https://rahul-thakoor.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Using no standard library crates with Webassembly</title>
       <link>https://rahul-thakoor.github.io/using-no-standard-library-crates-with-webassembly/</link>
       <pubDate>Sun, 29 Mar 2020 08:00:00 +0400</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/using-no-standard-library-crates-with-webassembly/</guid>
       <description>When working with Rust + Webassembly, you might want to use some crates in your project. Not all crates work out of the box with Webassembly yet, especially those that rely on System Libraries, File I/O, Networking, etc. With proposals such as WASI or WebAssembly Interface Types, these might work eventually but it isn&amp;rsquo;t the case yet.
 The Rust Wasm book suggests:
@@ -24,7 +26,7 @@ The Rust Wasm book suggests:
       <title>Making mdBooks work offline</title>
       <link>https://rahul-thakoor.github.io/making-mdbooks-work-offline/</link>
       <pubDate>Mon, 04 Mar 2019 18:06:48 +0400</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/making-mdbooks-work-offline/</guid>
       <description>mdBook1 is a great utility to create online books from Markdown files. It is used extensively in the Rust community. Here are some books made with mdBook:
  The Rust Programming Language (&amp;ldquo;the book&amp;rdquo;)2 Embedded Book 3 mdBook user guide4  Motivation  I usually read the books while commuting and this usually consumes mobile data. Given the contents don&amp;rsquo;t change that often, I thought it would be useful if they were cached.</description>
@@ -34,7 +36,7 @@ The Rust Wasm book suggests:
       <title>Releasing rust_gpiozero v0.2.0</title>
       <link>https://rahul-thakoor.github.io/releasing-rust_gpiozero-v0.2.0/</link>
       <pubDate>Wed, 27 Feb 2019 13:43:48 +0000</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/releasing-rust_gpiozero-v0.2.0/</guid>
       <description>For the past month I have been working on rust_gpiozero. This new release is a complete rewrite and uses Rene van der Meer(@golemparts)&amp;rsquo;s [rppal](https://github.com/golemparts/rppal) crate under the hood. It also uses Rust 2018 edition.
 Why rppal? Simply because Rene has done an incredible work on rppal. It provides first class support for the Raspberry Pis. Instead of trying to (poorly) reimplement the features, I think it is best to build upon the rppal.</description>
@@ -44,7 +46,7 @@ Why rppal? Simply because Rene has done an incredible work on rppal. It provides
       <title>My Experience in Increasing Rust&#39;s Reach 2018</title>
       <link>https://rahul-thakoor.github.io/my-experience-in-increasing-rusts-reach-2018/</link>
       <pubDate>Sun, 16 Sep 2018 08:49:37 +0400</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/my-experience-in-increasing-rusts-reach-2018/</guid>
       <description>I recently had the privilege of participating the Increasing Rust&amp;rsquo;s Reach(IRR) program. The program aims to grow Rust&amp;rsquo;s community of project collaborators and leaders. Increasing Rust&amp;rsquo;s Reach brings together Rust team members and individuals who are underrepresented in Rust&amp;rsquo;s community and the tech industry for a partnership of three (3) months, from mid-May to mid-August. Each partnership agrees to a commitment of 3–5 hours per week working on a Rust Project.</description>
     </item>
@@ -53,7 +55,7 @@ Why rppal? Simply because Rene has done an incredible work on rppal. It provides
       <title>Physical Computing With Rust On Raspberry Pi</title>
       <link>https://rahul-thakoor.github.io/physical-computing-with-rust-on-raspberry-pi/</link>
       <pubDate>Sat, 07 Jul 2018 23:06:32 +0400</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/physical-computing-with-rust-on-raspberry-pi/</guid>
       <description>A couple of months ago I released the rust_gpiozero1 crate. It is a port of the GPIO Zero2 library by the Raspberry Pi Foundation. The library provides a simple interface to control GPIO devices with a Raspberry Pi. Following this, recently ported the Raspberry Pi Foundation&amp;rsquo;s Physical Computing with Python3 guide for Rust.
 Why did I create the rust_gpiozero crate? After going through The Rust Programming language book, I decided to work on a side project to practice some of the concepts.</description>
@@ -63,7 +65,7 @@ Why did I create the rust_gpiozero crate? After going through The Rust Programmi
       <title>Rust: Raw string literals</title>
       <link>https://rahul-thakoor.github.io/rust-raw-string-literals/</link>
       <pubDate>Fri, 29 Jun 2018 22:45:43 +0400</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/rust-raw-string-literals/</guid>
       <description>While working with Rust, you will often come across r#&amp;quot;something like this&amp;quot;#, especially when working with JSON and TOML files. It defines a raw string literal. When would you use a raw string literal and what makes a valid raw string literal?
 When would you use a raw string literal? First, let&amp;rsquo;s understand what a string literal is. According to the The Rust Reference1, A string literal is a sequence of any Unicode characters enclosed within two U+0022 (double-quote) characters, with the exception of U+0022 itself2.</description>
@@ -73,7 +75,7 @@ When would you use a raw string literal? First, let&amp;rsquo;s understand what 
       <title>Explore OpenData on data.govmu.org using R</title>
       <link>https://rahul-thakoor.github.io/explore-opendata-on-data.govmu.org-using-r/</link>
       <pubDate>Mon, 07 May 2018 15:02:31 +0400</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/explore-opendata-on-data.govmu.org-using-r/</guid>
       <description>The National Computer Board(NCB) of Mauritius recently announced the Open Data Mauritius portal1. It contains 100 datasets on topics such as Agriculture, Crime, Justice and Security, Health and Tourism. The portal is powered by the DKAN Open Data Platform2, which is a community-driven, free and open source open data platform that gives organizations and individuals ultimate freedom to publish and consume structured information.
 DKAN includes a number of APIs3 to allow it to communicate with external applications.</description>
@@ -83,7 +85,7 @@ DKAN includes a number of APIs3 to allow it to communicate with external applica
       <title>An I2C Rust driver for mma7660fc-based 3-Axis Digital Accelerometer</title>
       <link>https://rahul-thakoor.github.io/an-i2c-rust-driver-for-mma7660fc-based-3-axis-digital-accelerometer/</link>
       <pubDate>Tue, 01 May 2018 22:44:18 +0400</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/an-i2c-rust-driver-for-mma7660fc-based-3-axis-digital-accelerometer/</guid>
       <description>This is an I2C implementation for mma7660fc-based 3-Axis Digital Accelerometer. It is an embedded-hal driver as part of the weekly driver initiative by Jorge Aparicio.
 The Device The MMA7660FC is a ±1.5 g 3-Axis Accelerometer with Digital Output (I2C). It can be found on Seeed&amp;rsquo;s Grove 3-Axis Digital Accelerometer. It is made by NXP Semiconductor.
@@ -94,7 +96,7 @@ The Device The MMA7660FC is a ±1.5 g 3-Axis Accelerometer with Digital Output (
       <title>Using Firmata On Arduino Compatible Boards</title>
       <link>https://rahul-thakoor.github.io/using-firmata-on-arduino-compatible-boards/</link>
       <pubDate>Sun, 25 Jun 2017 08:12:00 +0000</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/using-firmata-on-arduino-compatible-boards/</guid>
       <description>What is Arduino? Arduino is an open-source electronics prototyping platform. An Arduino board is development hardware consisting of a programmable microcontroller. The boards can collect information(inputs), act on the inputs(processing) and finally produce outputs. Typically, Arduino boards are programmed using the Arduino programming language through the Arduino IDE using custom firmware(sketches). Arduino exists in many forms and flavours, from the official boards such as the UNO, ArduinoBoard 101 and MEGA, to Arduino-compatible ones like the NodeMCU.</description>
     </item>
@@ -103,19 +105,19 @@ The Device The MMA7660FC is a ±1.5 g 3-Axis Accelerometer with Digital Output (
       <title>How to get started with NodeBots? - The hardware</title>
       <link>https://rahul-thakoor.github.io/how-to-get-started-with-nodebots-the-hardware/</link>
       <pubDate>Sun, 09 Apr 2017 08:37:00 +0000</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/how-to-get-started-with-nodebots-the-hardware/</guid>
       <description>When it comes to starting a DIY Electronics project, one can be overwhelmed by the myriad of choices. With so many varieties out there, how to get started?
 The basic components include: Processing, Input/Output, Circuits and Wiring and Power.
-  Processing: the brain of the project, typically development boards which enable us to run our program logic.
-  Inputs/Outputs: sensors, actuators, and other gadgets we connect to our boards to enhance our projects.</description>
+ Processing: the brain of the project, typically development boards which enable us to run our program logic.
+ Inputs/Outputs: sensors, actuators, and other gadgets we connect to our boards to enhance our projects.</description>
     </item>
     
     <item>
       <title>Developers Conference 2017</title>
       <link>https://rahul-thakoor.github.io/developers-conference-2017/</link>
       <pubDate>Sun, 02 Apr 2017 08:37:00 +0000</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/developers-conference-2017/</guid>
       <description>The Developers Conference, organised by the MSCC, is the BIGGEST tech event in Mauritius. DevCon brought together tech enthusiasts, hobbyists, numerous user groups, prestigious companies, students, and more!!! I was privileged to present as a Microsoft Student Partner.
 My team(@dishaykissoon and me), presented on NodeBots: Using Javascript for hardware programming. The idea was to use NodeBots and Javascript as an entry point to get more people interested in hardware programming and DIY projects.</description>
@@ -125,7 +127,7 @@ My team(@dishaykissoon and me), presented on NodeBots: Using Javascript for hard
       <title>My Instructables</title>
       <link>https://rahul-thakoor.github.io/my-instructables/</link>
       <pubDate>Mon, 23 Jan 2017 22:10:00 +0000</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/my-instructables/</guid>
       <description>Here are my writings at instructables.com</description>
     </item>
@@ -134,7 +136,7 @@ My team(@dishaykissoon and me), presented on NodeBots: Using Javascript for hard
       <title>Blynk-ESP8266 教程</title>
       <link>https://rahul-thakoor.github.io/blynk-esp8266-%E6%95%99%E7%A8%8B/</link>
       <pubDate>Sun, 01 May 2016 20:00:00 +0000</pubDate>
-      <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
+      
       <guid>https://rahul-thakoor.github.io/blynk-esp8266-%E6%95%99%E7%A8%8B/</guid>
       <description>Blynk 是一款适合喜欢折腾小型开发板的实用组合配套工具。通过该应用，你可以更方便的用于控制各种物联网设备。你可以使用Blynk创建精美的界面和挂件</description>
     </item>

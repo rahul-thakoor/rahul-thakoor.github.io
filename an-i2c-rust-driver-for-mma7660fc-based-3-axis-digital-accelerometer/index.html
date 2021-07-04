@@ -19,14 +19,14 @@
     "@type": "WebSite",
     "name": "rahul thakoor",
     
-    "url": "https:\/\/rahul-thakoor.github.io"
+    "url": "https://rahul-thakoor.github.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https:\/\/rahul-thakoor.github.io"
+  "url": "https://rahul-thakoor.github.io"
   
   
   
@@ -41,14 +41,14 @@
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https:\/\/rahul-thakoor.github.io",
+          "@id": "https://rahul-thakoor.github.io",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/rahul-thakoor.github.io\/an-i2c-rust-driver-for-mma7660fc-based-3-axis-digital-accelerometer\/",
+          "@id": "https://rahul-thakoor.github.io/an-i2c-rust-driver-for-mma7660fc-based-3-axis-digital-accelerometer/",
           "name": "An i2 c rust driver for mma7660fc based 3 axis digital accelerometer"
         }
     }]
@@ -63,18 +63,18 @@
   "headline": "An I2C Rust driver for mma7660fc-based 3-Axis Digital Accelerometer",
   "description" : "A platform agnostic driver to interface with the MMA7660FC 3-Axis Accelerometer via I2C using Rust",
   "inLanguage" : "en",
-  "wordCount":  190 ,
+  "wordCount": 190,
   "datePublished" : "2018-05-01T22:44:18",
   "dateModified" : "2018-05-01T22:44:18",
-  "image" : "https:\/\/rahul-thakoor.github.io",
+  "image" : "https://rahul-thakoor.github.io",
   "keywords" : [ "Rust, Driver, Embedded" ],
-  "mainEntityOfPage" : "https:\/\/rahul-thakoor.github.io\/an-i2c-rust-driver-for-mma7660fc-based-3-axis-digital-accelerometer\/",
+  "mainEntityOfPage" : "https://rahul-thakoor.github.io/an-i2c-rust-driver-for-mma7660fc-based-3-axis-digital-accelerometer/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https:\/\/rahul-thakoor.github.io",
+    "name" : "https://rahul-thakoor.github.io",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https:\/\/rahul-thakoor.github.io",
+        "url" : "https://rahul-thakoor.github.io",
         "height" :  60 ,
         "width" :  60
     }
@@ -104,7 +104,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="rahul thakoor" />
 
-  <meta name="generator" content="Hugo 0.84.4" />
+  <meta name="generator" content="Hugo 0.54.0" />
   <link rel="alternate" href="https://rahul-thakoor.github.io/index.xml" type="application/rss+xml" title="rahul thakoor">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -255,7 +255,7 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;
+  <i class="fas fa-calendar"></i>&nbsp;Posted on May 1, 2018
   
   
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
@@ -282,38 +282,50 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>This is an I2C implementation for mma7660fc-based 3-Axis Digital Accelerometer. It is an <a href="https://github.com/japaric/embedded-hal">embedded-hal</a> driver as part of the <a href="https://github.com/rust-lang-nursery/embedded-wg/issues/39">weekly driver initiative</a> by <a href="https://twitter.com/japaricious">Jorge Aparicio</a>.</p>
+        
+
+<p>This is an I2C implementation for mma7660fc-based 3-Axis Digital Accelerometer. It is an <a href="https://github.com/japaric/embedded-hal">embedded-hal</a> driver as part of the <a href="https://github.com/rust-lang-nursery/embedded-wg/issues/39">weekly driver initiative</a> by <a href="https://twitter.com/japaricious">Jorge Aparicio</a>.</p>
+
 <h2 id="the-device">The Device</h2>
+
 <p>The MMA7660FC is a ±1.5 g 3-Axis Accelerometer with Digital Output
 (I2C). It can be found on Seeed&rsquo;s Grove 3-Axis Digital Accelerometer. It is made by NXP Semiconductor.</p>
+
 <div align="center">
 <p><img src="/img/mma7660-driver/grove-accelerometer-front.jpg" width ="50%"></p> 
  </div>
+
 <h2 id="development">Development</h2>
+
 <p>For the development of this driver, I used the Grove 3-Axis Digital Accelerometer and tested on a Raspberry Pi 1 running latest version of <a href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian</a>.</p>
+
 <h2 id="the-driver">The Driver</h2>
+
 <p>It is quite straightforward to use the driver. The <a href="https://docs.rs/mma7660fc/0.1.2/mma7660fc/">documentation</a> provides a comprehensive explanation with an example. Essentially:</p>
+
 <ul>
-<li>
-<p>Add the <a href="https://crates.io/crates/mma7660fc">mma7660fc</a> crate as a dependency in the <code>Cargo.toml</code> file. You also need an implementation for <code>embedded-hal</code>. For Raspberry Pi, I am using <a href="https://crates.io/crates/linux-embedded-hal">linux-embedded-hal</a>.</p>
-</li>
-<li>
-<p>Initialise the Linux I2C driver and then create an <code>Mma7660fc</code> instance</p>
-</li>
-<li>
-<p>Read the accelerometer values</p>
-</li>
+<li><p>Add the <a href="https://crates.io/crates/mma7660fc">mma7660fc</a> crate as a dependency in the <code>Cargo.toml</code> file. You also need an implementation for <code>embedded-hal</code>. For Raspberry Pi, I am using <a href="https://crates.io/crates/linux-embedded-hal">linux-embedded-hal</a>.</p></li>
+
+<li><p>Initialise the Linux I2C driver and then create an <code>Mma7660fc</code> instance</p></li>
+
+<li><p>Read the accelerometer values</p></li>
 </ul>
+
 <h2 id="conclusion">Conclusion</h2>
+
 <p>This is a basic implementation of a driver for mma7660fc-based 3-Axis Digital Accelerometers. The driver does not implement all functionalities. Feedback, suggestions and PR are most welcome.</p>
+
 <h2 id="resources-and-links">Resources and Links</h2>
+
 <ul>
 <li><a href="https://www.nxp.com/docs/en/data-sheet/MMA7660FC.pdf">Datasheet</a></li>
 <li><a href="https://docs.rs/mma7660fc/">Documentation</a></li>
 <li><a href="https://crates.io/crates/mma7660fc">Crate</a></li>
 <li><a href="https://github.com/rahul-thakoor/mma7660fc">Repository</a></li>
 </ul>
+
 <h2 id="acknowledgement">Acknowledgement</h2>
+
 <p>The structure of this post is based on <a href="https://blog.dbrgn.ch/">Danilo Bargen&rsquo;s</a> weekly driver posts.</p>
 
 
@@ -424,14 +436,6 @@ if (!doNotTrack) {
         <ul class="list-inline text-center footer-links">
           
               <li>
-                <a href="mailto:rahul.thakoor@gmail.com" title="Email me">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
                 <a href="https://github.com/rahul-thakoor" title="GitHub">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
@@ -444,14 +448,6 @@ if (!doNotTrack) {
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://linkedin.com/in/rahul-thakoor-a50706138" title="LinkedIn">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
@@ -484,7 +480,7 @@ if (!doNotTrack) {
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.84.4</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>
