@@ -1,18 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Web on rahul thakoor</title>
+    <title>web on rahul thakoor</title>
     <link>https://rahul-thakoor.github.io/tags/web/</link>
-    <description>Recent content in Web on rahul thakoor</description>
+    <description>Recent content in web on rahul thakoor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>rahul.thakoor@gmail.com (Rahul Thakoor)</managingEditor>
     <webMaster>rahul.thakoor@gmail.com (Rahul Thakoor)</webMaster>
-    <lastBuildDate>Mon, 04 Mar 2019 18:06:48 +0400</lastBuildDate>
-    
-	<atom:link href="https://rahul-thakoor.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 04 Mar 2019 18:06:48 +0400</lastBuildDate><atom:link href="https://rahul-thakoor.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Making mdBooks work offline</title>
       <link>https://rahul-thakoor.github.io/making-mdbooks-work-offline/</link>

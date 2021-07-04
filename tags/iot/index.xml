@@ -1,18 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Iot on rahul thakoor</title>
+    <title>IoT on rahul thakoor</title>
     <link>https://rahul-thakoor.github.io/tags/iot/</link>
-    <description>Recent content in Iot on rahul thakoor</description>
+    <description>Recent content in IoT on rahul thakoor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>rahul.thakoor@gmail.com (Rahul Thakoor)</managingEditor>
     <webMaster>rahul.thakoor@gmail.com (Rahul Thakoor)</webMaster>
-    <lastBuildDate>Sun, 01 May 2016 20:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://rahul-thakoor.github.io/tags/iot/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 01 May 2016 20:00:00 +0000</lastBuildDate><atom:link href="https://rahul-thakoor.github.io/tags/iot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blynk-ESP8266 教程</title>
       <link>https://rahul-thakoor.github.io/blynk-esp8266-%E6%95%99%E7%A8%8B/</link>

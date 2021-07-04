@@ -1,18 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Physical Computing on rahul thakoor</title>
+    <title>physical computing on rahul thakoor</title>
     <link>https://rahul-thakoor.github.io/tags/physical-computing/</link>
-    <description>Recent content in Physical Computing on rahul thakoor</description>
+    <description>Recent content in physical computing on rahul thakoor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>rahul.thakoor@gmail.com (Rahul Thakoor)</managingEditor>
     <webMaster>rahul.thakoor@gmail.com (Rahul Thakoor)</webMaster>
-    <lastBuildDate>Wed, 27 Feb 2019 13:43:48 +0000</lastBuildDate>
-    
-	<atom:link href="https://rahul-thakoor.github.io/tags/physical-computing/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 27 Feb 2019 13:43:48 +0000</lastBuildDate><atom:link href="https://rahul-thakoor.github.io/tags/physical-computing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Releasing rust_gpiozero v0.2.0</title>
       <link>https://rahul-thakoor.github.io/releasing-rust_gpiozero-v0.2.0/</link>

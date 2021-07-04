@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on rahul thakoor</title>
@@ -8,11 +8,7 @@
     <language>en-us</language>
     <managingEditor>rahul.thakoor@gmail.com (Rahul Thakoor)</managingEditor>
     <webMaster>rahul.thakoor@gmail.com (Rahul Thakoor)</webMaster>
-    <lastBuildDate>Sun, 29 Mar 2020 08:00:00 +0400</lastBuildDate>
-    
-	<atom:link href="https://rahul-thakoor.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 29 Mar 2020 08:00:00 +0400</lastBuildDate><atom:link href="https://rahul-thakoor.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using no standard library crates with Webassembly</title>
       <link>https://rahul-thakoor.github.io/using-no-standard-library-crates-with-webassembly/</link>
@@ -111,8 +107,8 @@ The Device The MMA7660FC is a ±1.5 g 3-Axis Accelerometer with Digital Output (
       <guid>https://rahul-thakoor.github.io/how-to-get-started-with-nodebots-the-hardware/</guid>
       <description>When it comes to starting a DIY Electronics project, one can be overwhelmed by the myriad of choices. With so many varieties out there, how to get started?
 The basic components include: Processing, Input/Output, Circuits and Wiring and Power.
- Processing: the brain of the project, typically development boards which enable us to run our program logic.
- Inputs/Outputs: sensors, actuators, and other gadgets we connect to our boards to enhance our projects.</description>
+  Processing: the brain of the project, typically development boards which enable us to run our program logic.
+  Inputs/Outputs: sensors, actuators, and other gadgets we connect to our boards to enhance our projects.</description>
     </item>
     
     <item>

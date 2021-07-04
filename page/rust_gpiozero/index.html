@@ -19,14 +19,14 @@
     "@type": "WebSite",
     "name": "rahul thakoor",
     
-    "url": "https://rahul-thakoor.github.io"
+    "url": "https:\/\/rahul-thakoor.github.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https://rahul-thakoor.github.io"
+  "url": "https:\/\/rahul-thakoor.github.io"
   
   
   
@@ -41,14 +41,14 @@
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https://rahul-thakoor.github.io",
+          "@id": "https:\/\/rahul-thakoor.github.io",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https://rahul-thakoor.github.io/page/rust_gpiozero/",
+          "@id": "https:\/\/rahul-thakoor.github.io\/page\/rust_gpiozero\/",
           "name": "Rust gpiozero"
         }
     }]
@@ -61,24 +61,20 @@
     "name" : "Rahul Thakoor"
   },
   "headline": "rust_gpiozero",
-  "description" : "This library is based on GPIOZero library.
-Note: This is a work in progress. The library will eventually support embedded-hal based drivers
-The idea is to get started with physical computing using Rust with little coding by hiding the underlying complexity.
-The library uses BCM Pin numbering
-Example : Blinking an LED extern crate rust_gpiozero; use rust_gpiozero::*; fn main() { // Create a new LED attached to Pin 17 let mut led = LED::new(17); // blink the LED // on_time: 2 seconds and off_time: 3 seconds led.",
+  "description" : "This library is based on GPIOZero library.\nNote: This is a work in progress. The library will eventually support embedded-hal based drivers\nThe idea is to get started with physical computing using Rust with little coding by hiding the underlying complexity.\nThe library uses BCM Pin numbering\nExample : Blinking an LED extern crate rust_gpiozero; use rust_gpiozero::*; fn main() { \/\/ Create a new LED attached to Pin 17  let mut led = LED::new(17); \/\/ blink the LED \/\/ on_time: 2 seconds and off_time: 3 seconds  led.",
   "inLanguage" : "en",
-  "wordCount": 171,
+  "wordCount":  171 ,
   "datePublished" : "0001-01-01T00:00:00",
   "dateModified" : "0001-01-01T00:00:00",
-  "image" : "https://rahul-thakoor.github.io",
+  "image" : "https:\/\/rahul-thakoor.github.io",
   "keywords" : [ "" ],
-  "mainEntityOfPage" : "https://rahul-thakoor.github.io/page/rust_gpiozero/",
+  "mainEntityOfPage" : "https:\/\/rahul-thakoor.github.io\/page\/rust_gpiozero\/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https://rahul-thakoor.github.io",
+    "name" : "https:\/\/rahul-thakoor.github.io",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https://rahul-thakoor.github.io",
+        "url" : "https:\/\/rahul-thakoor.github.io",
         "height" :  60 ,
         "width" :  60
     }
@@ -104,7 +100,7 @@ Example : Blinking an LED extern crate rust_gpiozero; use rust_gpiozero::*; fn m
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="rahul thakoor" />
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.84.4" />
   <link rel="alternate" href="https://rahul-thakoor.github.io/index.xml" type="application/rss+xml" title="rahul thakoor">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -271,84 +267,66 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        
-
-<p>This library is based on <a href="https://gpiozero.readthedocs.io/en/stable/index.html">GPIOZero</a>
+        <p>This library is based on <a href="https://gpiozero.readthedocs.io/en/stable/index.html">GPIOZero</a>
 library.</p>
-
 <p><em>Note: This is a work in progress. The library will eventually support <code>embedded-hal</code> based drivers</em></p>
-
 <p>The idea is to get started with physical computing using Rust with little coding
 by hiding the underlying complexity.</p>
-
 <p>The library uses <a href="https://pinout.xyz/">BCM Pin numbering</a></p>
+<h3 id="example--blinking-an-led">Example : Blinking an LED</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust">
+<span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">crate</span> rust_gpiozero;
+<span style="color:#66d9ef">use</span> rust_gpiozero::<span style="color:#f92672">*</span>;
 
-<h3 id="example-blinking-an-led">Example : Blinking an LED</h3>
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
 
-<pre><code class="language-rust">
-extern crate rust_gpiozero;
-use rust_gpiozero::*;
+<span style="color:#75715e">// Create a new LED attached to Pin 17
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> led <span style="color:#f92672">=</span> LED::new(<span style="color:#ae81ff">17</span>);
 
-fn main() {
-
-// Create a new LED attached to Pin 17
-
-let mut led = LED::new(17);
-
-// blink the LED
-// on_time: 2 seconds and off_time: 3 seconds
-
-led.blink(2,3);
+<span style="color:#75715e">// blink the LED
+</span><span style="color:#75715e">// on_time: 2 seconds and off_time: 3 seconds
+</span><span style="color:#75715e"></span>
+led.blink(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>);
 
 }
 
-</code></pre>
-
-<h3 id="example-wait-for-a-button-press">Example : Wait for a Button Press</h3>
-
-<pre><code class="language-rust">extern crate rust_gpiozero;
-use rust_gpiozero::*;
+</code></pre></div><h3 id="example--wait-for-a-button-press">Example : Wait for a Button Press</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">crate</span> rust_gpiozero;
+<span style="color:#66d9ef">use</span> rust_gpiozero::<span style="color:#f92672">*</span>;
 
 
-fn main() {
-    // Create a button which is attached to Pin 17
-    let button = Button::new(17);
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#75715e">// Create a button which is attached to Pin 17
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> button <span style="color:#f92672">=</span> Button::new(<span style="color:#ae81ff">17</span>);
     button.wait_for_press();
-    println!(&quot;button pressed&quot;);
+    println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;button pressed&#34;</span>);
 
 }
 
-</code></pre>
+</code></pre></div><p>Compare this to using the crate <code>sysfs_gpio</code> to blink an LED on the Raspberry Pi :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust">
+<span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">crate</span> sysfs_gpio;
 
-<p>Compare this to using the crate <code>sysfs_gpio</code> to blink an LED on the Raspberry Pi :</p>
+<span style="color:#66d9ef">use</span> sysfs_gpio::{Direction, Pin};
+<span style="color:#66d9ef">use</span> std::thread::sleep;
+<span style="color:#66d9ef">use</span> std::time::Duration;
 
-<pre><code class="language-rust">
-extern crate sysfs_gpio;
-
-use sysfs_gpio::{Direction, Pin};
-use std::thread::sleep;
-use std::time::Duration;
-
-fn main() {
-    let my_led = Pin::new(127); // number depends on chip, etc.
-    my_led.with_exported(|| {
-        loop {
-            my_led.set_value(0).unwrap();
-            sleep(Duration::from_millis(200));
-            my_led.set_value(1).unwrap();
-            sleep(Duration::from_millis(200));
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">let</span> my_led <span style="color:#f92672">=</span> Pin::new(<span style="color:#ae81ff">127</span>); <span style="color:#75715e">// number depends on chip, etc.
+</span><span style="color:#75715e"></span>    my_led.with_exported(<span style="color:#f92672">||</span> {
+        <span style="color:#66d9ef">loop</span> {
+            my_led.set_value(<span style="color:#ae81ff">0</span>).unwrap();
+            sleep(Duration::from_millis(<span style="color:#ae81ff">200</span>));
+            my_led.set_value(<span style="color:#ae81ff">1</span>).unwrap();
+            sleep(Duration::from_millis(<span style="color:#ae81ff">200</span>));
         }
     }).unwrap();
 }
 
-</code></pre>
-
-
-        
+</code></pre></div>
 
         
-        
-
 
         
             <hr/>
@@ -492,7 +470,7 @@ fn main() {
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.84.4</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

@@ -1,18 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Johnny Five on rahul thakoor</title>
+    <title>Johnny-Five on rahul thakoor</title>
     <link>https://rahul-thakoor.github.io/tags/johnny-five/</link>
-    <description>Recent content in Johnny Five on rahul thakoor</description>
+    <description>Recent content in Johnny-Five on rahul thakoor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>rahul.thakoor@gmail.com (Rahul Thakoor)</managingEditor>
     <webMaster>rahul.thakoor@gmail.com (Rahul Thakoor)</webMaster>
-    <lastBuildDate>Sun, 25 Jun 2017 08:12:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://rahul-thakoor.github.io/tags/johnny-five/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 25 Jun 2017 08:12:00 +0000</lastBuildDate><atom:link href="https://rahul-thakoor.github.io/tags/johnny-five/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using Firmata On Arduino Compatible Boards</title>
       <link>https://rahul-thakoor.github.io/using-firmata-on-arduino-compatible-boards/</link>
@@ -30,8 +26,8 @@
       <guid>https://rahul-thakoor.github.io/how-to-get-started-with-nodebots-the-hardware/</guid>
       <description>When it comes to starting a DIY Electronics project, one can be overwhelmed by the myriad of choices. With so many varieties out there, how to get started?
 The basic components include: Processing, Input/Output, Circuits and Wiring and Power.
- Processing: the brain of the project, typically development boards which enable us to run our program logic.
- Inputs/Outputs: sensors, actuators, and other gadgets we connect to our boards to enhance our projects.</description>
+  Processing: the brain of the project, typically development boards which enable us to run our program logic.
+  Inputs/Outputs: sensors, actuators, and other gadgets we connect to our boards to enhance our projects.</description>
     </item>
     
     <item>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rahul thakoor</title>
@@ -8,11 +8,7 @@
     <language>en-us</language>
     <managingEditor>rahul.thakoor@gmail.com (Rahul Thakoor)</managingEditor>
     <webMaster>rahul.thakoor@gmail.com (Rahul Thakoor)</webMaster>
-    <lastBuildDate>Sun, 29 Mar 2020 08:00:00 +0400</lastBuildDate>
-    
-	<atom:link href="https://rahul-thakoor.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 29 Mar 2020 08:00:00 +0400</lastBuildDate><atom:link href="https://rahul-thakoor.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using no standard library crates with Webassembly</title>
       <link>https://rahul-thakoor.github.io/using-no-standard-library-crates-with-webassembly/</link>
@@ -111,8 +107,8 @@ The Device The MMA7660FC is a ±1.5 g 3-Axis Accelerometer with Digital Output (
       <guid>https://rahul-thakoor.github.io/how-to-get-started-with-nodebots-the-hardware/</guid>
       <description>When it comes to starting a DIY Electronics project, one can be overwhelmed by the myriad of choices. With so many varieties out there, how to get started?
 The basic components include: Processing, Input/Output, Circuits and Wiring and Power.
- Processing: the brain of the project, typically development boards which enable us to run our program logic.
- Inputs/Outputs: sensors, actuators, and other gadgets we connect to our boards to enhance our projects.</description>
+  Processing: the brain of the project, typically development boards which enable us to run our program logic.
+  Inputs/Outputs: sensors, actuators, and other gadgets we connect to our boards to enhance our projects.</description>
     </item>
     
     <item>
@@ -159,7 +155,8 @@ My team(@dishaykissoon and me), presented on NodeBots: Using Javascript for hard
       <author>rahul.thakoor@gmail.com (Rahul Thakoor)</author>
       <guid>https://rahul-thakoor.github.io/page/nodebotsmu/</guid>
       <description>Nodebots Mauritius is a meetup for hobbyists, hackers, makers and hardware enthusiasts. Nodebots are robots powered by NodeJS and Javascript, but we welcome anyone to wants to work on different platforms!
-Whether you are a web developer, skilled developer or a non-technical person, you are all welcome! So come join us to get advice, show off what you&amp;rsquo;re working on, help others, learn something new and tinker with electronics!</description>
+Whether you are a web developer, skilled developer or a non-technical person, you are all welcome! So come join us to get advice, show off what you&amp;rsquo;re working on, help others, learn something new and tinker with electronics!
+contact Facebook</description>
     </item>
     
     <item>
@@ -172,7 +169,7 @@ Whether you are a web developer, skilled developer or a non-technical person, yo
 Note: This is a work in progress. The library will eventually support embedded-hal based drivers
 The idea is to get started with physical computing using Rust with little coding by hiding the underlying complexity.
 The library uses BCM Pin numbering
-Example : Blinking an LED extern crate rust_gpiozero; use rust_gpiozero::*; fn main() { // Create a new LED attached to Pin 17 let mut led = LED::new(17); // blink the LED // on_time: 2 seconds and off_time: 3 seconds led.</description>
+Example : Blinking an LED extern crate rust_gpiozero; use rust_gpiozero::*; fn main() { // Create a new LED attached to Pin 17  let mut led = LED::new(17); // blink the LED // on_time: 2 seconds and off_time: 3 seconds  led.</description>
     </item>
     
   </channel>

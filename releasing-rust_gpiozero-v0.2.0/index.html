@@ -19,14 +19,14 @@
     "@type": "WebSite",
     "name": "rahul thakoor",
     
-    "url": "https://rahul-thakoor.github.io"
+    "url": "https:\/\/rahul-thakoor.github.io"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https://rahul-thakoor.github.io"
+  "url": "https:\/\/rahul-thakoor.github.io"
   
   
   
@@ -41,14 +41,14 @@
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https://rahul-thakoor.github.io",
+          "@id": "https:\/\/rahul-thakoor.github.io",
           "name": "home"
         }
     },{
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https://rahul-thakoor.github.io/releasing-rust_gpiozero-v0.2.0/",
+          "@id": "https:\/\/rahul-thakoor.github.io\/releasing-rust_gpiozero-v0.2.0\/",
           "name": "Releasing rust gpiozero v0.2.0"
         }
     }]
@@ -61,21 +61,20 @@
     "name" : "Rahul Thakoor"
   },
   "headline": "Releasing rust_gpiozero v0.2.0",
-  "description" : "For the past month I have been working on rust_gpiozero. This new release is a complete rewrite and uses Rene van der Meer(@golemparts)&amp;rsquo;s [rppal](https://github.com/golemparts/rppal) crate under the hood. It also uses Rust 2018 edition.
-Why rppal? Simply because Rene has done an incredible work on rppal. It provides first class support for the Raspberry Pis. Instead of trying to (poorly) reimplement the features, I think it is best to build upon the rppal.",
+  "description" : "For the past month I have been working on rust_gpiozero. This new release is a complete rewrite and uses Rene van der Meer(@golemparts)\u0026rsquo;s [rppal](https:\/\/github.com\/golemparts\/rppal) crate under the hood. It also uses Rust 2018 edition.\nWhy rppal? Simply because Rene has done an incredible work on rppal. It provides first class support for the Raspberry Pis. Instead of trying to (poorly) reimplement the features, I think it is best to build upon the rppal.",
   "inLanguage" : "en",
-  "wordCount": 347,
+  "wordCount":  347 ,
   "datePublished" : "2019-02-27T13:43:48",
   "dateModified" : "2019-02-27T13:43:48",
-  "image" : "https://rahul-thakoor.github.io",
+  "image" : "https:\/\/rahul-thakoor.github.io",
   "keywords" : [ "rust, raspberry pi, physical computing" ],
-  "mainEntityOfPage" : "https://rahul-thakoor.github.io/releasing-rust_gpiozero-v0.2.0/",
+  "mainEntityOfPage" : "https:\/\/rahul-thakoor.github.io\/releasing-rust_gpiozero-v0.2.0\/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https://rahul-thakoor.github.io",
+    "name" : "https:\/\/rahul-thakoor.github.io",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https://rahul-thakoor.github.io",
+        "url" : "https:\/\/rahul-thakoor.github.io",
         "height" :  60 ,
         "width" :  60
     }
@@ -105,7 +104,7 @@ Why rppal? Simply because Rene has done an incredible work on rppal. It provides
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="rahul thakoor" />
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.84.4" />
   <link rel="alternate" href="https://rahul-thakoor.github.io/index.xml" type="application/rss+xml" title="rahul thakoor">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -260,7 +259,7 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on February 27, 2019
+  <i class="fas fa-calendar"></i>&nbsp;
   
   
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
@@ -287,42 +286,28 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        
-
-<p>For the past month I have been working on <code>rust_gpiozero</code>. This new release is a complete rewrite and uses <a href="https://twitter.com/golemparts">Rene van der Meer(@golemparts)</a>&rsquo;s  <code>[rppal](https://github.com/golemparts/rppal)</code> crate under the hood. It also uses Rust 2018 edition.</p>
-
+        <p>For the past month I have been working on <code>rust_gpiozero</code>. This new release is a complete rewrite and uses <a href="https://twitter.com/golemparts">Rene van der Meer(@golemparts)</a>&rsquo;s  <code>[rppal](https://github.com/golemparts/rppal)</code> crate under the hood. It also uses Rust 2018 edition.</p>
 <h2 id="why-rppal">Why <code>rppal</code>?</h2>
-
 <p>Simply because Rene has done an incredible work on <code>rppal</code>. It provides first class support for the Raspberry Pis. Instead of trying to (poorly) reimplement the features, I think it is best to build upon the <code>rppal</code>. More importantly, Rene just added support for <code>embedded-hal</code> drivers which is going to make adding more components to <code>rust_gpiozero</code> much easier by leveraging already existing <a href="https://github.com/rust-embedded/awesome-embedded-rust#driver-crates">drivers</a>. You should definitely check out <code>rppal</code>.</p>
-
-<h2 id="what-s-new">What&rsquo;s new?</h2>
-
+<h2 id="whats-new">What&rsquo;s new?</h2>
 <p>The main goal for this release was to provide software-based PWM components. At first I experimented with <code>wiring_pi</code>. Fortunately, Rene added softpwm  in <code>[rppal](https://github.com/golemparts/rppal/releases/tag/0.11.0)</code> v0.11.0 after I requested which made implementing the following components a breeze:</p>
-
 <ul>
 <li>Adding <code>speed</code> feature for <code>Motor</code> component</li>
 <li><code>PWMOutputDevice</code></li>
 <li><code>PWMLED</code></li>
 <li><code>Servo</code></li>
 </ul>
-
 <p>There are some API changes in existing components. Also, the <code>blinking</code> or <code>beeping</code> methods now run in a background thread and do not block the main thread by default.</p>
-
 <h2 id="learning-journey">Learning Journey</h2>
-
 <p>I started <code>rust_gpiozero</code> as an educational project and this release was very instructive:</p>
-
 <ul>
 <li>I worked with threads in Rust which helped me better understand the borrowing, thread safety and closures. I worked with <code>std::sync::Arc</code>and <code>std::sync::Mutex</code>. However, I think there is still more to learn and discover.</li>
 <li>I used <code>macro_rules!</code> for the first time. While previously using <code>traits</code>, I felt not being able to override functions and also have access to struct data implementing the traits a challenge. With <code>macro_rules!</code>, I organised common implementations accordingly and implemented them where needed. It also made the code <em>&ldquo;DRYer&rdquo;</em>.</li>
 <li>I got a better understanding of Pulse Width Modulation</li>
 <li>I formatted the code with <code>rustfmt</code> and <code>clippy</code> ❤️</li>
 </ul>
-
-<h2 id="what-s-next">What&rsquo;s next?</h2>
-
+<h2 id="whats-next">What&rsquo;s next?</h2>
 <p>I am going to write some tutorials on how to use the new features and components. I will also update <a href="https://rahul-thakoor.github.io/physical-computing-rust/">Physical Computing with Rust</a> to use the new version of <code>rust_gpiozero</code>.</p>
-
 <p>I hope to release more new features soon. You can also test the new version and provide feedback.</p>
 
 
@@ -337,21 +322,6 @@ if (!doNotTrack) {
             
           </div>
         
-
-        
-        <p>Want to get updates on these blog posts?</p>
-        <form style="border:1px solid #ccc;padding:3px;text-align:center;border-radius: 10px;" action="https://tinyletter.com/rahulthakoor" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/rahulthakoor', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><div style="
-          display: flex;
-          flex-direction: row;
-          justify-content: space-evenly;
-          align-items: center;
-      "><p><label for="tlemail">Enter your email address</label></p><input type="text" style="width:140px" name="email" id="tlemail"><input type="hidden" value="1" name="embed"><input type="submit" value="Subscribe"></div><p><a href="https://tinyletter.com" target="_blank">powered by TinyLetter</a></p></form>
-       
-        
-         <p>Enjoyed this post?</p>
-         <style>.bmc-button img{width: 27px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{line-height: 36px !important;height:37px !important;text-decoration: none !important;display:inline-flex !important;color:#FFFFFF !important;background-color:#FF813F !important;border-radius: 3px !important;border: 1px solid transparent !important;padding: 1px 9px !important;font-size: 23px !important;letter-spacing:0.6px !important;;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#FFFFFF !important;}</style><link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/wKLeVt2"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
-        
-
 
         
             <hr/>
@@ -508,7 +478,7 @@ if (!doNotTrack) {
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.54.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.84.4</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>
